@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Test = () => {
+interface Props {
+  text: string;
+}
+
+const Test: FC<Props> = ({ text }) => {
   return (
     <div>
-      <div>Test</div>
+      <div>{text}</div>
     </div>
   );
 };

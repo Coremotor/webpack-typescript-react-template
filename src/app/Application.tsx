@@ -1,37 +1,13 @@
-import React, { useEffect, useState } from 'react';
-
-import iconReact from '../assets/icons/react.png';
-import iconTypescript from '../assets/icons/typescript.png';
-import iconWebpack from '../assets/icons/webpack.png';
-
+import React from 'react';
+import { useTheme } from 'hooks/useTheme';
+import iconReact from 'assets/icons/react.png';
+import iconTypescript from 'assets/icons/typescript.png';
+import iconWebpack from 'assets/icons/webpack.png';
+import Test from 'components/test';
 import styles from './application.module.css';
 
 const Application: React.FC = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
-  const toggleTheme = () => {
-    setDarkTheme((prevState) => !prevState);
-  };
-
-  useEffect(() => {
-    const useDarkTheme = parseInt(localStorage.getItem('dark-mode'));
-    if (isNaN(useDarkTheme)) {
-      setDarkTheme(true);
-    } else if (useDarkTheme === 1) {
-      setDarkTheme(true);
-    } else if (useDarkTheme === 0) {
-      setDarkTheme(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (darkTheme) {
-      localStorage.setItem('dark-mode', '1');
-      document.body.classList.add('dark-mode');
-    } else {
-      localStorage.setItem('dark-mode', '0');
-      document.body.classList.remove('dark-mode');
-    }
-  }, [darkTheme]);
+  const { darkTheme, toggleTheme } = useTheme();
 
   return (
     <div className={styles.container}>
@@ -44,7 +20,7 @@ const Application: React.FC = () => {
       <button className={styles.button} onClick={toggleTheme}>
         {darkTheme ? 'Light Theme' : 'Dark Theme'}
       </button>
-      {/* <Test /> */}
+      <Test text='Another component' />
     </div>
   );
 };
