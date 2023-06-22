@@ -2,16 +2,17 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/main.tsx'],
+  entry: [path.resolve('src/main.tsx')],
   module: {
-    rules: require('./webpack.rules'),
+    rules: require(path.resolve('webpack/webpack.rules')),
   },
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
   },
-  plugins: require('./webpack.plugins'),
+  plugins: require(path.resolve('webpack/webpack.plugins')),
   resolve: {
+    modules: [path.resolve('src'), path.resolve('node_modules')],
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
   },
   stats: 'errors-warnings',
