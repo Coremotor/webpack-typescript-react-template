@@ -5,7 +5,6 @@ import iconTypescript from '../assets/icons/typescript.png';
 import iconWebpack from '../assets/icons/webpack.png';
 
 import styles from './application.module.css';
-import Test from 'src/components/test';
 
 const Application: React.FC = () => {
   const [darkTheme, setDarkTheme] = useState(true);
