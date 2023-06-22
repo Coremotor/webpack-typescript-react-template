@@ -1,0 +1,18 @@
+:root {
+  --app-bgcolor: black;
+  --app-text-color: white;
+
+  --button-primary-bgcolor: white;
+  --button-primary-text-color: black;
+  --button-primary-border-color: black;
+}
+
+/*light theme*/
+body:not(.dark-mode) {
+  --app-bgcolor: white;
+  --app-text-color: black;
+
+  --button-primary-bgcolor: black;
+  --button-primary-text-color: white;
+  --button-primary-border-color: white;
+}
