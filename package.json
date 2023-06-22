@@ -9,7 +9,8 @@
     "serve": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js && cross-env serve dist/",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "prepare": "husky install",
-    "test": "npm run lint"
+    "husky-precommit": "npm run lint",
+    "test": ""
   },
   "author": "",
   "license": "ISC",
@@ -37,7 +38,6 @@
     "file-loader": "6.2.0",
     "fork-ts-checker-webpack-plugin": "8.0.0",
     "html-webpack-plugin": "5.5.3",
-    "husky": "8.0.3",
     "mini-css-extract-plugin": "2.7.6",
     "prettier": "2.8.8",
     "serve": "14.2.0",
