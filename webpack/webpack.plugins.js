@@ -9,7 +9,7 @@ module.exports = [
   inDev() && new webpack.HotModuleReplacementPlugin(),
   new HtmlWebpackPlugin({
     template: 'src/index.html',
-    favicon: 'src/assets/images/logo.png',
+    favicon: 'src/assets/icons/favicon.png',
     inject: true,
   }),
   new MiniCssExtractPlugin({

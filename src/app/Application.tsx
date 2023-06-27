@@ -1,27 +1,32 @@
-import React from 'react';
-import { useTheme } from 'hooks/useTheme';
-import iconReact from 'assets/icons/react.png';
-import iconTypescript from 'assets/icons/typescript.png';
-import iconWebpack from 'assets/icons/webpack.png';
-import Test from 'components/test';
+import React, { Suspense } from 'react';
+import { App, ConfigProvider, Spin } from 'antd';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from 'store/store';
 import styles from './application.module.css';
+import Root from 'router/root';
 
 const Application: React.FC = () => {
-  const { darkTheme, toggleTheme } = useTheme();
-
   return (
-    <div className={styles.container}>
-      <div className={styles.images_wrapper}>
-        <img src={iconReact} alt='icon' />
-        <img src={iconWebpack} alt='icon' />
-        <img src={iconTypescript} alt='icon' />
-      </div>
-      <div className={styles.text}>React Webpack TS Boilerplate</div>
-      <button className={styles.button} onClick={toggleTheme}>
-        {darkTheme ? 'Light Theme' : 'Dark Theme'}
-      </button>
-      <Test text='Another component' />
-    </div>
+    <React.StrictMode>
+      <Suspense
+        fallback={
+          <div className={styles.appLoader}>
+            <Spin size='large' />
+          </div>
+        }
+      >
+        <ConfigProvider>
+          <Provider store={store}>
+            <App className={styles.app}>
+              <BrowserRouter>
+                <Root />
+              </BrowserRouter>
+            </App>
+          </Provider>
+        </ConfigProvider>
+      </Suspense>
+    </React.StrictMode>
   );
 };
 
