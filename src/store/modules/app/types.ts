@@ -7,4 +7,5 @@ export type TAppState = {
   isDarkMode: boolean;
   locale: Locale;
   direction: TDirection;
+  error: string | null;
 };

@@ -1,34 +1,30 @@
 import React, { Suspense } from 'react';
-import { App, ConfigProvider, Spin, theme } from 'antd';
+import { App, ConfigProvider, theme } from 'antd';
 import { BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Root from 'router/root';
 import {
   getDirection,
   getIsDarkMode,
+  getIsLoading,
   getLocale,
 } from 'store/modules/app/selectors';
+import Notification from 'components/notification';
+import Loader from 'components/loader';
 import styles from './application.module.css';
-
-import 'dayjs/locale/en';
-import 'dayjs/locale/ru';
 
 const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const Application: React.FC = () => {
   const isDarkMode = useSelector(getIsDarkMode);
+  const isLoading = useSelector(getIsLoading);
   const locale = useSelector(getLocale);
   const direction = useSelector(getDirection);
 
   return (
     <React.StrictMode>
-      <Suspense
-        fallback={
-          <div className={styles.appLoader}>
-            <Spin size='large' />
-          </div>
-        }
-      >
+      {isLoading && <Loader />}
+      <Suspense fallback={<Loader />}>
         <ConfigProvider
           theme={{
             algorithm: isDarkMode ? darkAlgorithm : defaultAlgorithm,
@@ -43,6 +39,7 @@ const Application: React.FC = () => {
           </App>
         </ConfigProvider>
       </Suspense>
+      <Notification />
     </React.StrictMode>
   );
 };

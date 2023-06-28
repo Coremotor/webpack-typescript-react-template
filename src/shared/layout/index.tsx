@@ -7,6 +7,8 @@ import styles from './layout.module.css';
 import ThemeSwitcher from 'components/themeSwitcher';
 import LocaleSwitcher from 'components/localeSwitcher';
 import DirectionSwitcher from 'components/directionSwitcher';
+import { useSelector } from 'react-redux';
+import { getDirection } from 'store/modules/app/selectors';
 const { Header, Content, Sider } = Layout;
 
 const AppLayout = () => {
@@ -14,14 +16,23 @@ const AppLayout = () => {
     token: { colorBgContainer, colorSplit },
   } = theme.useToken();
 
+  const direction = useSelector(getDirection);
+
   return (
     <Layout className={styles.layout}>
       <Sider
         width={220}
-        style={{
-          background: colorBgContainer,
-          borderRight: `1px solid ${colorSplit}`,
-        }}
+        style={
+          direction === 'ltr'
+            ? {
+                background: colorBgContainer,
+                borderRight: `1px solid ${colorSplit}`,
+              }
+            : {
+                background: colorBgContainer,
+                borderLeft: `1px solid ${colorSplit}`,
+              }
+        }
         breakpoint='lg'
         collapsedWidth='0'
       >
@@ -33,6 +44,7 @@ const AppLayout = () => {
           style={{
             background: colorBgContainer,
             borderBottom: `1px solid ${colorSplit}`,
+            padding: '0 20px',
           }}
         >
           <Space>
@@ -41,7 +53,10 @@ const AppLayout = () => {
             <DirectionSwitcher />
           </Space>
         </Header>
-        <Content style={{ background: colorBgContainer }}>
+        <Content
+          style={{ background: colorBgContainer }}
+          className={styles.content}
+        >
           <Outlet />
         </Content>
       </Layout>

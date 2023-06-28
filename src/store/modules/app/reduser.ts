@@ -9,6 +9,7 @@ const initialState: TAppState = {
   isDarkMode: false,
   locale: localeRu,
   direction: 'ltr',
+  error: null,
 };
 
 const appSlice = createSlice({
@@ -27,10 +28,18 @@ const appSlice = createSlice({
     setDirection(state: TAppState, action: PayloadAction<TDirection>) {
       state.direction = action.payload;
     },
+    setError(state: TAppState, action: PayloadAction<string | null>) {
+      state.error = action.payload;
+    },
   },
 });
 
-export const { setIsLoading, setIsDarkMode, setLocale, setDirection } =
-  appSlice.actions;
+export const {
+  setIsLoading,
+  setIsDarkMode,
+  setLocale,
+  setDirection,
+  setError,
+} = appSlice.actions;
 
 export default appSlice.reducer;
