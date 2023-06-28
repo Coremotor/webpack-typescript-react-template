@@ -1,9 +1,10 @@
 import React from 'react';
+import { DatePicker } from 'antd';
 
 const Main = () => {
   return (
     <div>
-      <div>Main</div>
+      <DatePicker />
     </div>
   );
 };
