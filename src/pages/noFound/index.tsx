@@ -12,10 +12,10 @@ const NoFound = () => {
       className={styles.noFound}
       status='404'
       title='404'
-      subTitle='Sorry, the page you visited does not exist.'
+      subTitle='Извините, страница, которую вы посетили, не существует.'
       extra={
         <Button type='primary' onClick={goToMainPage}>
-          Back Home
+          Перейит на главную
         </Button>
       }
     />

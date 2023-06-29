@@ -14,37 +14,37 @@ import paymentMethodsActive from 'assets/icons/paymentMethodsActive.svg';
 
 export const navItems = [
   {
-    label: 'Главный экран',
+    label: 'navigation.main',
     route: routes.main,
     icon: main,
     iconActive: mainActive,
   },
   {
-    label: 'Платёжные операции',
+    label: 'navigation.paymentTransactions',
     route: routes.paymentTransactions,
     icon: paymentTransactions,
     iconActive: paymentTransactionsActive,
   },
   {
-    label: 'Документооборот',
+    label: 'navigation.documentFlow',
     route: routes.documentFlow,
     icon: documentFlow,
     iconActive: documentFlowActive,
   },
   {
-    label: 'Счета и договоры',
+    label: 'navigation.accountsContracts',
     route: routes.accountsContracts,
     icon: accountsContracts,
     iconActive: accountsContractsActive,
   },
   {
-    label: 'Объекты размещения',
+    label: 'navigation.accommodationFacilities',
     route: routes.accommodationFacilities,
     icon: accommodationFacilities,
     iconActive: accommodationFacilitiesActive,
   },
   {
-    label: 'Методы оплаты',
+    label: 'navigation.paymentMethods',
     route: routes.paymentMethods,
     icon: paymentMethods,
     iconActive: paymentMethodsActive,

@@ -2,12 +2,15 @@ import React from 'react';
 import { DatePicker, Space } from 'antd';
 import { useDispatch } from 'react-redux';
 import { setError } from 'store/modules/app/reduser';
+import { useTranslation } from 'react-i18next';
 
 const Main = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   return (
     <Space direction='vertical'>
+      <div>{t('test')}</div>
       <button onClick={() => dispatch(setError('err'))}>
         Show notification
       </button>

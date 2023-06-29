@@ -35,7 +35,7 @@ request.interceptors.response.use(
 
     // if (error?.response?.status === 401) {
     //   localStorage.removeItem('LOCALSTORAGE_TOKEN_KEY');
-    //   location.replace(routes.signIn);
+    //   location.replace(routes.authorization);
     // }
 
     return await Promise.reject(error);

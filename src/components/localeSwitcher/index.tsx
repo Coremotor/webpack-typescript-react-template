@@ -6,6 +6,7 @@ import 'dayjs/locale/en';
 import 'dayjs/locale/ru';
 import localeEn from 'antd/locale/en_US';
 import localeRu from 'antd/locale/ru_RU';
+import { useTranslation } from 'react-i18next';
 
 export const locales = [
   { label: 'English', value: 'en_US' },
@@ -15,9 +16,20 @@ export const locales = [
 const LocaleSwitcher = () => {
   const dispatch = useDispatch();
 
-  const changeLocale = (value: string) => {
-    if (value === 'ru_RU') dispatch(setLocale(localeRu));
-    if (value === 'en_US') dispatch(setLocale(localeEn));
+  const { i18n } = useTranslation();
+  const changeLanguage = async (lng: string) => {
+    await i18n.changeLanguage(lng);
+  };
+
+  const changeLocale = async (value: string) => {
+    if (value === 'ru_RU') {
+      dispatch(setLocale(localeRu));
+      await changeLanguage('ru');
+    }
+    if (value === 'en_US') {
+      dispatch(setLocale(localeEn));
+      await changeLanguage('en');
+    }
   };
   return (
     <Select onChange={changeLocale} options={locales} defaultValue='ru_RU' />

@@ -13,11 +13,14 @@ import Notification from 'components/notification';
 import Loader from 'components/loader';
 import styles from './application.module.css';
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'i18n/i18n';
+
 const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const Application: React.FC = () => {
-  const isDarkMode = useSelector(getIsDarkMode);
   const isLoading = useSelector(getIsLoading);
+  const isDarkMode = useSelector(getIsDarkMode);
   const locale = useSelector(getLocale);
   const direction = useSelector(getDirection);
 
@@ -32,11 +35,13 @@ const Application: React.FC = () => {
           locale={locale}
           direction={direction}
         >
-          <App className={styles.app}>
-            <BrowserRouter>
-              <Root />
-            </BrowserRouter>
-          </App>
+          <I18nextProvider i18n={i18n} defaultNS={'translation'}>
+            <App className={styles.app}>
+              <BrowserRouter>
+                <Root />
+              </BrowserRouter>
+            </App>
+          </I18nextProvider>
         </ConfigProvider>
       </Suspense>
       <Notification />

@@ -5,6 +5,7 @@ export const routes = {
   accountsContracts: '/accounts-contracts',
   accommodationFacilities: '/accommodation-facilities',
   paymentMethods: '/payment-methods',
-  signIn: '/sign-in',
+  authorization: '/authorization',
+  registration: '/registration',
   noMatch: '*',
 };

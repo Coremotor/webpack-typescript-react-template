@@ -2,7 +2,7 @@ import React from 'react';
 import type { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NoFound from 'pages/noFound';
-import SignIn from 'pages/signIn';
+import Authorization from 'pages/authorization';
 import { routes } from 'router/routes';
 import Main from 'pages/main';
 import AccommodationFacilities from 'pages/accommodationFacilities';
@@ -12,11 +12,13 @@ import PaymentMethods from 'pages/paymentMethods';
 import PaymentTransactions from 'pages/paymentTransactions';
 import Protected from 'router/protected';
 import AppLayout from 'shared/layout';
+import Registration from 'pages/registration';
 
 const Root: FC = () => {
   return (
     <Routes>
-      <Route path={routes.signIn} element={<SignIn />} />
+      <Route path={routes.authorization} element={<Authorization />} />
+      <Route path={routes.registration} element={<Registration />} />
       <Route path={routes.noMatch} element={<NoFound />} />
       <Route path={routes.main} element={<AppLayout />}>
         <Route
