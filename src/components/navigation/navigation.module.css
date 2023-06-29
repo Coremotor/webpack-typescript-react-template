@@ -2,5 +2,5 @@
   border: none !important;
 }
 .img {
-  min-width: 24px;
+  min-width: 24px !important;
 }
