@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AccountsContracts = () => {
+export const AccountsContracts = () => {
   return (
     <div>
       <div>Accounts and Contracts</div>

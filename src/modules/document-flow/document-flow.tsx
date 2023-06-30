@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from 'assets/icons/wallet.svg';
 
-const DocumentFlow = () => {
+export const DocumentFlow = () => {
   return (
     <div>
       <Logo />

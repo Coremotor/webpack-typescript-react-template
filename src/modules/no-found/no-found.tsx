@@ -2,9 +2,9 @@ import React from 'react';
 import { Button, Result } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
-import styles from './noFound.module.css';
+import styles from 'modules/no-found/no-found.module.css';
 
-const NoFound = () => {
+export const NoFound = () => {
   const navigate = useNavigate();
   const goToMainPage = () => navigate(RoutesEnum.mainScreen);
   return (

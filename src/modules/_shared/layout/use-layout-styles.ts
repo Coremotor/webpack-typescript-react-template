@@ -1,6 +1,6 @@
 import { theme } from 'antd';
 import { useSelector } from 'react-redux';
-import { getDirection } from 'modules/_shared/app/store/app/selectors';
+import { getDirection } from 'modules/_shared/store/global/selectors';
 import { CSSProperties } from 'react';
 
 export const useLayoutStyles = () => {

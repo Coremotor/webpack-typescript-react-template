@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, DatePicker, Space } from 'antd';
 import { useDispatch } from 'react-redux';
-import { setError } from 'modules/_shared/app/store/app/reduser';
+import { setError } from 'modules/_shared/store/global/reduser';
 
-const MainScreen = () => {
+export const MainScreen = () => {
   const dispatch = useDispatch();
 
   return (

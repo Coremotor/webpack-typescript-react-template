@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
-import { getDirection } from 'modules/_shared/app/store/app/selectors';
-import { setDirection } from 'modules/_shared/app/store/app/reduser';
+import { getDirection } from 'modules/_shared/store/global/selectors';
+import { setDirection } from 'modules/_shared/store/global/reduser';
 
-const DirectionSwitcher = () => {
+export const DirectionSwitcher = () => {
   const dispatch = useDispatch();
   const direction = useSelector(getDirection);
   const toggleDirection = () =>
@@ -15,5 +15,3 @@ const DirectionSwitcher = () => {
     </Button>
   );
 };
-
-export default DirectionSwitcher;

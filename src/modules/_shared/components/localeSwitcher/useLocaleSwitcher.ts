@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
-import { setLocale } from 'modules/_shared/app/store/app/reduser';
+import { setLocale } from 'modules/_shared/store/global/reduser';
 
 import localeRu from 'antd/locale/ru_RU';
 import localeEn from 'antd/locale/en_US';

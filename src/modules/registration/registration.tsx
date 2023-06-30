@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Form, Input } from 'antd';
 import styles from 'modules/registration/registration.module.css';
+import { Form, Input, Button } from 'modules/_shared/ui';
 
 interface RegistrationFormFields {
   email: string;
@@ -8,7 +8,7 @@ interface RegistrationFormFields {
   repeatPassword: string;
 }
 
-const Registration = () => {
+export const Registration = () => {
   const [form] = Form.useForm<RegistrationFormFields>();
   const onFinish = (values: RegistrationFormFields) => {
     console.log('Success:', values);

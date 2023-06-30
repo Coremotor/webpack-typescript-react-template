@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getError } from 'modules/_shared/app/store/app/selectors';
-import { setError } from 'modules/_shared/app/store/app/reduser';
+import { getError } from 'modules/_shared/store/global/selectors';
+import { setError } from 'modules/_shared/store/global/reduser';
 import { createPortal } from 'react-dom';
 import { Card } from 'antd';
 import styles from 'modules/_shared/components/notification/notification.module.css';
 
-const Notification = () => {
+export const Notification = () => {
   const dispatch = useDispatch();
   const error = useSelector(getError);
   const onNotificationClick = () => dispatch(setError(null));
@@ -23,5 +23,3 @@ const Notification = () => {
     </>
   );
 };
-
-export default Notification;

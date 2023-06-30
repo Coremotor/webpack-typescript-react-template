@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { TAppState, TDirection } from 'modules/_shared/app/store/app/types';
+import { TAppState, TDirection } from 'modules/_shared/store/global/types';
 import type { Locale } from 'antd/es/locale';
 import localeRu from 'antd/locale/ru_RU';
 
@@ -13,7 +13,7 @@ const initialState: TAppState = {
 };
 
 const appSlice = createSlice({
-  name: 'app',
+  name: 'global',
   initialState,
   reducers: {
     setIsLoading(state: TAppState, action: PayloadAction<boolean>) {
@@ -34,12 +34,7 @@ const appSlice = createSlice({
   },
 });
 
-export const {
-  setIsLoading,
-  setIsDarkMode,
-  setLocale,
-  setDirection,
-  setError,
-} = appSlice.actions;
+export const { setIsLoading, setLocale, setDirection, setError } =
+  appSlice.actions;
 
 export default appSlice.reducer;

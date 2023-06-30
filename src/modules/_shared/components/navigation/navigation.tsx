@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
-import styles from 'modules/_shared/components/navigation/navigation.module.css';
 import { useNavItems } from 'modules/_shared/components/navigation/useNavItems';
+import styles from 'modules/_shared/components/navigation/navigation.module.css';
 
-const Navigation = () => {
+export const Navigation = () => {
   const location = useLocation();
   const [currentRoute, setCurrentRoute] = useState(location.pathname);
   const navigate = useNavigate();
@@ -25,5 +25,3 @@ const Navigation = () => {
     />
   );
 };
-
-export default Navigation;

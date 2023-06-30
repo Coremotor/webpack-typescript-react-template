@@ -7,5 +7,4 @@ const Authorization = () => {
     </div>
   );
 };
-
 export default Authorization;

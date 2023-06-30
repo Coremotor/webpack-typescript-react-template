@@ -1,3 +1,1 @@
-import { Select, Form } from 'antd';
-
-export { Select, Form };
+export { Select, Form, Button, Input } from 'antd';

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Layout, Space } from 'antd';
 import { Outlet } from 'react-router-dom';
-import Navigation from 'modules/_shared/components/navigation';
+import {
+  Navigation,
+  LocaleSwitcher,
+  DirectionSwitcher,
+} from 'modules/_shared/components';
 import logo from 'assets/images/logo.png';
-import LocaleSwitcher from 'modules/_shared/components/localeSwitcher';
-import DirectionSwitcher from 'modules/_shared/components/directionSwitcher';
-import { useLayoutStyles } from 'modules/_shared/layout/useLayoutStyles';
+import { useLayoutStyles } from 'modules/_shared/layout/use-layout-styles';
 
 const { Header, Content, Sider } = Layout;
 

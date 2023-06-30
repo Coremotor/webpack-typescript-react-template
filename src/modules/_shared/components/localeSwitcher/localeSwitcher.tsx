@@ -5,12 +5,10 @@ import {
   useLocaleSwitcher,
 } from 'modules/_shared/components/localeSwitcher/useLocaleSwitcher';
 
-const LocaleSwitcher = () => {
+export const LocaleSwitcher = () => {
   const { changeLocale } = useLocaleSwitcher();
 
   return (
     <Select onChange={changeLocale} options={locales} defaultValue='ru_RU' />
   );
 };
-
-export default LocaleSwitcher;
