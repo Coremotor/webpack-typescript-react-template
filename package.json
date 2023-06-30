@@ -4,9 +4,9 @@
   "description": "Comfort Booking Personal Area",
   "main": "main.tsx",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
-    "serve": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js && cross-env serve dist/",
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js",
+    "serve": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js && cross-env serve dist/",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "prepare": "husky install",
     "test": "echo \"[Husky] pre-commit\""
@@ -26,6 +26,7 @@
     "react-router-dom": "6.14.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",

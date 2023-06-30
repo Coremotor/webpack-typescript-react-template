@@ -1,14 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Application from 'app/Application';
-import 'global.css';
-import { store } from 'store/store';
+import App from 'modules/_shared/app/app';
+import { store } from 'modules/_shared/store/store';
 import { Provider } from 'react-redux';
+import 'assets/styles/global.css';
 
-const app = (
-  <Provider store={store}>
-    <Application />
-  </Provider>
+createRoot(document.getElementById('app')).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
 );
-
-createRoot(document.getElementById('app')).render(app);
