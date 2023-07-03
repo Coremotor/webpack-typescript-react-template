@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.passwordInputWrapper {
+  margin-bottom: 10px;
+}
+.link {
+  font-weight: 600;
+  align-self: flex-end;
+}
+.button {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}

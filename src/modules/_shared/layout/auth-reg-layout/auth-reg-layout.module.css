@@ -4,10 +4,9 @@
     display: grid;
     place-items: center;
 }
-.form {
-    width: 400px;
+.formWrapper {
+    width: 360px;
     border-radius: 16px;
-    box-shadow: 0 8px 24px 0 #BABACB66;
+    box-shadow: 0 8px 24px 0 var(--box-shadow-color);
     padding: 30px;
 }
-

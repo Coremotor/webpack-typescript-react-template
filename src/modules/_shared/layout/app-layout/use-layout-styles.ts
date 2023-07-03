@@ -34,6 +34,7 @@ export const useLayoutStyles = () => {
   };
 
   const img: CSSProperties = {
+    width: 150,
     padding: 20,
   };
 

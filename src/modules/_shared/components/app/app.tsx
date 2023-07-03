@@ -14,6 +14,7 @@ import styles from 'modules/_shared/components/app/app.module.css';
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'modules/_shared/i18n/i18n';
+import ErrorBoundary from 'modules/_shared/utils/error-boundary';
 
 const App: React.FC = () => {
   const isLoading = useSelector(getIsLoading);
@@ -24,24 +25,26 @@ const App: React.FC = () => {
     <>
       {isLoading && <Loader />}
       <Suspense fallback={<Loader />}>
-        <ConfigProvider
-          locale={locale}
-          direction={direction}
-          theme={{
-            token: {
-              colorPrimary: colors.colorPrimary,
-              fontFamily: 'Gilroy',
-            },
-          }}
-        >
-          <I18nextProvider i18n={i18n} defaultNS={'translation'}>
-            <AntDApp className={styles.app}>
-              <BrowserRouter>
-                <RootRoute />
-              </BrowserRouter>
-            </AntDApp>
-          </I18nextProvider>
-        </ConfigProvider>
+        <ErrorBoundary>
+          <ConfigProvider
+            locale={locale}
+            direction={direction}
+            theme={{
+              token: {
+                colorPrimary: colors.colorPrimary,
+                fontFamily: 'Gilroy',
+              },
+            }}
+          >
+            <I18nextProvider i18n={i18n} defaultNS={'translation'}>
+              <AntDApp className={styles.app}>
+                <BrowserRouter>
+                  <RootRoute />
+                </BrowserRouter>
+              </AntDApp>
+            </I18nextProvider>
+          </ConfigProvider>
+        </ErrorBoundary>
       </Suspense>
       <Notification />
     </>

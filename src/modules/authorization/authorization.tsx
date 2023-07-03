@@ -1,10 +1,18 @@
 import React from 'react';
+import { AuthRegLayout } from 'modules/_shared/layout';
+import {
+  AuthorizationForm,
+  AuthorizationHeader,
+  SignInWithTravelline,
+} from 'modules/authorization/components';
 
 const Authorization = () => {
   return (
-    <div>
-      <div>Authorization</div>
-    </div>
+    <AuthRegLayout>
+      <AuthorizationHeader />
+      <AuthorizationForm />
+      <SignInWithTravelline />
+    </AuthRegLayout>
   );
 };
 export default Authorization;

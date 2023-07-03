@@ -32,3 +32,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(85, 85, 85, 0.5);
 }
+
+:root {
+ --box-shadow-color: #babacb66;
+}
