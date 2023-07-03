@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: [path.resolve('src/main.tsx')],
+  entry: [path.resolve('src/index.tsx')],
   module: {
     rules: require(path.resolve('config/webpack/webpack.rules')),
   },

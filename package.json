@@ -2,11 +2,11 @@
   "name": "cbpa",
   "version": "1.0.0",
   "description": "Comfort Booking Personal Area",
-  "main": "main.tsx",
+  "main": "index.tsx",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js",
-    "serve": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js && cross-env serve dist/",
+    "serve": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js && cross-env serve build/",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "prepare": "husky install",
     "test": "echo \"[Husky] pre-commit\""

@@ -2,13 +2,14 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: [path.resolve('src/main.tsx')],
+  entry: [path.resolve('src/index.tsx')],
   module: {
     rules: require(path.resolve('config/webpack/webpack.rules')),
   },
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
+    path: path.resolve('./', 'build'),
     clean: true,
   },
   plugins: require(path.resolve('config/webpack/webpack.plugins')),

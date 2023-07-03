@@ -14,7 +14,7 @@ import {
   PaymentMethods,
   PaymentTransactions,
   Registration,
-} from 'modules';
+} from 'modules/index';
 
 const RootRoute: FC = () => {
   return (
