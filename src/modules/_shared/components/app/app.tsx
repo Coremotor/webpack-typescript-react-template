@@ -9,6 +9,7 @@ import {
   getLocale,
 } from 'modules/_shared/store/global/selectors';
 import { Notification, Loader } from 'modules/_shared/components/index';
+import { colors } from 'assets/styles/colors';
 import styles from 'modules/_shared/components/app/app.module.css';
 
 import { I18nextProvider } from 'react-i18next';
@@ -28,8 +29,8 @@ const App: React.FC = () => {
           direction={direction}
           theme={{
             token: {
-              colorPrimary: '#4022F5',
-              // fontFamily: '',
+              colorPrimary: colors.colorPrimary,
+              fontFamily: 'Gilroy',
             },
           }}
         >

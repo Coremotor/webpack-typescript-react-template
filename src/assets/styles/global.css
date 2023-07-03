@@ -13,6 +13,12 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+  url("assets/fonts/Gilroy-Regular.woff") format("woff");
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }
