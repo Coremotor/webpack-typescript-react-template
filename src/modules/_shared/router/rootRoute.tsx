@@ -9,18 +9,23 @@ import {
   AccountsContracts,
   Authorization,
   DocumentFlow,
+  EmailConfirmation,
   MainScreen,
   NoFound,
   PaymentMethods,
   PaymentTransactions,
   Registration,
-} from 'modules/index';
+} from 'modules';
 
 const RootRoute: FC = () => {
   return (
     <Routes>
       <Route path={RoutesEnum.authorization} element={<Authorization />} />
       <Route path={RoutesEnum.registration} element={<Registration />} />
+      <Route
+        path={RoutesEnum.emailConfirmation}
+        element={<EmailConfirmation />}
+      />
       <Route path={RoutesEnum.noMatch} element={<NoFound />} />
       <Route path={RoutesEnum.mainScreen} element={<AppLayout />}>
         <Route

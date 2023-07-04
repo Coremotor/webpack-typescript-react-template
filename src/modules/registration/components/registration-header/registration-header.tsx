@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from 'assets/images/logo.png';
-import styles from './registration-header.module.css';
 import { Text, Title, Space } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
+import styles from './registration-header.module.css';
 
 export const RegistrationHeader = () => {
   const { t } = useTranslation();

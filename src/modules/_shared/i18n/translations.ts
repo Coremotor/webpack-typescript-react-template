@@ -25,6 +25,16 @@ export const translations: Translations = {
         button: 'Enter',
         TLButton: 'Sign in with TravelLine',
       },
+      emailConfirmation: {
+        title: 'Confirm email',
+        content: 'We have sent a verification code to',
+        placeholderInputCode: 'Enter confirmation code',
+        conditions: 'I accept the terms',
+        link: 'offer agreement',
+        button: 'Continue',
+        codeRequest: 'You can request the code again via',
+        sendCode: 'Send code again',
+      },
       navigation: {
         mainScreen: 'Main screen',
         paymentTransactions: 'Payment transactions',
@@ -58,6 +68,16 @@ export const translations: Translations = {
         forgotYourPassword: 'Забыли пароль?',
         button: 'Войти',
         TLButton: 'Войти через TravelLine',
+      },
+      emailConfirmation: {
+        title: 'Подтвердите email',
+        content: 'Мы отправили код подтверждения на',
+        placeholderInputCode: 'Введите код подтверждения',
+        conditions: 'Я принимаю условия',
+        link: 'договора оферты',
+        button: 'Продолжить',
+        codeRequest: 'Запросить код повторно можно через',
+        sendCode: 'Отправить код повторно',
       },
       navigation: {
         mainScreen: 'Главный экран',

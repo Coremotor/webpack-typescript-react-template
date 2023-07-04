@@ -3,6 +3,9 @@ import { lazy } from 'react';
 export const Registration = lazy(
   () => import('modules/registration/registration'),
 );
+export const EmailConfirmation = lazy(
+  () => import('modules/email-confirmation/email-confirmation'),
+);
 export const Authorization = lazy(
   () => import('modules/authorization/authorization'),
 );

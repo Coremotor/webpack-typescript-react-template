@@ -4,18 +4,13 @@ import { Button, Form, Input } from 'modules/_shared/ui';
 import styles from './authorization-form.module.css';
 import { Link } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
-
-interface AuthorizationFormFields {
-  email: string;
-  password: string;
-  repeatPassword: string;
-}
+import { TAuthorizationFormFields } from 'modules/authorization/types';
 
 export const AuthorizationForm = () => {
   const { t } = useTranslation();
 
-  const [form] = Form.useForm<AuthorizationFormFields>();
-  const onFinish = (values: AuthorizationFormFields) => {
+  const [form] = Form.useForm<TAuthorizationFormFields>();
+  const onFinish = (values: TAuthorizationFormFields) => {
     console.log(values);
   };
 

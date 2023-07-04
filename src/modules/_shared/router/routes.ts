@@ -7,5 +7,6 @@ export enum RoutesEnum {
   paymentMethods = '/payment-methods',
   authorization = '/authorization',
   registration = '/registration',
+  emailConfirmation = '/email-confirmation',
   noMatch = '*',
 }

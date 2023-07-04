@@ -1,25 +1,15 @@
 import React from 'react';
 import { Button, Form, Input } from 'modules/_shared/ui';
-import styles from './registration-form.module.css';
 import { useTranslation } from 'react-i18next';
-
-interface RegistrationFormFields {
-  email: string;
-  password: string;
-  repeatPassword: string;
-}
+import { useRegistrationForm } from 'modules/registration/hooks/use-registration-form';
+import styles from './registration-form.module.css';
 
 export const RegistrationForm = () => {
   const { t } = useTranslation();
-
-  const [form] = Form.useForm<RegistrationFormFields>();
-  const onFinish = (values: RegistrationFormFields) => {
-    console.log(values);
-  };
+  const { form, onFinish } = useRegistrationForm();
 
   return (
     <Form
-      className={styles.form}
       layout='vertical'
       form={form}
       name='registration'

@@ -21,6 +21,16 @@ export type Translation = {
     button: string;
     TLButton: string;
   };
+  emailConfirmation: {
+    title: string;
+    content: string;
+    placeholderInputCode: string;
+    conditions: string;
+    link: string;
+    button: string;
+    codeRequest: string;
+    sendCode: string;
+  };
   navigation: {
     mainScreen: string;
     paymentTransactions: string;
