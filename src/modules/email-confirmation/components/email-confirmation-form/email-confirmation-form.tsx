@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Form, Input, Space, Checkbox, Link } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
-import styles from './email-confirmation-form.module.css';
 import { useEmailConfirmationForm } from 'modules/email-confirmation/hooks/use-email-confirmation-form';
+import styles from './email-confirmation-form.module.css';
 
 export const EmailConfirmationForm = () => {
   const { t } = useTranslation();
