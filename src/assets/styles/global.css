@@ -1,9 +1,11 @@
 html,
 body {
   height: 100%;
+  min-width: 360px;
 }
 
 body {
+  font-weight: 500;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -34,5 +36,5 @@ body {
 }
 
 :root {
- --box-shadow-color: #babacb66;
+  --content-padding: 30px;
 }

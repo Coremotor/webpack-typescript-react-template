@@ -43,6 +43,12 @@ export const translations: Translations = {
         accommodationFacilities: 'Accommodation facilities',
         paymentMethods: 'Payment methods',
       },
+      paymentMethods: {
+        title: 'Payment methods',
+        paymentMethodDescription: 'Payer limit',
+        buttonSave: 'Save',
+        buttonCancel: 'Cancel',
+      },
     },
   },
   ru: {
@@ -86,6 +92,12 @@ export const translations: Translations = {
         accountsContracts: 'Счета и договоры',
         accommodationFacilities: 'Объекты размещения',
         paymentMethods: 'Методы оплаты',
+      },
+      paymentMethods: {
+        title: 'Методы оплаты',
+        paymentMethodDescription: 'Лимит плательщика',
+        buttonSave: 'Сохранить',
+        buttonCancel: 'Отменить',
       },
     },
   },

@@ -39,6 +39,12 @@ export type Translation = {
     accommodationFacilities: string;
     paymentMethods: string;
   };
+  paymentMethods: {
+    title: string;
+    paymentMethodDescription: string;
+    buttonSave: string;
+    buttonCancel: string;
+  };
 };
 export type Translations = {
   en: {

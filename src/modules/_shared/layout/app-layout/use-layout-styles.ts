@@ -30,7 +30,6 @@ export const useLayoutStyles = () => {
   const content: CSSProperties = {
     background: colorBgContainer,
     overflow: 'auto',
-    padding: 20,
   };
 
   const img: CSSProperties = {

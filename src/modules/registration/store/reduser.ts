@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { TRegistrationState } from 'modules/registration/store/types';
+import { TRegistrationState } from 'modules/registration/types';
 
 const initialState: TRegistrationState = {
   emailForConfirm: '',

@@ -7,9 +7,9 @@ import styles from 'modules/_shared/components/navigation/navigation.module.css'
 
 export const Navigation = () => {
   const location = useLocation();
-  const [currentRoute, setCurrentRoute] = useState(location.pathname);
   const navigate = useNavigate();
-  const navItems = useNavItems();
+  const [currentRoute, setCurrentRoute] = useState(location.pathname);
+  const navItems = useNavItems(currentRoute);
 
   const onNavItemClick: MenuProps['onClick'] = (e) => {
     setCurrentRoute(e.key);
