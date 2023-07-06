@@ -45,6 +45,11 @@ export type Translation = {
     buttonSave: string;
     buttonCancel: string;
   };
+  documentFlow: {
+    title: string;
+    docsTab: string;
+    registryTab: string;
+  };
 };
 export type Translations = {
   en: {

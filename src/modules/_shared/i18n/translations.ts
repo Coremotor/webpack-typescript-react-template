@@ -49,6 +49,11 @@ export const translations: Translations = {
         buttonSave: 'Save',
         buttonCancel: 'Cancel',
       },
+      documentFlow: {
+        title: 'Document flow',
+        docsTab: 'Accounting documents',
+        registryTab: 'Transaction register',
+      },
     },
   },
   ru: {
@@ -98,6 +103,11 @@ export const translations: Translations = {
         paymentMethodDescription: 'Лимит плательщика',
         buttonSave: 'Сохранить',
         buttonCancel: 'Отменить',
+      },
+      documentFlow: {
+        title: 'Документооборот',
+        docsTab: 'Бухгалтерские документы',
+        registryTab: 'Реестр операций',
       },
     },
   },

@@ -1,4 +1,4 @@
-import { Typography, Layout } from 'antd';
+import { Typography, Layout, DatePicker } from 'antd';
 
 export {
   Select,
@@ -12,6 +12,10 @@ export {
   Col,
   Row,
   Switch,
+  Tabs,
+  Card,
 } from 'antd';
+
 export const { Title, Text, Link } = Typography;
 export const { Footer } = Layout;
+export const { RangePicker } = DatePicker;
