@@ -3,7 +3,7 @@ import { List } from 'modules/_shared/ui';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPaymentMethods } from 'modules/payment-methods/store/selectors';
 import { setPaymentMethods } from 'modules/payment-methods/store/reduser';
-import { paymentMethodsData } from 'modules/_shared/mock-data/paymetMethodsData';
+import { paymentMethodsData } from 'modules/_shared/mock-data/paymet-methods-data';
 import { PaymentMethodsListItem } from 'modules/payment-methods/components/payment-methods-list-item/payment-methods-list-item';
 import styles from './payment-methods-list.module.css';
 

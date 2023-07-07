@@ -14,6 +14,7 @@ export {
   Switch,
   Tabs,
   Card,
+  Popover,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;

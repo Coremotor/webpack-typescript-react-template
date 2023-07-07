@@ -1,7 +1,10 @@
 import React from 'react';
 import { RangePicker, Space } from 'modules/_shared/ui';
 import styles from './accounting-documents.module.css';
-import { AccountingDocumentsList } from 'modules/document-flow/tabs/accounting-documents/components';
+import {
+  AccountingDocumentsActionBar,
+  AccountingDocumentsList,
+} from 'modules/document-flow/tabs/accounting-documents/components';
 
 export const AccountingDocuments = () => {
   return (
@@ -13,6 +16,7 @@ export const AccountingDocuments = () => {
       />
 
       <AccountingDocumentsList />
+      <AccountingDocumentsActionBar />
     </Space>
   );
 };

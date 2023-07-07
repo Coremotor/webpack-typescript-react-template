@@ -14,18 +14,24 @@ export const AccountingDocumentsListHeader = () => {
       <Col className={styles.col} flex={columnsWidth.date}>
         <Text ellipsis>Дата</Text>
       </Col>
-      <Col className={styles.col} flex={columnsWidth.acquirer}>
-        <Text ellipsis>Эквайер</Text>
+
+      <Col className={styles.col} flex={columnsWidth.main}>
+        <Row className={styles.innerRow} wrap={false}>
+          <Col className={styles.col} flex={columnsWidth.acquirer}>
+            <Text ellipsis>Эквайер</Text>
+          </Col>
+          <Col className={styles.col} flex={columnsWidth.acts}>
+            <Text ellipsis>Акты</Text>
+          </Col>
+          <Col className={styles.col} flex={columnsWidth.reports}>
+            <Text ellipsis>Отчёты</Text>
+          </Col>
+          <Col className={styles.col} flex={columnsWidth.invoices}>
+            <Text ellipsis>Счета фактуры</Text>
+          </Col>
+        </Row>
       </Col>
-      <Col className={styles.col} flex={columnsWidth.acts}>
-        <Text ellipsis>Акты</Text>
-      </Col>
-      <Col className={styles.col} flex={columnsWidth.reports}>
-        <Text ellipsis>Отчёты</Text>
-      </Col>
-      <Col className={styles.col} flex={columnsWidth.invoices}>
-        <Text ellipsis>Счета фактуры</Text>
-      </Col>
+
       <Col className={styles.col} flex={columnsWidth.print} />
       <Col className={styles.col} flex={columnsWidth.cloud} />
     </Row>

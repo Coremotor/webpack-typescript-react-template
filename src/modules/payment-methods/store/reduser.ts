@@ -9,7 +9,7 @@ const initialState: TPaymentMethodsState = {
   paymentMethods: [],
 };
 
-const appSlice = createSlice({
+const paymentMethodsSlice = createSlice({
   name: 'paymentMethods',
   initialState,
   reducers: {
@@ -22,6 +22,6 @@ const appSlice = createSlice({
   },
 });
 
-export const { setPaymentMethods } = appSlice.actions;
+export const { setPaymentMethods } = paymentMethodsSlice.actions;
 
-export default appSlice.reducer;
+export default paymentMethodsSlice.reducer;

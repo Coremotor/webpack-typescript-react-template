@@ -16,6 +16,8 @@ export const PaymentMethodsIcon: FC<TPaymentMethodsIconProps> = ({
         return <CardIcon />;
       case 'yandex':
         return <YandexIcon />;
+      default:
+        return <div>Icon</div>;
     }
   };
 
