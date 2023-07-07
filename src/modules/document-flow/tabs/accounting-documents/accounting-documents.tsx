@@ -8,15 +8,17 @@ import {
 
 export const AccountingDocuments = () => {
   return (
-    <Space className={styles.container} direction='vertical'>
-      <RangePicker
-        className={styles.datePicker}
-        picker='month'
-        format='MMMM YYYY'
-      />
+    <>
+      <Space className={styles.container} direction='vertical'>
+        <RangePicker
+          className={styles.datePicker}
+          picker='month'
+          format='MMMM YYYY'
+        />
 
-      <AccountingDocumentsList />
+        <AccountingDocumentsList />
+      </Space>
       <AccountingDocumentsActionBar />
-    </Space>
+    </>
   );
 };

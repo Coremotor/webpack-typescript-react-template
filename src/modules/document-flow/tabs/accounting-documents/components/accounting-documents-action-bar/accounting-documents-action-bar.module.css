@@ -1,4 +1,6 @@
 .container {
-  position: fixed;
+  width: fit-content;
+  position: sticky;
   bottom: 40px;
+  margin: 0 auto;
 }

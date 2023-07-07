@@ -4,10 +4,8 @@ import styles from 'modules/document-flow/tabs/accounting-documents/components/a
 
 export const AccountingDocumentsActionBar = () => {
   return (
-    <div className={styles.container}>
-      <Card bordered={false}>
-        <div>AccountingDocumentsActionBar</div>
-      </Card>
-    </div>
+    <Card className={styles.container} bordered={false}>
+      <div>AccountingDocumentsActionBar</div>
+    </Card>
   );
 };
