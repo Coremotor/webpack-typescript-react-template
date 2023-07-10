@@ -1,0 +1,16 @@
+.row {
+  width: 100%;
+  padding: 16px;
+}
+.col {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.text {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.text:hover {
+  color: var(--color-primary);
+}

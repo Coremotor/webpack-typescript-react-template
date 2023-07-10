@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, DatePicker, Space } from 'antd';
-import { useDispatch } from 'react-redux';
 import { setError } from 'modules/_shared/store/global/reduser';
+import { useAppDispatch } from 'modules/_shared/store/hooks';
 
 export const MainScreen = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <Space direction='vertical'>

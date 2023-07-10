@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { List } from 'modules/_shared/ui';
-import { useDispatch, useSelector } from 'react-redux';
 import { getPaymentMethods } from 'modules/payment-methods/store/selectors';
 import { setPaymentMethods } from 'modules/payment-methods/store/reduser';
 import { paymentMethodsData } from 'modules/_shared/mock-data/paymet-methods-data';
 import { PaymentMethodsListItem } from 'modules/payment-methods/components/payment-methods-list-item/payment-methods-list-item';
 import styles from './payment-methods-list.module.css';
+import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 
 export const PaymentMethodsList = () => {
-  const dispatch = useDispatch();
-  const paymentMethods = useSelector(getPaymentMethods);
+  const dispatch = useAppDispatch();
+  const paymentMethods = useAppSelector(getPaymentMethods);
 
   useEffect(() => {
     dispatch(setPaymentMethods(paymentMethodsData));

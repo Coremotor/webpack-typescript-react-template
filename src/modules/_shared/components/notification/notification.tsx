@@ -1,14 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { getError } from 'modules/_shared/store/global/selectors';
 import { setError } from 'modules/_shared/store/global/reduser';
 import { createPortal } from 'react-dom';
 import { Card } from 'antd';
 import styles from 'modules/_shared/components/notification/notification.module.css';
+import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 
 export const Notification = () => {
-  const dispatch = useDispatch();
-  const error = useSelector(getError);
+  const dispatch = useAppDispatch();
+  const error = useAppSelector(getError);
   const onNotificationClick = () => dispatch(setError(null));
 
   return (

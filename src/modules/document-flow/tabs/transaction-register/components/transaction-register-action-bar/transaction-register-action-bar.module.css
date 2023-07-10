@@ -1,0 +1,6 @@
+.card {
+  width: fit-content;
+  position: sticky;
+  bottom: 40px;
+  margin: 100px auto 0;
+}

@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
 import { setLocale } from 'modules/_shared/store/global/reduser';
 
 import localeRu from 'antd/locale/ru_RU';
 import localeEn from 'antd/locale/en_US';
 import 'dayjs/locale/en';
 import 'dayjs/locale/ru';
+import { useAppDispatch } from 'modules/_shared/store/hooks';
 
 export const locales = [
   { label: 'English', value: 'en_US' },
@@ -13,7 +13,7 @@ export const locales = [
 ];
 
 export const useLocaleSwitcher = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const { i18n } = useTranslation();
   const changeLanguage = async (lng: string) => {

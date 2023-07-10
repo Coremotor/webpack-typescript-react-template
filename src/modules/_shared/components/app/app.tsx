@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import { App as AntDApp, ConfigProvider } from 'antd';
 import { BrowserRouter } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import RootRoute from 'modules/_shared/router/rootRoute';
 import {
   getDirection,
@@ -15,11 +14,12 @@ import styles from 'modules/_shared/components/app/app.module.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'modules/_shared/i18n/i18n';
 import ErrorBoundary from 'modules/_shared/utils/error-boundary';
+import { useAppSelector } from 'modules/_shared/store/hooks';
 
 const App: React.FC = () => {
-  const isLoading = useSelector(getIsLoading);
-  const locale = useSelector(getLocale);
-  const direction = useSelector(getDirection);
+  const isLoading = useAppSelector(getIsLoading);
+  const locale = useAppSelector(getLocale);
+  const direction = useAppSelector(getDirection);
 
   return (
     <>

@@ -1,14 +1,14 @@
 import { theme } from 'antd';
-import { useSelector } from 'react-redux';
 import { getDirection } from 'modules/_shared/store/global/selectors';
 import { CSSProperties } from 'react';
+import { useAppSelector } from 'modules/_shared/store/hooks';
 
 export const useLayoutStyles = () => {
   const {
     token: { colorBgContainer, colorSplit },
   } = theme.useToken();
 
-  const direction = useSelector(getDirection);
+  const direction = useAppSelector(getDirection);
 
   const sider: CSSProperties =
     direction === 'ltr'

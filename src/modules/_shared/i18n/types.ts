@@ -49,8 +49,21 @@ export type Translation = {
     title: string;
     docsTab: string;
     registryTab: string;
+    actionBarText: string;
+    printButton: string;
+    downloadButton: string;
+    acts: string;
+    reports: string;
+    invoices: string;
+    registries: string;
+    loadMoreButton: string;
+    date: string;
+    acquirer: string;
+    consolidatedRegistries: string;
+    dailyRegisters: string;
   };
 };
+
 export type Translations = {
   en: {
     translation: Translation;

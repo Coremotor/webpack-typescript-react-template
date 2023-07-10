@@ -1,27 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Checkbox, Form, Button } from 'modules/_shared/ui';
-import styles from './accounting-documents-form.module.css';
 import { TAccountingDocumentsForm } from 'modules/document-flow/types';
-
-const formFields = [
-  { name: 'acts', label: 'Акты' },
-  { name: 'reports', label: 'Отчеты' },
-  { name: 'invoices', label: 'Счета фактуры' },
-  { name: 'registries', label: 'Реестры' },
-];
-
-const init = {
-  acts: true,
-  reports: false,
-  invoices: false,
-  registries: false,
-};
+import { useAccountingDocumentsFormFields } from 'modules/document-flow/tabs/accounting-documents/hooks/use-accounting-documents-form-fields';
+import styles from './accounting-documents-form.module.css';
 
 export const AccountingDocumentsForm = () => {
   const [form] = Form.useForm<TAccountingDocumentsForm>();
-  const [submittable, setSubmittable] = useState(false);
+  const { formFields, initialValues } = useAccountingDocumentsFormFields();
 
   const values = Form.useWatch([], form);
+  const [submittable, setSubmittable] = useState(false);
 
   const onFinish = (values: TAccountingDocumentsForm) => {
     console.log('Success:', values);
@@ -40,7 +28,7 @@ export const AccountingDocumentsForm = () => {
       name='print'
       form={form}
       onFinish={onFinish}
-      initialValues={init}
+      initialValues={initialValues}
     >
       {formFields.map((field) => (
         <Form.Item

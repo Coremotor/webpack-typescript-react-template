@@ -1,12 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
 import { getDirection } from 'modules/_shared/store/global/selectors';
 import { setDirection } from 'modules/_shared/store/global/reduser';
+import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 
 export const DirectionSwitcher = () => {
-  const dispatch = useDispatch();
-  const direction = useSelector(getDirection);
+  const dispatch = useAppDispatch();
+  const direction = useAppSelector(getDirection);
   const toggleDirection = () =>
     dispatch(setDirection(direction === 'rtl' ? 'ltr' : 'rtl'));
   return (

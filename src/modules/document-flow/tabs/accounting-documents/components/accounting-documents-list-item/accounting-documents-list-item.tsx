@@ -6,27 +6,34 @@ import CloudIcon from 'assets/icons/cloud.svg';
 import { TAccountingDocument } from 'modules/document-flow/types';
 import { AccountingDocumentsIcon } from 'modules/document-flow/tabs/accounting-documents/components/accounting-documents-icon/accounting-documents-icon';
 import { AccountingDocumentsForm } from 'modules/document-flow/tabs/accounting-documents/components/accounting-documents-form/accounting-documents-form';
+import { useSetUnsetDocs } from 'modules/document-flow/tabs/accounting-documents/hooks/use-set-unset-docs';
+import classNames from 'classnames';
 import styles from './accounting-documents-list-item.module.css';
 
 type TAccountingDocumentsListItemProps = {
-  item: TAccountingDocument;
+  doc: TAccountingDocument;
 };
 
 export const AccountingDocumentsListItem: FC<
   TAccountingDocumentsListItemProps
-> = ({ item }) => {
+> = ({ doc }) => {
   const { columnsWidth } = useColumnsWidth();
+  const { setUnsetDoc, checked } = useSetUnsetDocs(doc);
+
   return (
-    <Row className={styles.row} wrap={false}>
+    <Row
+      className={classNames(styles.row, { [styles.active]: checked })}
+      wrap={false}
+    >
       <Col className={styles.col} flex={columnsWidth.checkbox}>
-        <Checkbox />
+        <Checkbox onChange={setUnsetDoc} checked={checked} />
       </Col>
       <Col className={styles.col} flex={columnsWidth.date}>
-        <Text ellipsis>{item.date}</Text>
+        <Text ellipsis>{doc.date}</Text>
       </Col>
 
       <Col flex={columnsWidth.main}>
-        {item.docs.map((doc) => (
+        {doc.docs.map((doc) => (
           <Row className={styles.innerRow} key={doc.id} wrap={false}>
             <Col className={styles.col} flex={columnsWidth.acquirer}>
               <AccountingDocumentsIcon acquirer={doc.acquirer} />

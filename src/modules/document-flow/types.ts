@@ -14,8 +14,18 @@ export type TAccountingDocument = {
   docs: TDoc[];
 };
 
-export type TAccountingDocumentsState = {
+export type TTransactionRegister = {
+  id: string;
+  date: string;
+  dailyRegisters: string;
+  consolidatedRegistries: string;
+};
+
+export type TDocumentFlowState = {
   accountingDocuments: TAccountingDocument[];
+  selectedAccountingDocuments: TAccountingDocument[];
+  transactionRegisters: TTransactionRegister[];
+  selectedTransactionRegisters: TTransactionRegister[];
 };
 
 export type TAccountingDocumentsForm = {

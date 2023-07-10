@@ -3,3 +3,6 @@ export type TAuthorizationFormFields = {
   password: string;
   repeatPassword: string;
 };
+export type TAuthorizationState = {
+  isAuth: boolean;
+};

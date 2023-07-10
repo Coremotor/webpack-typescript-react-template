@@ -3,12 +3,12 @@ import styles from './email-confirmation-header.module.css';
 import logo from 'assets/images/logo.png';
 import { Text, Title, Space } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 import { getEmailForConfirm } from 'modules/registration/store/selectors';
+import { useAppSelector } from 'modules/_shared/store/hooks';
 
 export const EmailConfirmationHeader = () => {
   const { t } = useTranslation();
-  const email = useSelector(getEmailForConfirm);
+  const email = useAppSelector(getEmailForConfirm);
 
   return (
     <header className={styles.container}>

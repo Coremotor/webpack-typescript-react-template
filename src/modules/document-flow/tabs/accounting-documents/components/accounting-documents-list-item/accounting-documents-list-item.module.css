@@ -1,5 +1,6 @@
 .row {
   width: 100%;
+  padding: 16px;
 }
 .col {
   display: flex;
@@ -18,4 +19,7 @@
 }
 .printIcon:hover {
   cursor: pointer;
+}
+.active {
+  background-color: var(--background-active-item);
 }

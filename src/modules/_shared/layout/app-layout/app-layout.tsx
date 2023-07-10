@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { Navigation } from 'modules/_shared/components';
 import logo from 'assets/images/logo.png';
 import { useLayoutStyles } from 'modules/_shared/layout/app-layout/use-layout-styles';
+import { AppHeader } from 'modules/_shared/components/app-header/app-header';
 
 const { Header, Content, Sider } = Layout;
 
@@ -23,7 +24,9 @@ export const AppLayout = () => {
         <Navigation />
       </Sider>
       <Layout>
-        <Header style={header}>Header</Header>
+        <Header style={header}>
+          <AppHeader />
+        </Header>
         <Content style={content}>
           <Outlet />
         </Content>

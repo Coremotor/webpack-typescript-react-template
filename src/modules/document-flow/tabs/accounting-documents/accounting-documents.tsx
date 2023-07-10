@@ -1,12 +1,15 @@
 import React from 'react';
 import { RangePicker, Space } from 'modules/_shared/ui';
-import styles from './accounting-documents.module.css';
 import {
   AccountingDocumentsActionBar,
   AccountingDocumentsList,
 } from 'modules/document-flow/tabs/accounting-documents/components';
+import { useAppSelector } from 'modules/_shared/store/hooks';
+import { getSelectedAccountingDocuments } from 'modules/document-flow/store/selectors';
+import styles from './accounting-documents.module.css';
 
 export const AccountingDocuments = () => {
+  const selectedDocs = useAppSelector(getSelectedAccountingDocuments);
   return (
     <>
       <Space className={styles.container} direction='vertical'>
@@ -18,7 +21,7 @@ export const AccountingDocuments = () => {
 
         <AccountingDocumentsList />
       </Space>
-      <AccountingDocumentsActionBar />
+      {selectedDocs.length > 0 && <AccountingDocumentsActionBar />}
     </>
   );
 };

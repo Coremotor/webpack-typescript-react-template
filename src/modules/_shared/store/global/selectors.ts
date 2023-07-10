@@ -1,6 +1,6 @@
-import { TState } from 'modules/_shared/store/store';
+import { RootState } from 'modules/_shared/store/store';
 
-export const getIsLoading = (state: TState) => state.global.isLoading;
-export const getLocale = (state: TState) => state.global.locale;
-export const getDirection = (state: TState) => state.global.direction;
-export const getError = (state: TState) => state.global.error;
+export const getIsLoading = (state: RootState) => state.global.isLoading;
+export const getLocale = (state: RootState) => state.global.locale;
+export const getDirection = (state: RootState) => state.global.direction;
+export const getError = (state: RootState) => state.global.error;
