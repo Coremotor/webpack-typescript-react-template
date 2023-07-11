@@ -1,5 +1,7 @@
 FROM node:18.16.0 AS builder
 
+RUN npm install webpack -g
+
 WORKDIR /usr/src/app
 
 COPY package*.json .

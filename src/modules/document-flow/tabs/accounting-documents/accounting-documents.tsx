@@ -8,7 +8,7 @@ import { useAppSelector } from 'modules/_shared/store/hooks';
 import { getSelectedAccountingDocuments } from 'modules/document-flow/store/selectors';
 import styles from './accounting-documents.module.css';
 
-export const AccountingDocuments = () => {
+const AccountingDocuments = () => {
   const selectedDocs = useAppSelector(getSelectedAccountingDocuments);
   return (
     <>
@@ -25,3 +25,5 @@ export const AccountingDocuments = () => {
     </>
   );
 };
+
+export default AccountingDocuments;

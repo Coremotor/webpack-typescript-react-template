@@ -8,7 +8,7 @@ import {
   TransactionRegisterList,
 } from 'modules/document-flow/tabs/transaction-register/components';
 
-export const TransactionRegister = () => {
+const TransactionRegister = () => {
   return (
     <>
       <Space className={styles.container} direction='vertical' size='large'>
@@ -28,3 +28,5 @@ export const TransactionRegister = () => {
     </>
   );
 };
+
+export default TransactionRegister;
