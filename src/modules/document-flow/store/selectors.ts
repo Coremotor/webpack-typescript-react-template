@@ -8,3 +8,7 @@ export const getTransactionRegisters = (state: RootState) =>
   state.documentFlow.transactionRegisters;
 export const getSelectedTransactionRegisters = (state: RootState) =>
   state.documentFlow.selectedTransactionRegisters;
+export const getActiveTransactionRegister = (state: RootState) =>
+  state.documentFlow.activeTransactionRegister;
+export const getDailyRegisters = (state: RootState) =>
+  state.documentFlow.dailyRegisters;

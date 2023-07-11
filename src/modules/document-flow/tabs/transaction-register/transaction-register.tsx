@@ -5,10 +5,15 @@ import EmailIcon from 'assets/icons/email.svg';
 import styles from './transaction-register.module.css';
 import {
   TransactionRegisterActionBar,
+  TransactionRegisterDailyRegisters,
   TransactionRegisterList,
 } from 'modules/document-flow/tabs/transaction-register/components';
+import { useAppSelector } from 'modules/_shared/store/hooks';
+import { getSelectedTransactionRegisters } from 'modules/document-flow/store/selectors';
 
 const TransactionRegister = () => {
+  const selectedRegisters = useAppSelector(getSelectedTransactionRegisters);
+
   return (
     <>
       <Space className={styles.container} direction='vertical' size='large'>
@@ -24,7 +29,8 @@ const TransactionRegister = () => {
         </Space>
         <TransactionRegisterList />
       </Space>
-      <TransactionRegisterActionBar />
+      {selectedRegisters.length > 0 && <TransactionRegisterActionBar />}
+      <TransactionRegisterDailyRegisters />
     </>
   );
 };

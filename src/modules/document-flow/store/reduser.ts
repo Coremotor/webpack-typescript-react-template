@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import {
   TAccountingDocument,
+  TDailyRegister,
   TDocumentFlowState,
   TTransactionRegister,
 } from 'modules/document-flow/types';
@@ -11,6 +12,8 @@ const initialState: TDocumentFlowState = {
   selectedAccountingDocuments: [],
   transactionRegisters: [],
   selectedTransactionRegisters: [],
+  activeTransactionRegister: null,
+  dailyRegisters: [],
 };
 
 const documentFlowSlice = createSlice({
@@ -41,6 +44,18 @@ const documentFlowSlice = createSlice({
     ) {
       state.selectedTransactionRegisters = action.payload;
     },
+    setActiveTransactionRegister(
+      state: TDocumentFlowState,
+      action: PayloadAction<TTransactionRegister | null>,
+    ) {
+      state.activeTransactionRegister = action.payload;
+    },
+    setDailyRegisters(
+      state: TDocumentFlowState,
+      action: PayloadAction<TDailyRegister[]>,
+    ) {
+      state.dailyRegisters = action.payload;
+    },
   },
 });
 
@@ -49,6 +64,8 @@ export const {
   setSelectedAccountingDocuments,
   setTransactionRegisters,
   setSelectedTransactionRegisters,
+  setActiveTransactionRegister,
+  setDailyRegisters,
 } = documentFlowSlice.actions;
 
 export default documentFlowSlice.reducer;

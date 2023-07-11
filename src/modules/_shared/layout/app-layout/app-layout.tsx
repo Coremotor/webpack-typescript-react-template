@@ -15,7 +15,7 @@ export const AppLayout = () => {
     <Layout style={layout}>
       <Sider
         theme='light'
-        width={220}
+        width={250}
         style={sider}
         breakpoint='lg'
         collapsedWidth='0'

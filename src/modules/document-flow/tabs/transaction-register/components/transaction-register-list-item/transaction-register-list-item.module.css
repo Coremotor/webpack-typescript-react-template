@@ -1,5 +1,8 @@
 .row {
   width: 100%;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 8px;
+  cursor: pointer;
   padding: 16px;
 }
 .col {
@@ -7,10 +10,9 @@
   align-items: center;
   padding: 0 5px;
 }
-.text {
-  cursor: pointer;
-  text-decoration: underline;
+.selected {
+  background-color: var(--background-active-item);
 }
-.text:hover {
-  color: var(--color-primary);
+.active {
+  border-color: var(--color-primary);
 }

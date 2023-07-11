@@ -3,7 +3,7 @@ import { Select } from 'antd';
 import {
   locales,
   useLocaleSwitcher,
-} from 'modules/_shared/components/localeSwitcher/useLocaleSwitcher';
+} from 'modules/_shared/components/locale-switcher/use-locale-switcher';
 
 export const LocaleSwitcher = () => {
   const { changeLocale } = useLocaleSwitcher();

@@ -21,11 +21,19 @@ export type TTransactionRegister = {
   consolidatedRegistries: string;
 };
 
+export type TDailyRegister = {
+  id: string;
+  date: string;
+  name: string;
+};
+
 export type TDocumentFlowState = {
   accountingDocuments: TAccountingDocument[];
   selectedAccountingDocuments: TAccountingDocument[];
   transactionRegisters: TTransactionRegister[];
   selectedTransactionRegisters: TTransactionRegister[];
+  activeTransactionRegister: TTransactionRegister | null;
+  dailyRegisters: TDailyRegister[];
 };
 
 export type TAccountingDocumentsForm = {

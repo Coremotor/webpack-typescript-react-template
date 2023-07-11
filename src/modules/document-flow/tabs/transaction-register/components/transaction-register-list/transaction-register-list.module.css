@@ -1,9 +1,12 @@
 .item {
-  border: 1px solid var(--layout-border-color);
-  border-block-end: 1px solid var(--layout-border-color) !important;
+  border: none;
   border-radius: 8px;
-  margin-bottom: 10px;
+  border-block-end: none !important;
   padding: 0 !important;
+  margin-bottom: 10px;
+}
+.item:last-child {
+  border-block-end: none !important;
 }
 .list {
   display: flex;
