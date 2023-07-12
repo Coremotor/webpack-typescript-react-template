@@ -2,7 +2,7 @@ import React from 'react';
 import { getError } from 'modules/_shared/store/global/selectors';
 import { setError } from 'modules/_shared/store/global/reduser';
 import { createPortal } from 'react-dom';
-import { Card } from 'antd';
+import { Card } from 'modules/_shared/ui';
 import styles from 'modules/_shared/components/notification/notification.module.css';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 

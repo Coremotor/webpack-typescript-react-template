@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Result } from 'antd';
+import { Button, Result } from 'modules/_shared/ui';
 import { useNavigate } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import styles from 'modules/no-found/no-found.module.css';

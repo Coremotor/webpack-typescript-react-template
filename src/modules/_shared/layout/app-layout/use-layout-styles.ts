@@ -1,4 +1,4 @@
-import { theme } from 'antd';
+import { theme } from 'modules/_shared/ui';
 import { getDirection } from 'modules/_shared/store/global/selectors';
 import { CSSProperties } from 'react';
 import { useAppSelector } from 'modules/_shared/store/hooks';

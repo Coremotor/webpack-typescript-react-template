@@ -1,5 +1,5 @@
 import React from 'react';
-import { App as AntDApp, ConfigProvider } from 'antd';
+import { App as AntDApp, ConfigProvider } from 'modules/_shared/ui';
 import { BrowserRouter } from 'react-router-dom';
 import RootRoute from 'modules/_shared/router/rootRoute';
 import {

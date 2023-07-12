@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import { TPaymentMethod } from 'modules/payment-methods/types';
-import { Row, Col, Switch, Text } from 'modules/_shared/ui';
+import { Row, Col, Switch, Text, Space } from 'modules/_shared/ui';
 import { PaymentMethodsIcon } from 'modules/payment-methods/components/payment-methods-icon/payment-methods-icon';
-import { Space } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { formatCurrency } from 'modules/_shared/i18n/format-currency';
 import styles from './payment-methods-list-item.module.css';

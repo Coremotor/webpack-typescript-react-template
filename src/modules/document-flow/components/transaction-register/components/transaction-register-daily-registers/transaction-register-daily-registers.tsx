@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { Drawer, Button, Text } from 'modules/_shared/ui';
+import { Drawer, Button, Text, Row, Col, Space } from 'modules/_shared/ui';
 import CloudIcon from 'assets/icons/cloud.svg';
-import { Row, Col, Space } from 'antd';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 import { getDailyRegisters } from 'modules/document-flow/store/selectors';
 import { setDailyRegisters } from 'modules/document-flow/store/reduser';

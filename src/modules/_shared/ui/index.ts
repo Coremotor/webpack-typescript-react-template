@@ -19,8 +19,14 @@ export {
   Divider,
   Modal,
   Spin,
+  Menu,
+  Result,
+  App,
+  ConfigProvider,
+  Layout,
+  theme,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;
-export const { Footer } = Layout;
+export const { Footer, Header, Content, Sider } = Layout;
 export const { RangePicker } = DatePicker;
