@@ -17,6 +17,7 @@ export {
   Popover,
   Drawer,
   Divider,
+  Modal,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;

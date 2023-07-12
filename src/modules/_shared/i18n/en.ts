@@ -55,6 +55,9 @@ export const en: { translation: Translation } = {
       actionBarText: 'Selected',
       printButton: 'Print',
       downloadButton: 'Download',
+      saveButton: 'Save',
+      cancelButton: 'Cancel',
+      sendEmailButton: 'Schedule a shipment',
       acts: 'Acts',
       reports: 'Reports',
       invoices: 'Invoices',
@@ -64,6 +67,11 @@ export const en: { translation: Translation } = {
       acquirer: 'Acquirer',
       consolidatedRegistries: 'Consolidated registries',
       dailyRegisters: 'Daily registers',
+      modalTitle: 'Schedule an email',
+      dailyShedulerDescription: 'Shipping period: daily',
+      consolidateShedulerDescription:
+        'Shipping period: within 7 working days of the next month',
+      selectPlaceholder: 'Enter username',
     },
   },
 };

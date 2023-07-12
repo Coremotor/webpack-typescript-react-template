@@ -6,7 +6,7 @@ import {
   AccountingDocuments,
 } from 'modules/document-flow/tabs';
 
-export const useTabs = () => {
+export const useDocumentFlowTabs = () => {
   const { t } = useTranslation();
   const items: TabsProps['items'] = [
     {

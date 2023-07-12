@@ -55,6 +55,9 @@ export const ru: { translation: Translation } = {
       actionBarText: 'Выбрано',
       printButton: 'Напечатать',
       downloadButton: 'Скачать',
+      saveButton: 'Сохранить',
+      cancelButton: 'Отменить',
+      sendEmailButton: 'Запланировать отправку',
       acts: 'Акты',
       reports: 'Отчеты',
       invoices: 'Счета фактуры',
@@ -64,6 +67,11 @@ export const ru: { translation: Translation } = {
       acquirer: 'Эквайер',
       consolidatedRegistries: 'Сводные реестры',
       dailyRegisters: 'Ежедневные реестры',
+      modalTitle: 'Запланировать отправку на почту',
+      dailyShedulerDescription: 'Период отправки: ежедневно',
+      consolidateShedulerDescription:
+        'Период отправки: в течение 7-ми рабочих дней следующего месяца',
+      selectPlaceholder: 'Введите имя пользователя',
     },
   },
 };

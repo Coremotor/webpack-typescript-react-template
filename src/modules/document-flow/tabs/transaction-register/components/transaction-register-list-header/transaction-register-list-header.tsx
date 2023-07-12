@@ -3,7 +3,7 @@ import { Checkbox, Col, Row, Text } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { useColumnsWidth } from 'modules/document-flow/tabs/transaction-register/hooks/use-columns-width';
 import styles from './transaction-register-list-header.module.css';
-import { useSetUnsetAllRegisters } from 'modules/document-flow/tabs/accounting-documents/hooks/use-set-unset-all-registers';
+import { useSetUnsetAllRegisters } from 'modules/document-flow/tabs/transaction-register/hooks/use-set-unset-all-registers';
 
 export const TransactionRegisterListHeader = () => {
   const { t } = useTranslation();

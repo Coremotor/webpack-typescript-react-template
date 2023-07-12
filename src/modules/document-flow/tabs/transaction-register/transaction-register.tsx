@@ -1,8 +1,5 @@
 import React from 'react';
 import { RangePicker, Space } from 'modules/_shared/ui';
-import { Button } from 'antd';
-import EmailIcon from 'assets/icons/email.svg';
-import styles from './transaction-register.module.css';
 import {
   TransactionRegisterActionBar,
   TransactionRegisterDailyRegisters,
@@ -10,6 +7,8 @@ import {
 } from 'modules/document-flow/tabs/transaction-register/components';
 import { useAppSelector } from 'modules/_shared/store/hooks';
 import { getSelectedTransactionRegisters } from 'modules/document-flow/store/selectors';
+import { TransactionRegisterSchedulerSend } from 'modules/document-flow/components';
+import styles from './transaction-register.module.css';
 
 const TransactionRegister = () => {
   const selectedRegisters = useAppSelector(getSelectedTransactionRegisters);
@@ -23,9 +22,7 @@ const TransactionRegister = () => {
             picker='month'
             format='MMMM YYYY'
           />
-          <Button className={styles.button} icon={<EmailIcon />}>
-            Запланировать отправку
-          </Button>
+          <TransactionRegisterSchedulerSend />
         </Space>
         <TransactionRegisterList />
       </Space>

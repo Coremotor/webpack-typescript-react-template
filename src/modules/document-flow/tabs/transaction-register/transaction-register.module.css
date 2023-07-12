@@ -9,7 +9,3 @@
   width: 320px;
   border: 1px solid var(--layout-border-color);
 }
-.button {
-  display: flex;
-  align-items: center;
-}

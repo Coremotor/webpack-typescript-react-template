@@ -52,6 +52,9 @@ export type Translation = {
     actionBarText: string;
     printButton: string;
     downloadButton: string;
+    saveButton: string;
+    cancelButton: string;
+    sendEmailButton: string;
     acts: string;
     reports: string;
     invoices: string;
@@ -61,6 +64,10 @@ export type Translation = {
     acquirer: string;
     consolidatedRegistries: string;
     dailyRegisters: string;
+    modalTitle: string;
+    dailyShedulerDescription: string;
+    consolidateShedulerDescription: string;
+    selectPlaceholder: string;
   };
 };
 

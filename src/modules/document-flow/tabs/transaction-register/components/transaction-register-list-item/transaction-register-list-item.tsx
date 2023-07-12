@@ -3,7 +3,7 @@ import { TTransactionRegister } from 'modules/document-flow/types';
 import { Checkbox, Col, Row, Text } from 'modules/_shared/ui';
 import CloudIcon from 'assets/icons/cloud.svg';
 import { useColumnsWidth } from 'modules/document-flow/tabs/transaction-register/hooks/use-columns-width';
-import { useSetUnsetRegisters } from 'modules/document-flow/tabs/accounting-documents/hooks/use-set-unset-registres';
+import { useSetUnsetRegisters } from 'modules/document-flow/tabs/transaction-register/hooks/use-set-unset-registres';
 import classNames from 'classnames';
 import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import styles from './transaction-register-list-item.module.css';
