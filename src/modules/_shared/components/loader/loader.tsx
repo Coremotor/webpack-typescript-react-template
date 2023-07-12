@@ -1,11 +1,7 @@
 import React from 'react';
-import styles from 'modules/_shared/components/loader/loader.module.css';
-import { Spin } from 'antd';
+import 'modules/_shared/components/loader/loader.css';
+import { Spin } from 'modules/_shared/ui';
 
 export const Loader = () => {
-  return (
-    <div className={styles.loader}>
-      <Spin size='large' />
-    </div>
-  );
+  return <Spin className='outlet-loader' size='large' />;
 };

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   TransactionRegister,
   AccountingDocuments,
-} from 'modules/document-flow/tabs';
+} from 'modules/document-flow/components';
 
 export const useDocumentFlowTabs = () => {
   const { t } = useTranslation();

@@ -1,13 +1,12 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { App as AntDApp, ConfigProvider } from 'antd';
 import { BrowserRouter } from 'react-router-dom';
 import RootRoute from 'modules/_shared/router/rootRoute';
 import {
   getDirection,
-  getIsLoading,
   getLocale,
 } from 'modules/_shared/store/global/selectors';
-import { Notification, Loader } from 'modules/_shared/components/index';
+import { Notification } from 'modules/_shared/components/index';
 import { colors } from 'assets/styles/colors';
 import styles from 'modules/_shared/components/app/app.module.css';
 
@@ -17,35 +16,31 @@ import ErrorBoundary from 'modules/_shared/utils/error-boundary';
 import { useAppSelector } from 'modules/_shared/store/hooks';
 
 const App: React.FC = () => {
-  const isLoading = useAppSelector(getIsLoading);
   const locale = useAppSelector(getLocale);
   const direction = useAppSelector(getDirection);
 
   return (
     <>
-      {isLoading && <Loader />}
-      <Suspense fallback={<Loader />}>
-        <ErrorBoundary>
-          <ConfigProvider
-            locale={locale}
-            direction={direction}
-            theme={{
-              token: {
-                colorPrimary: colors.colorPrimary,
-                fontFamily: 'Gilroy',
-              },
-            }}
-          >
-            <I18nextProvider i18n={i18n} defaultNS={'translation'}>
-              <AntDApp className={styles.app}>
-                <BrowserRouter>
-                  <RootRoute />
-                </BrowserRouter>
-              </AntDApp>
-            </I18nextProvider>
-          </ConfigProvider>
-        </ErrorBoundary>
-      </Suspense>
+      <ErrorBoundary>
+        <ConfigProvider
+          locale={locale}
+          direction={direction}
+          theme={{
+            token: {
+              colorPrimary: colors.colorPrimary,
+              fontFamily: 'Gilroy',
+            },
+          }}
+        >
+          <I18nextProvider i18n={i18n} defaultNS={'translation'}>
+            <AntDApp className={styles.app}>
+              <BrowserRouter>
+                <RootRoute />
+              </BrowserRouter>
+            </AntDApp>
+          </I18nextProvider>
+        </ConfigProvider>
+      </ErrorBoundary>
       <Notification />
     </>
   );

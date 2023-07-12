@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useNavItems } from 'modules/_shared/components/navigation/useNavItems';
+import { useNavItems } from 'modules/_shared/components/navigation/use-nav-items';
 import styles from 'modules/_shared/components/navigation/navigation.module.css';
 
 export const Navigation = () => {

@@ -18,6 +18,7 @@ export {
   Drawer,
   Divider,
   Modal,
+  Spin,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;

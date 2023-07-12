@@ -55,6 +55,7 @@ export type Translation = {
     saveButton: string;
     cancelButton: string;
     sendEmailButton: string;
+    archiveRegistersButton: string;
     acts: string;
     reports: string;
     invoices: string;

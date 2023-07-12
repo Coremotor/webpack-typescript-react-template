@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const useShedulerSendModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);

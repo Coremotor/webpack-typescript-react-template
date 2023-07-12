@@ -58,6 +58,7 @@ export const ru: { translation: Translation } = {
       saveButton: 'Сохранить',
       cancelButton: 'Отменить',
       sendEmailButton: 'Запланировать отправку',
+      archiveRegistersButton: 'Архив ежедневных реестров',
       acts: 'Акты',
       reports: 'Отчеты',
       invoices: 'Счета фактуры',

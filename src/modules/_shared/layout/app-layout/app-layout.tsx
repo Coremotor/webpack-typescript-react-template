@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
-import { Navigation } from 'modules/_shared/components';
+import { Loader, Navigation } from 'modules/_shared/components';
 import logo from 'assets/images/logo.png';
 import { useLayoutStyles } from 'modules/_shared/layout/app-layout/use-layout-styles';
 import { AppHeader } from 'modules/_shared/components/app-header/app-header';
@@ -28,7 +28,9 @@ export const AppLayout = () => {
           <AppHeader />
         </Header>
         <Content style={content}>
-          <Outlet />
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </Content>
       </Layout>
     </Layout>

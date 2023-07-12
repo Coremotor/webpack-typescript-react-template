@@ -11,7 +11,7 @@ export const DocumentFlow = () => {
     <div className={styles.container}>
       <Title level={3}>{t('documentFlow.title')}</Title>
       <Tabs
-        defaultActiveKey={items[1].key}
+        defaultActiveKey={items[0].key}
         items={items}
         destroyInactiveTabPane
       />

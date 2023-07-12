@@ -58,6 +58,7 @@ export const en: { translation: Translation } = {
       saveButton: 'Save',
       cancelButton: 'Cancel',
       sendEmailButton: 'Schedule a shipment',
+      archiveRegistersButton: 'Archive of daily registers',
       acts: 'Acts',
       reports: 'Reports',
       invoices: 'Invoices',
