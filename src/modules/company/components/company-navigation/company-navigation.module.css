@@ -1,0 +1,12 @@
+.openNavButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navItem {
+  cursor: pointer;
+  padding: 4px 0;
+}
+.icon {
+  margin-right: 10px;
+}

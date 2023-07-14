@@ -74,5 +74,12 @@ export const en: { translation: Translation } = {
         'Shipping period: within 7 working days of the next month',
       selectPlaceholder: 'Enter username',
     },
+    company: {
+      info: 'Information about the company',
+      employees: 'Employees',
+      management: 'Management',
+      founders: 'Founders',
+      title: 'My company',
+    },
   },
 };

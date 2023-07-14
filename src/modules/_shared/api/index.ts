@@ -1,11 +1,20 @@
 import axios, { AxiosError } from 'axios';
 import { store } from 'modules/_shared/store/store';
 import { setIsLoading, setError } from 'modules/_shared/store/global/reduser';
+import { notification } from 'antd';
 
 export const request = axios.create({
   baseURL: 'baseUrl',
   responseType: 'json',
 });
+
+const showErrorMsg = (description: string): void => {
+  notification.open({
+    type: 'error',
+    message: 'Response',
+    description,
+  });
+};
 
 request.interceptors.request.use(
   (config) => {
@@ -31,7 +40,10 @@ request.interceptors.response.use(
   },
   async (error: AxiosError) => {
     store.dispatch(setIsLoading(false));
-    if (error) store.dispatch(setError('error from api'));
+    if (error) {
+      store.dispatch(setError('error from api'));
+      showErrorMsg('error from api');
+    }
 
     // if (error?.response?.status === 401) {
     //   localStorage.removeItem('LOCALSTORAGE_TOKEN_KEY');

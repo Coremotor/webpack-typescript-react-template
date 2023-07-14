@@ -4,8 +4,8 @@ import { getPaymentMethods } from 'modules/payment-methods/store/selectors';
 import { setPaymentMethods } from 'modules/payment-methods/store/reduser';
 import { paymentMethodsData } from 'modules/_shared/mock-data/paymet-methods-data';
 import { PaymentMethodsListItem } from 'modules/payment-methods/components/payment-methods-list-item/payment-methods-list-item';
-import styles from './payment-methods-list.module.css';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import styles from './payment-methods-list.module.css';
 
 export const PaymentMethodsList = () => {
   const dispatch = useAppDispatch();

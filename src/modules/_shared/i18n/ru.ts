@@ -74,5 +74,12 @@ export const ru: { translation: Translation } = {
         'Период отправки: в течение 7-ми рабочих дней следующего месяца',
       selectPlaceholder: 'Введите имя пользователя',
     },
+    company: {
+      info: 'Информация о компании',
+      employees: 'Сотрудники',
+      management: 'Руководство',
+      founders: 'Учредители',
+      title: 'Моя компания',
+    },
   },
 };

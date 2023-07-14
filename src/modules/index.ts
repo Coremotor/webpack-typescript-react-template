@@ -26,3 +26,5 @@ export const AccommodationFacilities = lazy(
   () => import('modules/accommodation-facilities/accommodation-facilities'),
 );
 export const NoFound = lazy(() => import('modules/no-found/no-found'));
+
+export { Company } from 'modules/company/company';

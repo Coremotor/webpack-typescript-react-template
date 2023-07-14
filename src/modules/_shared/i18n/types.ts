@@ -70,6 +70,13 @@ export type Translation = {
     consolidateShedulerDescription: string;
     selectPlaceholder: string;
   };
+  company: {
+    info: string;
+    employees: string;
+    management: string;
+    founders: string;
+    title: string;
+  };
 };
 
 export type Translations = {

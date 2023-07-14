@@ -1,19 +1,22 @@
 import React from 'react';
 import { setIsAuth } from 'modules/authorization/store/reduser';
-import styles from 'modules/_shared/components/app-header/app-header.module.css';
 import { useAppDispatch } from 'modules/_shared/store/hooks';
-import { LocaleSwitcher } from 'modules/_shared/components/locale-switcher/locale-switcher';
+import { LocaleSwitcher } from 'modules/_shared/components';
+import { Space, Button } from 'modules/_shared/ui';
+import { CompanyNavigation } from 'modules/company/components';
+import styles from './app-header.module.css';
 
 export const AppHeader = () => {
   const dispatch = useAppDispatch();
   const logout = () => dispatch(setIsAuth(false));
   return (
-    <header className={styles.header}>
+    <Space className={styles.header}>
       <LocaleSwitcher />
+      <CompanyNavigation />
 
-      <div className={styles.logout} onClick={logout}>
+      <Button className={styles.logout} onClick={logout}>
         Выйти
-      </div>
-    </header>
+      </Button>
+    </Space>
   );
 };

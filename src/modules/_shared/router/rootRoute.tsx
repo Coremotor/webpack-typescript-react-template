@@ -8,6 +8,7 @@ import {
   AccommodationFacilities,
   AccountsContracts,
   Authorization,
+  Company,
   DocumentFlow,
   EmailConfirmation,
   MainScreen,
@@ -16,6 +17,7 @@ import {
   PaymentTransactions,
   Registration,
 } from 'modules';
+import { CompanyEdit } from 'modules/company/components/company-info/components';
 
 const RootRoute: FC = () => {
   return (
@@ -33,6 +35,22 @@ const RootRoute: FC = () => {
           element={
             <Protected>
               <MainScreen />
+            </Protected>
+          }
+        />
+        <Route
+          path={RoutesEnum.company}
+          element={
+            <Protected>
+              <Company />
+            </Protected>
+          }
+        />
+        <Route
+          path={RoutesEnum.editCompany}
+          element={
+            <Protected>
+              <CompanyEdit />
             </Protected>
           }
         />

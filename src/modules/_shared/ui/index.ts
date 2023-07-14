@@ -25,6 +25,7 @@ export {
   ConfigProvider,
   Layout,
   theme,
+  Breadcrumb,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;

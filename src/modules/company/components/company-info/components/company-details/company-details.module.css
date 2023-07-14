@@ -1,0 +1,14 @@
+.card {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.logoWrapper {
+  width: 64px;
+  height: 64px;
+}
+.title {
+  margin: 0 !important;
+}

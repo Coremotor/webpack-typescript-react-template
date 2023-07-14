@@ -8,5 +8,7 @@ export enum RoutesEnum {
   authorization = '/authorization',
   registration = '/registration',
   emailConfirmation = '/email-confirmation',
+  company = '/company',
+  editCompany = '/edit-company',
   noMatch = '*',
 }
