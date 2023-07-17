@@ -22,8 +22,8 @@ export const PaymentMethodsListItem: FC<TPaymentMethodsListItemProps> = ({
       </Col>
       <Col className={styles.col} flex='auto'>
         <Space.Compact direction='vertical'>
-          <Text strong>{item.title}</Text>
-          <Text strong type='secondary'>
+          <Text>{item.title}</Text>
+          <Text type='secondary'>
             {t('paymentMethods.paymentMethodDescription')}:
             {item.limit.min && ` от ${formatCurrency(item.limit.min)}`}
             {item.limit.max && ` до ${formatCurrency(item.limit.max)}`}

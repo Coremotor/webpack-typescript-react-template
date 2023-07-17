@@ -1,3 +1,3 @@
-export { ConsolidatedRegistries } from 'modules/document-flow/components/transaction-register-scheduler-send/components/consolidated-registries/consolidated-registries';
-export { DailyRegisters } from 'modules/document-flow/components/transaction-register-scheduler-send/components/daily-registers/daily-registers';
-export { SendRecipients } from 'modules/document-flow/components/transaction-register-scheduler-send/components/send-recipients/send-recipients';
+export { ConsolidatedRegistries } from 'modules/document-flow/transaction-register-scheduler-send/components/consolidated-registries/consolidated-registries';
+export { DailyRegisters } from 'modules/document-flow/transaction-register-scheduler-send/components/daily-registers/daily-registers';
+export { SendRecipients } from 'modules/document-flow/transaction-register-scheduler-send/components/send-recipients/send-recipients';

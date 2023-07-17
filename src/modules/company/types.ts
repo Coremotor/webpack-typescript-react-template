@@ -46,3 +46,12 @@ export enum ActiveNavTabKeyEnum {
   three = '3',
   four = '4',
 }
+
+export type TEmployeeFormFields = {
+  fullName: string;
+  position: string;
+  email: string;
+  phone: string;
+  access: string;
+  available: string;
+};

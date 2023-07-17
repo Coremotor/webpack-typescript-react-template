@@ -8,7 +8,7 @@ import { App } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useTranslation } from 'react-i18next';
-import styles from 'modules/company/components/company-edit/company-edit.module.css';
+import styles from './company-edit.module.css';
 
 type TFormFields = {
   mailingAddress: string;

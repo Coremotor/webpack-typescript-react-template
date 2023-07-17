@@ -9,8 +9,8 @@ import {
   Col,
 } from 'modules/_shared/ui';
 import Logo from 'assets/icons/organization-big.svg';
-import styles from './company-details.module.css';
 import { TCompany } from 'modules/company/types';
+import styles from './company-details.module.css';
 
 type TCompanyDetailsProps = {
   company: TCompany | null;

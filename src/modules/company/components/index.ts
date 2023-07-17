@@ -4,4 +4,4 @@ export { CompanyFounders } from 'modules/company/components/company-founders/com
 export { CompanyInfo } from 'modules/company/components/company-info/company-info';
 export { CompanyManagement } from 'modules/company/components/company-management/company-management';
 export { CompanyEdit } from 'modules/company/components/company-edit/company-edit';
-export { CompanyAddEmployee } from 'modules/company/components/company-add-employee/company-add-employee';
+export { CompanyEmployee } from 'modules/company/components/company-employee/company-employee';

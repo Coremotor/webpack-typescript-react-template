@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 import { getEmployees } from 'modules/company/store/selectors';
 import { setEmployees } from 'modules/company/store/reduser';
 import { employeesData } from 'modules/_shared/mock-data/company-data';
-import styles from 'modules/document-flow/accounting-documents/components/accounting-documents-list/accounting-documents-list.module.css';
+import styles from './company-employees-list.module.css';
 
 export const CompanyEmployeesList = () => {
   const dispatch = useAppDispatch();

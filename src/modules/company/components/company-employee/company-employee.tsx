@@ -10,21 +10,22 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useTranslation } from 'react-i18next';
-import styles from './company-add-employee.module.css';
 import {
   accessLevelOptions,
   availableObjectOptions,
 } from 'modules/_shared/mock-data/company-data';
+import { TEmployeeFormFields } from 'modules/company/types';
+import styles from 'modules/company/components/company-employee/company-employee.module.css';
 
 const filter = (input: string, option: { value: string; label: string }) =>
   ((option?.label as string) ?? '').toLowerCase().includes(input.toLowerCase());
 
-export const CompanyAddEmployee = () => {
+export const CompanyEmployee = () => {
   const { t } = useTranslation();
-  const [form] = Form.useForm();
+  const [form] = Form.useForm<TEmployeeFormFields>();
   const navigate = useNavigate();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: TEmployeeFormFields) => {
     console.log(values);
     navigate(RoutesEnum.company);
   };
@@ -56,7 +57,7 @@ export const CompanyAddEmployee = () => {
       >
         <Form.Item
           label={t('companyEmployees.fullName')}
-          name='fullname'
+          name='fullName'
           rules={[{ required: true }]}
         >
           <Input
