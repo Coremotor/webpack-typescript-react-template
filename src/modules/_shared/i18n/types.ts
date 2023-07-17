@@ -76,6 +76,29 @@ export type Translation = {
     management: string;
     founders: string;
     title: string;
+    contacts: string;
+    saveButton: string;
+    myCompany: string;
+    mailingAddress: string;
+    phone: string;
+    editContacts: string;
+  };
+  companyEmployees: {
+    addEmployeeButton: string;
+    addingEmployee: string;
+    employees: string;
+    fullName: string;
+    position: string;
+    phone: string;
+    access: string;
+    available: string;
+    status: string;
+    fullNamePlaceholder: string;
+    positionPlaceholder: string;
+    emailPlaceholder: string;
+    phonePlaceholder: string;
+    accessPlaceholder: string;
+    availablePlaceholder: string;
   };
 };
 

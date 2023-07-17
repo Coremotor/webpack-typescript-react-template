@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { TCompany, TCompanyState } from 'modules/company/types';
+import type { TCompany, TCompanyState, TEmployee } from 'modules/company/types';
 import { ActiveNavTabKeyEnum } from 'modules/company/types';
 
 const initialState: TCompanyState = {
-  activeTabKey: ActiveNavTabKeyEnum.one,
+  activeTabKey: ActiveNavTabKeyEnum.two,
   company: null,
+  employee: null,
+  employees: [],
 };
 
 const companySlice = createSlice({
@@ -18,9 +20,16 @@ const companySlice = createSlice({
     setCompany(state: TCompanyState, action: PayloadAction<TCompany | null>) {
       state.company = action.payload;
     },
+    setEmployee(state: TCompanyState, action: PayloadAction<TEmployee | null>) {
+      state.employee = action.payload;
+    },
+    setEmployees(state: TCompanyState, action: PayloadAction<TEmployee[]>) {
+      state.employees = action.payload;
+    },
   },
 });
 
-export const { setActiveTabKey, setCompany } = companySlice.actions;
+export const { setActiveTabKey, setCompany, setEmployee, setEmployees } =
+  companySlice.actions;
 
 export default companySlice.reducer;

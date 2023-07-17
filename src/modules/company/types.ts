@@ -21,9 +21,23 @@ export type TCompany = {
   contacts: TContacts;
 };
 
+export type TEmployee = {
+  id: string;
+  fullName: string;
+  description: string;
+  email: string;
+  status: {
+    title: string;
+    value: string;
+  };
+  accessLevel: string;
+};
+
 export type TCompanyState = {
   activeTabKey: string;
   company: TCompany | null;
+  employee: TEmployee | null;
+  employees: TEmployee[];
 };
 
 export enum ActiveNavTabKeyEnum {

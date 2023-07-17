@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+export const NoFound = lazy(() => import('modules/no-found/no-found'));
 
 export const Registration = lazy(
   () => import('modules/registration/registration'),
@@ -25,6 +26,4 @@ export const PaymentTransactions = lazy(
 export const AccommodationFacilities = lazy(
   () => import('modules/accommodation-facilities/accommodation-facilities'),
 );
-export const NoFound = lazy(() => import('modules/no-found/no-found'));
-
-export { Company } from 'modules/company/company';
+export const Company = lazy(() => import('modules/company/company'));

@@ -1,0 +1,17 @@
+.container {
+  padding: 32px var(--content-padding);
+}
+.form {
+  width: 60%;
+}
+.inputsWrapper {
+  width: 100%;
+  display: flex;
+}
+.inputEmail {
+  width: 100%;
+  margin-right: 24px;
+}
+.input {
+  width: 100%;
+}

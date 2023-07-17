@@ -1,4 +1,4 @@
-import type { TCompany } from 'modules/company/types';
+import type { TCompany, TEmployee } from 'modules/company/types';
 
 export const companyData: TCompany = {
   id: 'company-id',
@@ -21,3 +21,52 @@ export const companyData: TCompany = {
     email: 'ElonMusk@gmail.com',
   },
 };
+
+export const availableObjectOptions = [
+  { value: 'id_1', label: 'Hampton by Hilton Moscow Strogino' },
+  { value: 'id_2', label: 'Hotel Plaza Garden Moscow' },
+  { value: 'id_3', label: 'Novotel Москва Сити 4*' },
+  { value: 'id_4', label: 'Aparthotel Adagio Moscow Kievskaya' },
+];
+
+export const accessLevelOptions = [
+  { value: 'id_1', label: 'Админ' },
+  { value: 'id_2', label: 'Сотрудник' },
+  { value: 'id_3', label: 'Бухгалтер' },
+];
+
+export const employeesData: TEmployee[] = [
+  {
+    id: 'employee_id_1',
+    fullName: 'Админ',
+    description: 'Администратор системы',
+    email: 'ElonMusk@gmail.com',
+    status: {
+      title: 'Последний логин',
+      value: '19 марта 2023',
+    },
+    accessLevel: 'Полный доступ',
+  },
+  {
+    id: 'employee_id_2',
+    fullName: 'Константинов Константин Константинович',
+    description: 'Стажёр',
+    email: 'konstantin@mail.ru',
+    status: {
+      title: 'Последний логин',
+      value: '19 марта 2023',
+    },
+    accessLevel: 'Бухгалтер',
+  },
+  {
+    id: 'employee_id_3',
+    fullName: 'Петрова Лариса Ивановна',
+    description: 'Организатор мероприятий',
+    email: 'petrova@mail.ru',
+    status: {
+      title: 'Последний логин',
+      value: '19 марта 2023',
+    },
+    accessLevel: 'Сотрудник',
+  },
+];

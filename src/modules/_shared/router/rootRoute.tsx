@@ -17,7 +17,7 @@ import {
   PaymentTransactions,
   Registration,
 } from 'modules';
-import { CompanyEdit } from 'modules/company/components/company-info/components';
+import { CompanyAddEmployee, CompanyEdit } from 'modules/company/components';
 
 const RootRoute: FC = () => {
   return (
@@ -51,6 +51,14 @@ const RootRoute: FC = () => {
           element={
             <Protected>
               <CompanyEdit />
+            </Protected>
+          }
+        />
+        <Route
+          path={RoutesEnum.employee}
+          element={
+            <Protected>
+              <CompanyAddEmployee />
             </Protected>
           }
         />

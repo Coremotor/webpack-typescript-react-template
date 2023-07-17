@@ -10,5 +10,6 @@ export enum RoutesEnum {
   emailConfirmation = '/email-confirmation',
   company = '/company',
   editCompany = '/edit-company',
+  employee = '/employee',
   noMatch = '*',
 }

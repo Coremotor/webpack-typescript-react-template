@@ -22,6 +22,7 @@ export const useLayoutStyles = () => {
         };
 
   const header: CSSProperties = {
+    display: 'flex',
     background: colorBgContainer,
     borderBottom: `1px solid ${colorSplit}`,
     padding: '0 20px',
