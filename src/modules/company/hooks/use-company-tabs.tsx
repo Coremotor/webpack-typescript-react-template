@@ -6,7 +6,7 @@ import {
   CompanyFounders,
   CompanyInfo,
   CompanyManagement,
-} from 'modules/company/components';
+} from 'modules/company/blocks';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 import { getActiveTabKey } from 'modules/company/store/selectors';
 import { setActiveTabKey } from 'modules/company/store/reduser';

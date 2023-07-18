@@ -8,6 +8,7 @@ const initialState: TCompanyState = {
   company: null,
   employee: null,
   employees: [],
+  activeEmployee: null,
 };
 
 const companySlice = createSlice({
@@ -26,10 +27,21 @@ const companySlice = createSlice({
     setEmployees(state: TCompanyState, action: PayloadAction<TEmployee[]>) {
       state.employees = action.payload;
     },
+    setActiveEmployee(
+      state: TCompanyState,
+      action: PayloadAction<TEmployee | null>,
+    ) {
+      state.activeEmployee = action.payload;
+    },
   },
 });
 
-export const { setActiveTabKey, setCompany, setEmployee, setEmployees } =
-  companySlice.actions;
+export const {
+  setActiveTabKey,
+  setCompany,
+  setEmployee,
+  setEmployees,
+  setActiveEmployee,
+} = companySlice.actions;
 
 export default companySlice.reducer;

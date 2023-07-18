@@ -1,8 +1,10 @@
 import React from 'react';
 import type { TabsProps } from 'antd';
 import { useTranslation } from 'react-i18next';
-import AccountingDocuments from 'modules/document-flow/accounting-documents/accounting-documents';
-import TransactionRegister from 'modules/document-flow/transaction-register/transaction-register';
+import {
+  AccountingDocuments,
+  TransactionRegister,
+} from 'modules/document-flow/blocks';
 
 export const useDocumentFlowTabs = () => {
   const { t } = useTranslation();

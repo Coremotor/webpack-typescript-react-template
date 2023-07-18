@@ -12,7 +12,7 @@ import styles from 'modules/_shared/components/app/app.module.css';
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'modules/_shared/i18n/i18n';
-import ErrorBoundary from 'modules/_shared/utils/error-boundary';
+import ErrorBoundary from 'modules/_shared/components/error-boundary/error-boundary';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 import { setIsAuth } from 'modules/authorization/store/reduser';
 

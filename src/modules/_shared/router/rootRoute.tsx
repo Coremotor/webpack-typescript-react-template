@@ -17,7 +17,7 @@ import {
   PaymentTransactions,
   Registration,
 } from 'modules';
-import { CompanyEmployee, CompanyEdit } from 'modules/company/components';
+import { CompanyEmployee, CompanyEdit } from 'modules/company/blocks';
 
 const RootRoute: FC = () => {
   return (

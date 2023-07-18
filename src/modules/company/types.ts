@@ -38,6 +38,7 @@ export type TCompanyState = {
   company: TCompany | null;
   employee: TEmployee | null;
   employees: TEmployee[];
+  activeEmployee: TEmployee | null;
 };
 
 export enum ActiveNavTabKeyEnum {

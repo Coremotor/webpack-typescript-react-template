@@ -3,3 +3,4 @@ export { Loader } from 'modules/_shared/components/loader/loader';
 export { LocaleSwitcher } from 'modules/_shared/components/locale-switcher/locale-switcher';
 export { Navigation } from 'modules/_shared/components/navigation/navigation';
 export { Notification } from 'modules/_shared/components/notification/notification';
+export { TextAvatar } from 'modules/_shared/components/text-avatar/text-avatar';
