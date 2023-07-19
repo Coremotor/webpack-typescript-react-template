@@ -7,18 +7,18 @@ export const useModal = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
+  const onModalOkButton = () => {
     setIsModalOpen(false);
   };
 
-  const handleCancel = () => {
+  const onModalCancelButton = () => {
     setIsModalOpen(false);
   };
 
   return {
     isModalOpen,
     showModal,
-    handleOk,
-    handleCancel,
+    onModalOkButton,
+    onModalCancelButton,
   };
 };

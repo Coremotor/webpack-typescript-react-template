@@ -1,9 +1,11 @@
 import React, { FC } from 'react';
-import styles from './company-employees-menu.module.css';
 import { Link } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
-import { Space } from 'modules/_shared/ui';
 import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
+import EditIcon from 'assets/icons/edit.svg';
+import DeleteIcon from 'assets/icons/delete.svg';
+import { Text } from 'modules/_shared/ui';
+import styles from './company-employees-menu.module.css';
 
 type TCompanyEmployeesMenuProps = {
   hideMenu: () => void;
@@ -20,11 +22,15 @@ export const CompanyEmployeesMenu: FC<TCompanyEmployeesMenuProps> = ({
   };
 
   return (
-    <>
-      <Space onClick={stopPropagationFn} direction='vertical'>
-        <Link to={RoutesEnum.employee}>Редактировать</Link>
-        <div onClick={onDelete}>Удалить</div>
-      </Space>
-    </>
+    <div className={styles.navItemsWrapper} onClick={stopPropagationFn}>
+      <Link className={styles.navItem} to={RoutesEnum.employee}>
+        <EditIcon />
+        <Text className={styles.text}>Редактировать</Text>
+      </Link>
+      <div className={styles.navItem} onClick={onDelete}>
+        <DeleteIcon />
+        <Text className={styles.text}>Удалить</Text>
+      </div>
+    </div>
   );
 };

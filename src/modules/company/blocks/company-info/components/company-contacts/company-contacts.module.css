@@ -14,9 +14,12 @@
   margin-top: 10px;
 }
 .icon {
-  height: 28px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--layout-border-color);
   border-radius: 6px;
   cursor: pointer;
-  padding: 5px;
 }

@@ -11,7 +11,7 @@
   padding: 0 5px;
 }
 .selected {
-  background-color: var(--background-active-item);
+  background-color: var(--active-icon-background);
 }
 .active {
   border-color: var(--color-primary);

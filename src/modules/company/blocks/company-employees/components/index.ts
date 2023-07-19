@@ -4,3 +4,4 @@ export { CompanyEmployeesList } from 'modules/company/blocks/company-employees/c
 export { CompanyEmployeesDetails } from 'modules/company/blocks/company-employees/components/company-employees-details/company-employees-details';
 export { CompanyEmployeesMenu } from 'modules/company/blocks/company-employees/components/company-employees-menu/company-employees-menu';
 export { CompanyEmployeesDelete } from 'modules/company/blocks/company-employees/components/company-employees-delete/company-employees-delete';
+export { CompanyEmployeesMenuPopover } from 'modules/company/blocks/company-employees/components/company-employees-menu/company-employees-menu-popover';

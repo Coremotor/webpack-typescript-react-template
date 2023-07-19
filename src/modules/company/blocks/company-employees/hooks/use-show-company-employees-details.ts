@@ -6,15 +6,15 @@ import { setActiveEmployee } from 'modules/company/store/reduser';
 export const useShowCompanyEmployeesDetails = () => {
   const dispatch = useAppDispatch();
   const activeEmployee = useAppSelector(getActiveEmployee);
-  const [open, setOpen] = useState(false);
+  const [isEmployeeDetailsOpen, setIsEmployeeDetailsOpen] = useState(false);
 
-  const onClose = () => {
-    setOpen(false);
+  const onEmployeeDetailsClose = () => {
+    setIsEmployeeDetailsOpen(false);
     dispatch(setActiveEmployee(null));
   };
 
   const showDrawer = () => {
-    setOpen(true);
+    setIsEmployeeDetailsOpen(true);
   };
 
   useEffect(() => {
@@ -24,8 +24,8 @@ export const useShowCompanyEmployeesDetails = () => {
   }, [activeEmployee]);
 
   return {
-    open,
-    onClose,
+    isEmployeeDetailsOpen,
+    onEmployeeDetailsClose,
     activeEmployee,
   };
 };

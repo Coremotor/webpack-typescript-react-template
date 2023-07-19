@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Col, Modal, Popover, Row, Space, Text } from 'modules/_shared/ui';
+import { Col, Row, Text } from 'modules/_shared/ui';
 import { useCompanyEmployeesColumnsWidth } from 'modules/company/blocks/company-employees/hooks/use-company-employees-columns-width';
 import { TEmployee } from 'modules/company/types';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
@@ -7,12 +7,10 @@ import { setActiveEmployee } from 'modules/company/store/reduser';
 import { getActiveEmployee } from 'modules/company/store/selectors';
 import { transformFullName } from 'modules/_shared/utils/text-transform';
 import { TextAvatar } from 'modules/_shared/components';
-import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import {
-  CompanyEmployeesMenu,
   CompanyEmployeesDelete,
+  CompanyEmployeesMenuPopover,
 } from 'modules/company/blocks/company-employees/components';
-import ThreeDotsIcon from 'assets/icons/three-dots.svg';
 import { usePopover } from 'modules/_shared/hooks/use-popover';
 import { useModal } from 'modules/_shared/hooks/use-modal';
 import classNames from 'classnames';
@@ -32,7 +30,8 @@ export const CompanyEmployeesListItem: FC<CompanyEmployeesListItemProps> = ({
   const isActive = activeEmployee && activeEmployee.id === employee.id;
 
   const { open, hide, handleOpenChange } = usePopover();
-  const { isModalOpen, showModal, handleOk, handleCancel } = useModal();
+  const { isModalOpen, showModal, onModalOkButton, onModalCancelButton } =
+    useModal();
 
   const setEmployee = () => dispatch(setActiveEmployee(employee));
   return (
@@ -45,15 +44,15 @@ export const CompanyEmployeesListItem: FC<CompanyEmployeesListItemProps> = ({
         onClick={setEmployee}
       >
         <Col className={styles.col} flex={columnsWidth.fullName}>
-          <Space align='center'>
+          <div className={styles.fullNameWrapper}>
             <TextAvatar str={transformFullName(employee.fullName)} />
-            <Space.Compact direction='vertical'>
+            <div className={styles.textWrapper}>
               <Text ellipsis>{employee.fullName}</Text>
               <Text type='secondary' ellipsis>
                 {employee.description}
               </Text>
-            </Space.Compact>
-          </Space>
+            </div>
+          </div>
         </Col>
 
         <Col className={styles.col} flex={columnsWidth.email}>
@@ -61,12 +60,12 @@ export const CompanyEmployeesListItem: FC<CompanyEmployeesListItemProps> = ({
         </Col>
 
         <Col className={styles.col} flex={columnsWidth.status}>
-          <Space.Compact direction='vertical'>
+          <div className={styles.textWrapper}>
             <Text ellipsis>{employee.status.title}</Text>
             <Text type='secondary' ellipsis>
               {employee.status.value}
             </Text>
-          </Space.Compact>
+          </div>
         </Col>
 
         <Col className={styles.col} flex={columnsWidth.accessLevel}>
@@ -74,34 +73,21 @@ export const CompanyEmployeesListItem: FC<CompanyEmployeesListItemProps> = ({
         </Col>
 
         <Col className={styles.col} flex={columnsWidth.edit}>
-          <Popover
-            placement='bottomRight'
-            content={
-              <CompanyEmployeesMenu
-                hideMenu={hide}
-                openDeleteEmployeeModal={showModal}
-              />
-            }
-            trigger='click'
-            arrow={false}
+          <CompanyEmployeesMenuPopover
             open={open}
-            onOpenChange={handleOpenChange}
-          >
-            <div className={styles.icon} onClick={stopPropagationFn}>
-              <ThreeDotsIcon />
-            </div>
-          </Popover>
+            hide={hide}
+            showModal={showModal}
+            handleOpenChange={handleOpenChange}
+          />
         </Col>
       </Row>
 
-      <Modal
-        title='Удалить сотрудника?'
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <CompanyEmployeesDelete employee={employee} />
-      </Modal>
+      <CompanyEmployeesDelete
+        employee={employee}
+        isModalOpen={isModalOpen}
+        onModalCancelButton={onModalCancelButton}
+        onModalOkButton={onModalOkButton}
+      />
     </>
   );
 };

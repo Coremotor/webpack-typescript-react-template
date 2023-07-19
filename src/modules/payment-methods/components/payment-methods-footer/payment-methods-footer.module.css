@@ -2,7 +2,7 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: var(--background-color);
+  background-color: var(--default-background-color);
   border-top: 1px solid var(--layout-border-color);
   padding: 16px var(--content-padding);
 }

@@ -1,0 +1,19 @@
+.navItemsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.navItem:hover {
+  background-color: var(--item-background-color);
+  color: inherit;
+
+}
+.text {
+  margin-left: 10px;
+}

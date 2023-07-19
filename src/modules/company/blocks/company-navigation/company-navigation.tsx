@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover, Space, Text } from 'modules/_shared/ui';
+import { Popover, Text } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { useCompanyNavigation } from 'modules/company/blocks/company-navigation/hooks/use-company-navigation';
 import CompanyIcon from 'assets/icons/organization.svg';
@@ -12,6 +12,7 @@ export const CompanyNavigation = () => {
 
   return (
     <Popover
+      overlayInnerStyle={{ padding: '5px 0' }}
       destroyTooltipOnHide
       open={isNavMenuOpen}
       onOpenChange={handleOpenChange}
@@ -19,7 +20,7 @@ export const CompanyNavigation = () => {
       trigger='click'
       arrow={false}
       content={
-        <Space direction='vertical'>
+        <div className={styles.navItemsWrapper}>
           {navItems.map((item) => (
             <div
               className={styles.navItem}
@@ -29,7 +30,7 @@ export const CompanyNavigation = () => {
               {t(item.label)}
             </div>
           ))}
-        </Space>
+        </div>
       }
     >
       <div className={styles.openNavButton}>

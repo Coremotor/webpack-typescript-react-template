@@ -3,9 +3,16 @@
   align-items: center;
   cursor: pointer;
 }
+.navItemsWrapper {
+  display: flex;
+  flex-direction: column;
+}
 .navItem {
   cursor: pointer;
-  padding: 4px 0;
+  padding: 10px 20px;
+}
+.navItem:hover {
+  background-color: var(--item-background-color);
 }
 .icon {
   margin-right: 10px;
