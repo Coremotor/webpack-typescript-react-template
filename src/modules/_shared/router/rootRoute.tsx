@@ -55,7 +55,7 @@ const RootRoute: FC = () => {
           }
         />
         <Route
-          path={RoutesEnum.employee}
+          path={RoutesEnum.employee + '/:employeeId?'}
           element={
             <Protected>
               <CompanyEmployee />

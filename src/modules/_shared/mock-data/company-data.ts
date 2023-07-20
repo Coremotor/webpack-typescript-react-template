@@ -46,6 +46,7 @@ export const employeesData: TEmployee[] = [
       value: '19 марта 2023',
     },
     accessLevel: 'Полный доступ',
+    phone: '89633695623',
   },
   {
     id: 'employee_id_2',
@@ -57,6 +58,7 @@ export const employeesData: TEmployee[] = [
       value: '19 марта 2023',
     },
     accessLevel: 'Бухгалтер',
+    phone: '89633695624',
   },
   {
     id: 'employee_id_3',
@@ -68,5 +70,6 @@ export const employeesData: TEmployee[] = [
       value: '19 марта 2023',
     },
     accessLevel: 'Сотрудник',
+    phone: '89633695625',
   },
 ];

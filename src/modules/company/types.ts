@@ -31,6 +31,7 @@ export type TEmployee = {
     value: string;
   };
   accessLevel: string;
+  phone: string;
 };
 
 export type TCompanyState = {

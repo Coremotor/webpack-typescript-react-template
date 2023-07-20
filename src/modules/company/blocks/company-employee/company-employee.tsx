@@ -7,7 +7,7 @@ import {
   Select,
   Title,
 } from 'modules/_shared/ui';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useTranslation } from 'react-i18next';
 import {
@@ -24,6 +24,7 @@ export const CompanyEmployee = () => {
   const { t } = useTranslation();
   const [form] = Form.useForm<TEmployeeFormFields>();
   const navigate = useNavigate();
+  const { employeeId } = useParams();
 
   const onFinish = (values: TEmployeeFormFields) => {
     console.log(values);
@@ -41,11 +42,19 @@ export const CompanyEmployee = () => {
               </Link>
             ),
           },
-          { title: t('companyEmployees.addingEmployee') },
+          {
+            title: employeeId
+              ? t('companyEmployees.editEmployee')
+              : t('companyEmployees.addingEmployee'),
+          },
         ]}
       />
 
-      <Title level={4}>{t('companyEmployees.addingEmployee')}</Title>
+      <Title level={4}>
+        {employeeId
+          ? t('companyEmployees.editEmployee')
+          : t('companyEmployees.addingEmployee')}
+      </Title>
 
       <Form
         className={styles.form}

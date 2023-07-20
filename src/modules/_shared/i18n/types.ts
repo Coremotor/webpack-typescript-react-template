@@ -86,6 +86,7 @@ export type Translation = {
   companyEmployees: {
     addEmployeeButton: string;
     addingEmployee: string;
+    editEmployee: string;
     employees: string;
     fullName: string;
     position: string;

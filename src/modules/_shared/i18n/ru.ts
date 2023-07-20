@@ -90,6 +90,7 @@ export const ru: { translation: Translation } = {
     companyEmployees: {
       addEmployeeButton: 'Добавить сотрудника',
       addingEmployee: 'Добавление сотрудника',
+      editEmployee: 'Редактирование сотрудника',
       employees: 'Сотрудники',
       fullName: 'ФИО сотрудника',
       position: 'Должность',

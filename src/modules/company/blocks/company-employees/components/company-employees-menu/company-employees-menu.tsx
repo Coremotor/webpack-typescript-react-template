@@ -5,16 +5,19 @@ import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import EditIcon from 'assets/icons/edit.svg';
 import DeleteIcon from 'assets/icons/delete.svg';
 import { Text } from 'modules/_shared/ui';
+import { TEmployee } from 'modules/company/types';
 import styles from './company-employees-menu.module.css';
 
 type TCompanyEmployeesMenuProps = {
   hideMenu: () => void;
   openDeleteEmployeeModal: () => void;
+  employee: TEmployee | null;
 };
 
 export const CompanyEmployeesMenu: FC<TCompanyEmployeesMenuProps> = ({
   hideMenu,
   openDeleteEmployeeModal,
+  employee,
 }) => {
   const onDelete = () => {
     hideMenu();
@@ -23,7 +26,10 @@ export const CompanyEmployeesMenu: FC<TCompanyEmployeesMenuProps> = ({
 
   return (
     <div className={styles.navItemsWrapper} onClick={stopPropagationFn}>
-      <Link className={styles.navItem} to={RoutesEnum.employee}>
+      <Link
+        className={styles.navItem}
+        to={RoutesEnum.employee + '/' + employee?.id}
+      >
         <EditIcon />
         <Text className={styles.text}>Редактировать</Text>
       </Link>

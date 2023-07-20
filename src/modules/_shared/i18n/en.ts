@@ -90,6 +90,7 @@ export const en: { translation: Translation } = {
     companyEmployees: {
       addEmployeeButton: 'Add employee',
       addingEmployee: 'Adding an employee',
+      editEmployee: 'Editing an employee',
       employees: 'Employees',
       fullName: 'Employee full name',
       position: 'Position',

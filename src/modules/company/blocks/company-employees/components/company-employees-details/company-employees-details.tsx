@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer, Divider, Text } from 'modules/_shared/ui';
+import { Drawer, Divider, Text, Space, Row, Col } from 'modules/_shared/ui';
 import { useShowCompanyEmployeesDetails } from 'modules/company/blocks/company-employees/hooks/use-show-company-employees-details';
 import { TextAvatar } from 'modules/_shared/components';
 import { transformFullName } from 'modules/_shared/utils/text-transform';
@@ -12,12 +12,13 @@ import EditIcon from 'assets/icons/edit.svg';
 import DeleteIcon from 'assets/icons/delete.svg';
 import classNames from 'classnames';
 import styles from './company-employees-details.module.css';
+import { availableObjectOptions } from 'modules/_shared/mock-data/company-data';
 
 export const CompanyEmployeesDetails = () => {
   const navigate = useNavigate();
   const goToEditEmployee = () => {
     onEmployeeDetailsClose();
-    navigate(RoutesEnum.employee);
+    navigate(RoutesEnum.employee + '/' + activeEmployee?.id);
   };
 
   const { isEmployeeDetailsOpen, onEmployeeDetailsClose, activeEmployee } =
@@ -55,7 +56,7 @@ export const CompanyEmployeesDetails = () => {
             <div className={styles.employeeInfo}>
               <Text strong>{activeEmployee?.fullName}</Text>
               <Text type='secondary'>{activeEmployee?.description}</Text>
-              <Text>{activeEmployee?.status.title}</Text>
+              <Text>{activeEmployee?.accessLevel}</Text>
             </div>
           </div>
 
@@ -74,8 +75,46 @@ export const CompanyEmployeesDetails = () => {
             </div>
           </div>
         </header>
+
         <Divider />
-        <div>{activeEmployee?.fullName}</div>
+
+        <Space direction='vertical'>
+          <Row gutter={40}>
+            <Col flex='30%'>
+              <Text type='secondary'>Статус</Text>
+            </Col>
+            <Col flex='70%'>
+              {activeEmployee?.status.title +
+                ' ' +
+                activeEmployee?.status.value}
+            </Col>
+          </Row>
+
+          <Row gutter={40}>
+            <Col flex='30%'>
+              <Text type='secondary'>Email</Text>
+            </Col>
+            <Col flex='70%'>{activeEmployee?.email}</Col>
+          </Row>
+
+          <Row gutter={40}>
+            <Col flex='30%'>
+              <Text type='secondary'>Телефон</Text>
+            </Col>
+            <Col flex='70%'>{activeEmployee?.phone}</Col>
+          </Row>
+
+          <Row gutter={40}>
+            <Col flex='30%'>
+              <Text type='secondary'>Доступные объекты</Text>
+            </Col>
+            <Col flex='70%'>
+              {availableObjectOptions.map((obj) => (
+                <Text key={obj.value}>{obj.label}; </Text>
+              ))}
+            </Col>
+          </Row>
+        </Space>
       </div>
 
       <CompanyEmployeesDelete

@@ -78,6 +78,7 @@ export const CompanyEmployeesListItem: FC<CompanyEmployeesListItemProps> = ({
             hide={hide}
             showModal={showModal}
             handleOpenChange={handleOpenChange}
+            employee={employee}
           />
         </Col>
       </Row>
