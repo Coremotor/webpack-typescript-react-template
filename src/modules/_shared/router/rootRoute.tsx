@@ -17,7 +17,26 @@ import {
   PaymentTransactions,
   Registration,
 } from 'modules';
-import { CompanyEmployee, CompanyEdit } from 'modules/company/blocks';
+import {
+  CompanyEmployee,
+  CompanyEdit,
+  CompanyFounder,
+} from 'modules/company/blocks';
+
+const protectedRoutes = [
+  { path: RoutesEnum.company, element: <Company /> },
+  { path: RoutesEnum.editCompany, element: <CompanyEdit /> },
+  { path: RoutesEnum.employee + '/:employeeId?', element: <CompanyEmployee /> },
+  { path: RoutesEnum.founder + '/:founderId?', element: <CompanyFounder /> },
+  {
+    path: RoutesEnum.accommodationFacilities,
+    element: <AccommodationFacilities />,
+  },
+  { path: RoutesEnum.accountsContracts, element: <AccountsContracts /> },
+  { path: RoutesEnum.documentFlow, element: <DocumentFlow /> },
+  { path: RoutesEnum.paymentMethods, element: <PaymentMethods /> },
+  { path: RoutesEnum.paymentTransactions, element: <PaymentTransactions /> },
+];
 
 const RootRoute: FC = () => {
   return (
@@ -38,70 +57,13 @@ const RootRoute: FC = () => {
             </Protected>
           }
         />
-        <Route
-          path={RoutesEnum.company}
-          element={
-            <Protected>
-              <Company />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.editCompany}
-          element={
-            <Protected>
-              <CompanyEdit />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.employee + '/:employeeId?'}
-          element={
-            <Protected>
-              <CompanyEmployee />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.accommodationFacilities}
-          element={
-            <Protected>
-              <AccommodationFacilities />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.accountsContracts}
-          element={
-            <Protected>
-              <AccountsContracts />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.documentFlow}
-          element={
-            <Protected>
-              <DocumentFlow />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.paymentMethods}
-          element={
-            <Protected>
-              <PaymentMethods />
-            </Protected>
-          }
-        />
-        <Route
-          path={RoutesEnum.paymentTransactions}
-          element={
-            <Protected>
-              <PaymentTransactions />
-            </Protected>
-          }
-        />
+        {protectedRoutes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<Protected>{route.element}</Protected>}
+          />
+        ))}
       </Route>
     </Routes>
   );
