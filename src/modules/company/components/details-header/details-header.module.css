@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+}
+.close {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  right: 480px;
+  background-color: var(--default-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-right: auto;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.buttons {
+  display: flex;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.edit {
+  border: 1px solid var(--layout-border-color);
+  margin-right: 10px;
+}
+.delete {
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger-border);
+}

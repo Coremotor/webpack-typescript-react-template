@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import Protected from 'modules/_shared/router/protected';
-import { AppLayout } from 'modules/_shared/layout';
+import { AppLayout } from 'modules/_shared/layouts';
 import {
   AccommodationFacilities,
   AccountsContracts,

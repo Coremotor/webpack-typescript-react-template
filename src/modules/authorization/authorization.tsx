@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthRegLayout } from 'modules/_shared/layout';
+import { AuthRegLayout } from 'modules/_shared/layouts';
 import {
   AuthorizationForm,
   AuthorizationHeader,

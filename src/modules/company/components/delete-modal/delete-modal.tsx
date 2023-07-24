@@ -1,39 +1,44 @@
 import React, { FC } from 'react';
-import { TEmployee } from 'modules/company/types';
 import { Modal, Button, Text } from 'modules/_shared/ui';
+import { useTranslation } from 'react-i18next';
 
-type TCompanyEmployeesDeleteProps = {
-  employee: TEmployee | null;
+type TDeleteModalProps = {
+  title: string;
+  deletingObjPosition: string;
+  deletingObjName: string;
   isModalOpen: boolean;
   onModalOkButton: () => void;
   onModalCancelButton: () => void;
 };
 
-export const CompanyEmployeesDelete: FC<TCompanyEmployeesDeleteProps> = ({
-  employee,
+export const DeleteModal: FC<TDeleteModalProps> = ({
+  title,
+  deletingObjPosition,
+  deletingObjName,
   isModalOpen,
   onModalOkButton,
   onModalCancelButton,
 }) => {
-  if (!employee) return;
+  const { t } = useTranslation();
 
   return (
     <Modal
-      title='Удалить сотрудника?'
+      title={title}
       open={isModalOpen}
       onOk={onModalOkButton}
       onCancel={onModalCancelButton}
       footer={[
         <Button key='back' onClick={onModalCancelButton}>
-          Отменить
+          {t('shared.cancel')}
         </Button>,
         <Button key='submit' type='primary' danger onClick={onModalOkButton}>
-          Удалить
+          {t('shared.delete')}
         </Button>,
       ]}
     >
       <Text>
-        Сотрудник <Text strong>{employee.fullName}</Text> будет удален!
+        {deletingObjPosition} <Text strong>{deletingObjName}</Text>{' '}
+        {t('shared.willRemoved') + '!'}
       </Text>
     </Modal>
   );

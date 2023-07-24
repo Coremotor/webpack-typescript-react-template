@@ -1,4 +1,10 @@
 export type Translation = {
+  shared: {
+    edit: string;
+    delete: string;
+    cancel: string;
+    willRemoved: string;
+  };
   registration: {
     title: string;
     link: string;
@@ -100,6 +106,9 @@ export type Translation = {
     phonePlaceholder: string;
     accessPlaceholder: string;
     availablePlaceholder: string;
+    availableObjects: string;
+    deleteEmployee: string;
+    employee: string;
   };
 };
 

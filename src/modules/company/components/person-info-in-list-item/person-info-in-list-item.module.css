@@ -1,15 +1,12 @@
-.col {
+.fullNameWrapper {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 5px;
 }
 .textWrapper {
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-.icon {
-  display: flex;
-}
-.icon:hover {
-  cursor: pointer;
+  margin-left: 10px;
 }

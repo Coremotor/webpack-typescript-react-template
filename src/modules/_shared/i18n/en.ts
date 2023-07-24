@@ -2,6 +2,12 @@ import { Translation } from 'modules/_shared/i18n/types';
 
 export const en: { translation: Translation } = {
   translation: {
+    shared: {
+      edit: 'Edit',
+      delete: 'Delete',
+      cancel: 'Cancel',
+      willRemoved: 'will be removed',
+    },
     registration: {
       title: 'Registration',
       link: 'Enter',
@@ -104,6 +110,9 @@ export const en: { translation: Translation } = {
       phonePlaceholder: 'Enter phone',
       accessPlaceholder: 'Select access level',
       availablePlaceholder: 'Select available objects',
+      availableObjects: 'Available objects',
+      deleteEmployee: 'Delete an employee',
+      employee: 'Employee',
     },
   },
 };

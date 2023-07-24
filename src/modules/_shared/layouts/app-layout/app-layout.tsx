@@ -3,7 +3,7 @@ import { Sider, Content, Header, Layout } from 'modules/_shared/ui';
 import { Outlet } from 'react-router-dom';
 import { Loader, Navigation } from 'modules/_shared/components';
 import logo from 'assets/images/logo.png';
-import { useLayoutStyles } from 'modules/_shared/layout/app-layout/use-layout-styles';
+import { useLayoutStyles } from 'modules/_shared/layouts/app-layout/use-layout-styles';
 import { AppHeader } from 'modules/_shared/components/app-header/app-header';
 
 export const AppLayout = () => {

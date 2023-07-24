@@ -9,6 +9,7 @@ import { getEmployees } from 'modules/company/store/selectors';
 import { setEmployees } from 'modules/company/store/reduser';
 import { employeesData } from 'modules/_shared/mock-data/company-data';
 import styles from './company-employees-list.module.css';
+import { ListItem } from 'modules/company/layouts';
 
 export const CompanyEmployeesList = () => {
   const dispatch = useAppDispatch();
@@ -25,9 +26,9 @@ export const CompanyEmployeesList = () => {
         className={styles.list}
         dataSource={employees}
         renderItem={(employee) => (
-          <List.Item key={employee.id} className={styles.item}>
+          <ListItem>
             <CompanyEmployeesListItem employee={employee} />
-          </List.Item>
+          </ListItem>
         )}
       />
     </>

@@ -3,7 +3,7 @@ import {
   RegistrationForm,
   RegistrationHeader,
 } from 'modules/registration/components';
-import { AuthRegLayout } from 'modules/_shared/layout';
+import { AuthRegLayout } from 'modules/_shared/layouts';
 
 export const Registration = () => {
   return (

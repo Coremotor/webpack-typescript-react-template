@@ -2,6 +2,12 @@ import { Translation } from 'modules/_shared/i18n/types';
 
 export const ru: { translation: Translation } = {
   translation: {
+    shared: {
+      edit: 'Редактировать',
+      delete: 'Удалить',
+      cancel: 'Отмена',
+      willRemoved: 'будет удален',
+    },
     registration: {
       title: 'Регистрация',
       link: 'Войти',
@@ -104,6 +110,9 @@ export const ru: { translation: Translation } = {
       phonePlaceholder: 'Введите телефон',
       accessPlaceholder: 'Выберите уровень доступа',
       availablePlaceholder: 'Выберите доступные объекты',
+      availableObjects: 'Доступные объекты',
+      deleteEmployee: 'Удалить сотрудника',
+      employee: 'Сотрудник',
     },
   },
 };

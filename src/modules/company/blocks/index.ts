@@ -3,6 +3,7 @@ export { CompanyEmployees } from 'modules/company/blocks/company-employees/compa
 export { CompanyFounders } from 'modules/company/blocks/company-founders/company-founders';
 export { CompanyInfo } from 'modules/company/blocks/company-info/company-info';
 export { CompanyManagement } from 'modules/company/blocks/company-management/company-management';
+export { CompanyManager } from 'modules/company/blocks/company-manager/company-manager';
 export { CompanyEdit } from 'modules/company/blocks/company-edit/company-edit';
 export { CompanyEmployee } from 'modules/company/blocks/company-employee/company-employee';
 export { CompanyFounder } from 'modules/company/blocks/company-founder/company-founder';

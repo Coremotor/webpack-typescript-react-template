@@ -12,7 +12,6 @@
 .navItem:hover {
   background-color: var(--item-background-color);
   color: inherit;
-
 }
 .text {
   margin-left: 10px;

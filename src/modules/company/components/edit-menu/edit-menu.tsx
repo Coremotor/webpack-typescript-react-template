@@ -5,37 +5,38 @@ import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import EditIcon from 'assets/icons/edit.svg';
 import DeleteIcon from 'assets/icons/delete.svg';
 import { Text } from 'modules/_shared/ui';
-import { TEmployee } from 'modules/company/types';
-import styles from './company-employees-menu.module.css';
+import { useTranslation } from 'react-i18next';
+import styles from './edit-menu.module.css';
 
-type TCompanyEmployeesMenuProps = {
+type TEditMenuProps = {
   hideMenu: () => void;
-  openDeleteEmployeeModal: () => void;
-  employee: TEmployee | null;
+  openDeleteModal: () => void;
+  editableObjId: string;
 };
 
-export const CompanyEmployeesMenu: FC<TCompanyEmployeesMenuProps> = ({
+export const EditMenu: FC<TEditMenuProps> = ({
   hideMenu,
-  openDeleteEmployeeModal,
-  employee,
+  openDeleteModal,
+  editableObjId,
 }) => {
+  const { t } = useTranslation();
   const onDelete = () => {
     hideMenu();
-    openDeleteEmployeeModal();
+    openDeleteModal();
   };
 
   return (
     <div className={styles.navItemsWrapper} onClick={stopPropagationFn}>
       <Link
         className={styles.navItem}
-        to={RoutesEnum.employee + '/' + employee?.id}
+        to={RoutesEnum.employee + '/' + editableObjId}
       >
         <EditIcon />
-        <Text className={styles.text}>Редактировать</Text>
+        <Text className={styles.text}>{t('shared.edit')}</Text>
       </Link>
       <div className={styles.navItem} onClick={onDelete}>
         <DeleteIcon />
-        <Text className={styles.text}>Удалить</Text>
+        <Text className={styles.text}>{t('shared.delete')}</Text>
       </div>
     </div>
   );
