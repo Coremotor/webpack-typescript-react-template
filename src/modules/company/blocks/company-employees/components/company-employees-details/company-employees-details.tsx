@@ -14,11 +14,6 @@ export const CompanyEmployeesDetails = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const goToEditEmployee = () => {
-    onEmployeeDetailsClose();
-    navigate(RoutesEnum.employee + '/' + activeEmployee?.id);
-  };
-
   const { isEmployeeDetailsOpen, onEmployeeDetailsClose, activeEmployee } =
     useShowCompanyEmployeesDetails();
 
@@ -32,6 +27,11 @@ export const CompanyEmployeesDetails = () => {
 
   if (!activeEmployee) return;
 
+  const goToEmployeePage = () => {
+    onEmployeeDetailsClose();
+    navigate(RoutesEnum.employee + '/' + activeEmployee.id);
+  };
+
   const activeEmployeeInfo = convertActiveEmployeeInTableView(activeEmployee);
 
   return (
@@ -41,10 +41,10 @@ export const CompanyEmployeesDetails = () => {
     >
       <div className={styles.wrapper}>
         <DetailsHeader
-          fullName={activeEmployee?.fullName || ''}
-          description={activeEmployee?.description || ''}
+          fullName={activeEmployee.fullName}
+          description={activeEmployee.description}
           onClose={onEmployeeDetailsClose}
-          onEdit={goToEditEmployee}
+          onEdit={goToEmployeePage}
           onDelete={showModal}
         />
 

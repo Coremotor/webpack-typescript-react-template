@@ -5,18 +5,20 @@ type TSidebarDetailsDrawerProps = {
   onClose: () => void;
   isOpen: boolean;
   children: ReactNode;
+  width?: number;
 };
 
 export const SidebarDetailsDrawer: FC<TSidebarDetailsDrawerProps> = ({
   onClose,
   isOpen,
   children,
+  width = 600,
 }) => {
   return (
     <Drawer
       destroyOnClose
       placement='right'
-      width={500}
+      width={width}
       onClose={onClose}
       open={isOpen}
       closable={false}

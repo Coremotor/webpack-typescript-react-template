@@ -34,12 +34,35 @@ export type TEmployee = {
   phone: string;
 };
 
+export type TManager = {
+  id: string;
+  fullName: string;
+  description: string;
+  isRussiaResident: boolean;
+  citizenship: string;
+  phone: string;
+  act: string;
+  inn: string;
+  snils: string;
+  birthday: string;
+  birthPlace: string;
+  address: string;
+  mailingAddress: string;
+  passportNumber: string;
+  passportDate: string;
+  passportCode: string;
+  passportOrgan: string;
+};
+
 export type TCompanyState = {
   activeTabKey: string;
   company: TCompany | null;
   employee: TEmployee | null;
   employees: TEmployee[];
   activeEmployee: TEmployee | null;
+  manager: TManager | null;
+  managers: TManager[];
+  activeManager: TManager | null;
 };
 
 export enum ActiveNavTabKeyEnum {

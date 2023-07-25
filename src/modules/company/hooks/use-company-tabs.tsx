@@ -5,7 +5,7 @@ import {
   CompanyEmployees,
   CompanyFounders,
   CompanyInfo,
-  CompanyManagement,
+  CompanyManagers,
 } from 'modules/company/blocks';
 import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
 import { getActiveTabKey } from 'modules/company/store/selectors';
@@ -32,7 +32,7 @@ export const useCompanyTabs = () => {
     {
       key: ActiveNavTabKeyEnum.three,
       label: t('company.management'),
-      children: <CompanyManagement />,
+      children: <CompanyManagers />,
     },
     {
       key: ActiveNavTabKeyEnum.four,

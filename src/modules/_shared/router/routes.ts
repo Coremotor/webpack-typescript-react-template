@@ -12,5 +12,6 @@ export enum RoutesEnum {
   editCompany = '/edit-company',
   employee = '/employee',
   founder = '/founder',
+  manager = '/manager',
   noMatch = '*',
 }

@@ -1,4 +1,4 @@
-import type { TCompany, TEmployee } from 'modules/company/types';
+import type { TCompany, TEmployee, TManager } from 'modules/company/types';
 
 export const companyData: TCompany = {
   id: 'company-id',
@@ -71,5 +71,46 @@ export const employeesData: TEmployee[] = [
     },
     accessLevel: 'Сотрудник',
     phone: '89633695625',
+  },
+];
+
+export const managersData: TManager[] = [
+  {
+    id: 'manager_id_1',
+    fullName: 'Иванова Ольга Леонидовна',
+    description: 'Генеральный директор',
+    isRussiaResident: true,
+    citizenship: 'РФ',
+    phone: '+7 (902) 100-58-41',
+    act: 'Устав',
+    inn: '526317984689',
+    snils: '258 412 520 69',
+    birthday: '18.11.1992',
+    birthPlace: '123592, г. Москва',
+    address: '123592, г. Москва, ул. Кулакова, д.20, к.1',
+    mailingAddress: '123592, г. Москва, ул. Кулакова, д.20, к.1',
+    passportNumber: '8815 848754',
+    passportDate: '04.12.2005',
+    passportCode: '120 001',
+    passportOrgan: 'ОУФМС России по РМЭ',
+  },
+  {
+    id: 'manager_id_2',
+    fullName: 'Иванов Олег Петрович',
+    description: 'Генеральный секретарь',
+    isRussiaResident: true,
+    citizenship: 'РФ',
+    phone: '+7 (902) 100-58-40',
+    act: 'Устав',
+    inn: '903317984689',
+    snils: '789 412 520 69',
+    birthday: '20.11.1985',
+    birthPlace: '123000, г. Москва',
+    address: '123000, г. Москва, ул. Кулакова, д.20, к.1',
+    mailingAddress: '123000, г. Москва, ул. Кулакова, д.20, к.1',
+    passportNumber: '9980 848754',
+    passportDate: '20.12.2010',
+    passportCode: '122 001',
+    passportOrgan: 'ОУФМС России по СПБ',
   },
 ];

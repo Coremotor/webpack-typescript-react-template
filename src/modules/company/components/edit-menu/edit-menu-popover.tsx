@@ -9,7 +9,7 @@ type TEditMenuPopoverProps = {
   hideMenu: () => void;
   openDeleteModal: () => void;
   onOpenMenuChange: (newOpen: boolean) => void;
-  editableObjId: string;
+  editPagePath: string;
 };
 
 export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
@@ -17,7 +17,7 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
   openDeleteModal,
   onOpenMenuChange,
   openMenu,
-  editableObjId,
+  editPagePath,
 }) => {
   return (
     <Popover
@@ -28,7 +28,7 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
         <EditMenu
           hideMenu={hideMenu}
           openDeleteModal={openDeleteModal}
-          editableObjId={editableObjId}
+          editPagePath={editPagePath}
         />
       }
       trigger='click'

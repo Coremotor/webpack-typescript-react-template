@@ -4,6 +4,8 @@ export type Translation = {
     delete: string;
     cancel: string;
     willRemoved: string;
+    yes: string;
+    no: string;
   };
   registration: {
     title: string;

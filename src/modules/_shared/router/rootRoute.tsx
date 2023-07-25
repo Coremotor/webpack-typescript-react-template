@@ -21,6 +21,7 @@ import {
   CompanyEmployee,
   CompanyEdit,
   CompanyFounder,
+  CompanyManager,
 } from 'modules/company/blocks';
 
 const protectedRoutes = [
@@ -28,6 +29,7 @@ const protectedRoutes = [
   { path: RoutesEnum.editCompany, element: <CompanyEdit /> },
   { path: RoutesEnum.employee + '/:employeeId?', element: <CompanyEmployee /> },
   { path: RoutesEnum.founder + '/:founderId?', element: <CompanyFounder /> },
+  { path: RoutesEnum.manager + '/:managerId?', element: <CompanyManager /> },
   {
     path: RoutesEnum.accommodationFacilities,
     element: <AccommodationFacilities />,

@@ -15,6 +15,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import styles from './company-employees-list-item.module.css';
 import { ListItemRow } from 'modules/company/layouts';
+import { RoutesEnum } from 'modules/_shared/router/routes';
 
 type TCompanyEmployeesListItemProps = {
   employee: TEmployee;
@@ -71,7 +72,7 @@ export const CompanyEmployeesListItem: FC<TCompanyEmployeesListItemProps> = ({
               hideMenu={hide}
               openDeleteModal={showModal}
               onOpenMenuChange={handleOpenChange}
-              editableObjId={employee.id}
+              editPagePath={RoutesEnum.employee + '/' + employee.id}
             />
           </Col>
         </>

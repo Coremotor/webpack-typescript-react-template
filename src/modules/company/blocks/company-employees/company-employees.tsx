@@ -13,11 +13,11 @@ export const CompanyEmployees = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const goToEditEmployee = () => navigate(RoutesEnum.employee);
+  const goToEmployeePage = () => navigate(RoutesEnum.employee);
 
   return (
     <Space className={styles.list} size='large' direction='vertical'>
-      <Button onClick={goToEditEmployee} type='primary'>
+      <Button onClick={goToEmployeePage} type='primary'>
         {t('companyEmployees.addEmployeeButton')}
       </Button>
       <CompanyEmployeesList />

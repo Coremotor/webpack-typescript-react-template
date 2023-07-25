@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { RoutesEnum } from 'modules/_shared/router/routes';
 import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import EditIcon from 'assets/icons/edit.svg';
 import DeleteIcon from 'assets/icons/delete.svg';
@@ -11,13 +10,13 @@ import styles from './edit-menu.module.css';
 type TEditMenuProps = {
   hideMenu: () => void;
   openDeleteModal: () => void;
-  editableObjId: string;
+  editPagePath: string;
 };
 
 export const EditMenu: FC<TEditMenuProps> = ({
   hideMenu,
   openDeleteModal,
-  editableObjId,
+  editPagePath,
 }) => {
   const { t } = useTranslation();
   const onDelete = () => {
@@ -27,10 +26,7 @@ export const EditMenu: FC<TEditMenuProps> = ({
 
   return (
     <div className={styles.navItemsWrapper} onClick={stopPropagationFn}>
-      <Link
-        className={styles.navItem}
-        to={RoutesEnum.employee + '/' + editableObjId}
-      >
+      <Link className={styles.navItem} to={editPagePath}>
         <EditIcon />
         <Text className={styles.text}>{t('shared.edit')}</Text>
       </Link>

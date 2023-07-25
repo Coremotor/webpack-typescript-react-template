@@ -6,6 +6,7 @@ import { setActiveEmployee } from 'modules/company/store/reduser';
 export const useShowCompanyEmployeesDetails = () => {
   const dispatch = useAppDispatch();
   const activeEmployee = useAppSelector(getActiveEmployee);
+
   const [isEmployeeDetailsOpen, setIsEmployeeDetailsOpen] = useState(false);
 
   const onEmployeeDetailsClose = () => {

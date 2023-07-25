@@ -7,6 +7,8 @@ export const en: { translation: Translation } = {
       delete: 'Delete',
       cancel: 'Cancel',
       willRemoved: 'will be removed',
+      yes: 'Yes',
+      no: 'No',
     },
     registration: {
       title: 'Registration',

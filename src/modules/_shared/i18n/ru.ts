@@ -7,6 +7,8 @@ export const ru: { translation: Translation } = {
       delete: 'Удалить',
       cancel: 'Отмена',
       willRemoved: 'будет удален',
+      yes: 'Да',
+      no: 'Нет',
     },
     registration: {
       title: 'Регистрация',
