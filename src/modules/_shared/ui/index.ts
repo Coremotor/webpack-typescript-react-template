@@ -26,6 +26,7 @@ export {
   Layout,
   theme,
   Breadcrumb,
+  DatePicker,
 } from 'antd';
 
 export const { Title, Text, Link } = Typography;

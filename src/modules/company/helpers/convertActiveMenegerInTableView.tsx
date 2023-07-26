@@ -15,7 +15,7 @@ export const convertToBasicTab = (activeManager: TManager) => [
   },
   {
     label: 'ФИО для подписи в документах',
-    value: activeManager.fullName,
+    value: activeManager.fullNameForDocs,
   },
   {
     label: 'ИНН',

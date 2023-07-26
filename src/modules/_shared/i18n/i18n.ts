@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { translations } from 'modules/_shared/i18n/translations';
+import { translations } from 'modules/_shared/i18n/locales/translations';
 
 // eslint-disable-next-line import/no-named-as-default-member
 i18n

@@ -3,6 +3,7 @@ export type Translation = {
     edit: string;
     delete: string;
     cancel: string;
+    save: string;
     willRemoved: string;
     yes: string;
     no: string;

@@ -3,7 +3,7 @@ import { TPaymentMethod } from 'modules/payment-methods/types';
 import { Row, Col, Switch, Text, Space } from 'modules/_shared/ui';
 import { PaymentMethodsIcon } from 'modules/payment-methods/components/payment-methods-icon/payment-methods-icon';
 import { useTranslation } from 'react-i18next';
-import { formatCurrency } from 'modules/_shared/i18n/format-currency';
+import { formatCurrency } from 'modules/_shared/helpers/format-currency';
 import styles from './payment-methods-list-item.module.css';
 
 type TPaymentMethodsListItemProps = {

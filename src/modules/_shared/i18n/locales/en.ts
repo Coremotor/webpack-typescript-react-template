@@ -6,6 +6,7 @@ export const en: { translation: Translation } = {
       edit: 'Edit',
       delete: 'Delete',
       cancel: 'Cancel',
+      save: 'Save',
       willRemoved: 'will be removed',
       yes: 'Yes',
       no: 'No',

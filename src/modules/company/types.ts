@@ -37,7 +37,8 @@ export type TEmployee = {
 export type TManager = {
   id: string;
   fullName: string;
-  description: string;
+  fullNameForDocs: string;
+  position: string;
   isRussiaResident: boolean;
   citizenship: string;
   phone: string;
@@ -48,6 +49,8 @@ export type TManager = {
   birthPlace: string;
   address: string;
   mailingAddress: string;
+  isMailingAddressEqualsAddress: boolean;
+  passportSeries: string;
   passportNumber: string;
   passportDate: string;
   passportCode: string;
@@ -79,4 +82,26 @@ export type TEmployeeFormFields = {
   phone: string;
   access: string;
   available: string;
+};
+
+export type TManagerFormFields = {
+  fullName: string;
+  fullNameForDocs: string;
+  position: string;
+  isRussiaResident: boolean;
+  citizenship: string;
+  phone: string;
+  act: string;
+  inn: string;
+  snils: string;
+  birthday: string;
+  birthPlace: string;
+  address: string;
+  mailingAddress: string;
+  isMailingAddressEqualsAddress: boolean;
+  passportSeries: string;
+  passportNumber: string;
+  passportDate: string;
+  passportCode: string;
+  passportOrgan: string;
 };

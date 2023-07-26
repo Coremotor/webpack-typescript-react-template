@@ -45,7 +45,7 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
           <Col className={styles.col} flex={managerListColumnsWidth.fullName}>
             <PersonInfoInListItem
               fullName={manager.fullName}
-              description={manager.description}
+              description={manager.position}
             />
           </Col>
 

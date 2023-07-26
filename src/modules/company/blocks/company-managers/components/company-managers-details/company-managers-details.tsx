@@ -44,7 +44,7 @@ export const CompanyManagersDetails = () => {
       <div className={styles.wrapper}>
         <DetailsHeader
           fullName={activeManager.fullName}
-          description={activeManager.description}
+          description={activeManager.position}
           onClose={onManagerDetailsClose}
           onEdit={goToManagerPage}
           onDelete={showModal}

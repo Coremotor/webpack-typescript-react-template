@@ -6,6 +6,7 @@ export const ru: { translation: Translation } = {
       edit: 'Редактировать',
       delete: 'Удалить',
       cancel: 'Отмена',
+      save: 'Сохранить',
       willRemoved: 'будет удален',
       yes: 'Да',
       no: 'Нет',
