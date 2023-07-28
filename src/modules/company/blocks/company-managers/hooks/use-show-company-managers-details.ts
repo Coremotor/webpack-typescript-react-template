@@ -1,7 +1,10 @@
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { useEffect, useState } from 'react';
 import { getActiveManager } from 'modules/company/store/selectors';
-import { setActiveManager } from 'modules/company/store/reduser';
+import { setActiveManager } from 'modules/company/store/reducer';
 
 export const useShowCompanyManagersDetails = () => {
   const dispatch = useAppDispatch();

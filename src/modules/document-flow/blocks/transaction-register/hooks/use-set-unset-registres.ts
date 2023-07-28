@@ -1,5 +1,8 @@
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { TTransactionRegister } from 'modules/document-flow/types';
 import {
   getActiveTransactionRegister,
@@ -8,7 +11,7 @@ import {
 import {
   setActiveTransactionRegister,
   setSelectedTransactionRegisters,
-} from 'modules/document-flow/store/reduser';
+} from 'modules/document-flow/store/reducer';
 
 export const useSetUnsetRegisters = (register: TTransactionRegister) => {
   const dispatch = useAppDispatch();

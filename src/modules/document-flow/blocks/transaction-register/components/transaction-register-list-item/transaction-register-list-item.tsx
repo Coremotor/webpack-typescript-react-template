@@ -3,7 +3,6 @@ import { TTransactionRegister } from 'modules/document-flow/types';
 import { Checkbox, Col, Row, Text } from 'modules/_shared/ui';
 import CloudIcon from 'assets/icons/cloud.svg';
 import classNames from 'classnames';
-import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import { useColumnsWidth } from 'modules/document-flow/blocks/transaction-register/hooks/use-columns-width';
 import { useSetUnsetRegisters } from 'modules/document-flow/blocks/transaction-register/hooks/use-set-unset-registres';
 import styles from './transaction-register-list-item.module.css';
@@ -19,6 +18,9 @@ export const TransactionRegisterListItem: FC<
   const { setUnsetRegisters, checked, setActiveRegister, isActive } =
     useSetUnsetRegisters(register);
 
+  const handlerCheckboxClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) =>
+    e.stopPropagation();
+
   return (
     <Row
       onClick={setActiveRegister}
@@ -30,7 +32,7 @@ export const TransactionRegisterListItem: FC<
     >
       <Col className={styles.col} flex={columnsWidth.checkbox}>
         <Checkbox
-          onClick={stopPropagationFn}
+          onClick={handlerCheckboxClick}
           onChange={setUnsetRegisters}
           checked={checked}
         />

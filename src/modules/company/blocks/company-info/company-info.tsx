@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { getCompany } from 'modules/company/store/selectors';
 import {
   CompanyContacts,
   CompanyDetails,
 } from 'modules/company/blocks/company-info/components';
 import styles from './company-info.module.css';
-import { setCompany } from 'modules/company/store/reduser';
+import { setCompany } from 'modules/company/store/reducer';
 import { companyData } from 'modules/_shared/mock-data/company-data';
 
 export const CompanyInfo = () => {

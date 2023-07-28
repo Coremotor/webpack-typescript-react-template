@@ -1,11 +1,14 @@
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { getCompany } from 'modules/company/store/selectors';
 import { App } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { Form } from 'modules/_shared/ui';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useEffect } from 'react';
-import { setCompany } from 'modules/company/store/reduser';
+import { setCompany } from 'modules/company/store/reducer';
 import { companyData } from 'modules/_shared/mock-data/company-data';
 
 type TFormFields = {

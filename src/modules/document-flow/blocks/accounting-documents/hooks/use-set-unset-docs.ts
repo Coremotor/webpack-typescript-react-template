@@ -1,8 +1,11 @@
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { TAccountingDocument } from 'modules/document-flow/types';
 import { getSelectedAccountingDocuments } from 'modules/document-flow/store/selectors';
-import { setSelectedAccountingDocuments } from 'modules/document-flow/store/reduser';
+import { setSelectedAccountingDocuments } from 'modules/document-flow/store/reducer';
 
 export const useSetUnsetDocs = (doc: TAccountingDocument) => {
   const dispatch = useAppDispatch();

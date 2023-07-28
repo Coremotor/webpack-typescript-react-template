@@ -1,8 +1,11 @@
 import React, { FC } from 'react';
 import { Col, Text } from 'modules/_shared/ui';
 import { TManager } from 'modules/company/types';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
-import { setActiveManager } from 'modules/company/store/reduser';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
+import { setActiveManager } from 'modules/company/store/reducer';
 import { getActiveManager } from 'modules/company/store/selectors';
 import { usePopover } from 'modules/_shared/hooks/use-popover';
 import { useModal } from 'modules/_shared/hooks/use-modal';
@@ -32,9 +35,13 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
 
   const isActive = activeManager && activeManager.id === manager.id;
 
-  const { open, hide, handleOpenChange } = usePopover();
-  const { isModalOpen, showModal, onModalOkButton, onModalCancelButton } =
-    useModal();
+  const { isMenuOpen, handleHideMenu, handleOpenMenuChange } = usePopover();
+  const {
+    isModalOpen,
+    handleOpenModal,
+    handleModalConfirmClick,
+    handleModalCancelClick,
+  } = useModal();
 
   const setManagerInActive = () => dispatch(setActiveManager(manager));
 
@@ -68,10 +75,10 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
 
           <Col className={styles.col} flex={managerListColumnsWidth.edit}>
             <EditMenuPopover
-              openMenu={open}
-              hideMenu={hide}
-              openDeleteModal={showModal}
-              onOpenMenuChange={handleOpenChange}
+              openMenu={isMenuOpen}
+              hideMenu={handleHideMenu}
+              openDeleteModal={handleOpenModal}
+              onOpenMenuChange={handleOpenMenuChange}
               editPagePath={RoutesEnum.manager + '/' + manager.id}
             />
           </Col>
@@ -82,9 +89,9 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
         title={t('Удалить руководителя') + '?'}
         deletingObjPosition={t('руководитель')}
         deletingObjName={manager.fullName}
-        isModalOpen={isModalOpen}
-        onModalOkButton={onModalOkButton}
-        onModalCancelButton={onModalCancelButton}
+        isOpen={isModalOpen}
+        onConfirm={handleModalConfirmClick}
+        onCancel={handleModalCancelClick}
       />
     </>
   );

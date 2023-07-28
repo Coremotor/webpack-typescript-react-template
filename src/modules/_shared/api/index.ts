@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
-import { store } from 'modules/_shared/store/store';
-import { setIsLoading, setError } from 'modules/_shared/store/global/reduser';
+import { store } from 'modules/_shared/root-store/store';
+import { setIsLoading, setError } from 'modules/_shared/app-store/reducer';
 import { notification } from 'antd';
 
 export const request = axios.create({

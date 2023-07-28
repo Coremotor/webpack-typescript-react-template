@@ -3,29 +3,26 @@ import { Sider, Content, Header, Layout } from 'modules/_shared/ui';
 import { Outlet } from 'react-router-dom';
 import { Loader, Navigation } from 'modules/_shared/components';
 import logo from 'assets/images/logo.png';
-import { useLayoutStyles } from 'modules/_shared/layouts/app-layout/use-layout-styles';
 import { AppHeader } from 'modules/_shared/components/app-header/app-header';
-
+import styles from './app-layout.module.css';
 export const AppLayout = () => {
-  const { sider, header, content, img, layout } = useLayoutStyles();
-
   return (
-    <Layout style={layout}>
+    <Layout className={styles.layout}>
       <Sider
+        className={styles.sider}
         theme='light'
         width={250}
-        style={sider}
         breakpoint='lg'
         collapsedWidth='0'
       >
-        <img style={img} src={logo} alt='Comfort booking' />
+        <img className={styles.logo} src={logo} alt='Comfort booking' />
         <Navigation />
       </Sider>
       <Layout>
-        <Header style={header}>
+        <Header className={styles.header}>
           <AppHeader />
         </Header>
-        <Content style={content}>
+        <Content className={styles.content}>
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>

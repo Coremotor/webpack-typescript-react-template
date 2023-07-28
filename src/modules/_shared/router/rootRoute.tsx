@@ -38,7 +38,7 @@ const protectedRoutes = [
   { path: RoutesEnum.documentFlow, element: <DocumentFlow /> },
   { path: RoutesEnum.paymentMethods, element: <PaymentMethods /> },
   { path: RoutesEnum.paymentTransactions, element: <PaymentTransactions /> },
-];
+] as const;
 
 const RootRoute: FC = () => {
   return (

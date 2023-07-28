@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Text, Button, Popover, Space } from 'modules/_shared/ui';
-import { useAppSelector } from 'modules/_shared/store/hooks';
+import { useAppSelector } from 'modules/_shared/root-store/hooks';
 import { getSelectedAccountingDocuments } from 'modules/document-flow/store/selectors';
 import ArrowIcon from 'assets/icons/arrow.svg';
 import classNames from 'classnames';

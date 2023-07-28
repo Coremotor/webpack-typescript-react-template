@@ -1,10 +1,13 @@
 import React from 'react';
-import { getError } from 'modules/_shared/store/global/selectors';
-import { setError } from 'modules/_shared/store/global/reduser';
+import { getError } from 'modules/_shared/app-store/selectors';
+import { setError } from 'modules/_shared/app-store/reducer';
 import { createPortal } from 'react-dom';
 import { Card } from 'modules/_shared/ui';
 import styles from 'modules/_shared/components/notification/notification.module.css';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 
 export const Notification = () => {
   const dispatch = useAppDispatch();

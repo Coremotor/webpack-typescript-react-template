@@ -1,4 +1,4 @@
-import { RootState } from 'modules/_shared/store/store';
+import { RootState } from 'modules/_shared/root-store/store';
 
 export const getIsLoading = (state: RootState) => state.global.isLoading;
 export const getLocale = (state: RootState) => state.global.locale;

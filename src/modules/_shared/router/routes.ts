@@ -10,8 +10,8 @@ export enum RoutesEnum {
   emailConfirmation = '/email-confirmation',
   company = '/company',
   editCompany = '/edit-company',
-  employee = '/employee',
-  founder = '/founder',
-  manager = '/manager',
+  employee = '/company/employee',
+  founder = '/company/founder',
+  manager = '/company/manager',
   noMatch = '*',
 }

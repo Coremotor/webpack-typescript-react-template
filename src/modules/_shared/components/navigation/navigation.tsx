@@ -3,7 +3,7 @@ import type { MenuProps } from 'antd';
 import { Menu } from 'modules/_shared/ui';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useNavItems } from 'modules/_shared/components/navigation/use-nav-items';
-import styles from 'modules/_shared/components/navigation/navigation.module.css';
+import styles from './navigation.module.css';
 
 export const Navigation = () => {
   const location = useLocation();

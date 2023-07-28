@@ -5,8 +5,8 @@ import styles from './authorization-form.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { TAuthorizationFormFields } from 'modules/authorization/types';
-import { setIsAuth } from 'modules/authorization/store/reduser';
-import { useAppDispatch } from 'modules/_shared/store/hooks';
+import { setIsAuth } from 'modules/authorization/store/reducer';
+import { useAppDispatch } from 'modules/_shared/root-store/hooks';
 
 export const AuthorizationForm = () => {
   const { t } = useTranslation();

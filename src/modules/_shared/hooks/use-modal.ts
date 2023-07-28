@@ -1,24 +1,24 @@
 import { useState } from 'react';
 
 export const useModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
+  const open = () => {
+    setIsOpen(true);
   };
 
-  const onModalOkButton = () => {
-    setIsModalOpen(false);
+  const onOkButton = () => {
+    setIsOpen(false);
   };
 
-  const onModalCancelButton = () => {
-    setIsModalOpen(false);
+  const onCancelButton = () => {
+    setIsOpen(false);
   };
 
   return {
-    isModalOpen,
-    showModal,
-    onModalOkButton,
-    onModalCancelButton,
+    isModalOpen: isOpen,
+    handleOpenModal: open,
+    handleModalConfirmClick: onOkButton,
+    handleModalCancelClick: onCancelButton,
   };
 };

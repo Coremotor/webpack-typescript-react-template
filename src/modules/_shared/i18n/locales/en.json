@@ -1,0 +1,118 @@
+{
+  "translation": {
+    "shared": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "willRemoved": "will be removed",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "registration": {
+      "title": "Registration",
+      "link": "Enter",
+      "isHaveAccount": "Already have an account?",
+      "emailInputLabel": "Your email",
+      "passwordInputLabel": "Your password",
+      "repeatPasswordInputLabel": "Repeat password",
+      "placeholderPassword": "Enter password",
+      "passwordNotMatch": "Password that you entered do not match!",
+      "button": "Continue"
+    },
+    "authorization": {
+      "title": "Login to your personal account",
+      "link": "Register",
+      "isHaveAccount": "Don't have an account?",
+      "emailInputLabel": "Your email",
+      "passwordInputLabel": "Your password",
+      "placeholderPassword": "Enter password",
+      "forgotYourPassword": "Forgot your password?",
+      "button": "Enter",
+      "TLButton": "Sign in with TravelLine"
+    },
+    "emailConfirmation": {
+      "title": "Confirm email",
+      "content": "We have sent a verification code to",
+      "placeholderInputCode": "Enter confirmation code",
+      "conditions": "I accept the terms",
+      "link": "offer agreement",
+      "button": "Continue",
+      "codeRequest": "You can request the code again via",
+      "sendCode": "Send code again"
+    },
+    "navigation": {
+      "mainScreen": "Main screen",
+      "paymentTransactions": "Payment transactions",
+      "documentFlow": "Document flow",
+      "accountsContracts": "Accounts and contracts",
+      "accommodationFacilities": "Accommodation facilities",
+      "paymentMethods": "Payment methods"
+    },
+    "paymentMethods": {
+      "title": "Payment methods",
+      "paymentMethodDescription": "Payer limit",
+      "buttonSave": "Save",
+      "buttonCancel": "Cancel"
+    },
+    "documentFlow": {
+      "title": "Document flow",
+      "docsTab": "Accounting documents",
+      "registryTab": "Transaction register",
+      "actionBarText": "Selected",
+      "printButton": "Print",
+      "downloadButton": "Download",
+      "saveButton": "Save",
+      "cancelButton": "Cancel",
+      "sendEmailButton": "Schedule a shipment",
+      "archiveRegistersButton": "Archive of daily registers",
+      "acts": "Acts",
+      "reports": "Reports",
+      "invoices": "Invoices",
+      "registries": "Registries",
+      "loadMoreButton": "Show more",
+      "date": "Date",
+      "acquirer": "Acquirer",
+      "consolidatedRegistries": "Consolidated registries",
+      "dailyRegisters": "Daily registers",
+      "modalTitle": "Schedule an email",
+      "dailyShedulerDescription": "Shipping period: daily",
+      "consolidateShedulerDescription": "Shipping period: within 7 working days of the next month",
+      "selectPlaceholder": "Enter username"
+    },
+    "company": {
+      "info": "Information about the company",
+      "employees": "Employees",
+      "management": "Management",
+      "founders": "Founders",
+      "title": "My company",
+      "contacts": "Contacts",
+      "saveButton": "Save",
+      "myCompany": "My company",
+      "mailingAddress": "Mailing address",
+      "phone": "Phone",
+      "editContacts": "Editing contact information"
+    },
+    "companyEmployees": {
+      "addEmployeeButton": "Add employee",
+      "addingEmployee": "Adding an employee",
+      "editEmployee": "Editing an employee",
+      "employees": "Employees",
+      "fullName": "Employee full name",
+      "position": "Position",
+      "phone": "Phone",
+      "access": "Access level",
+      "available": "Available objects",
+      "status": "Status",
+      "fullNamePlaceholder": "Enter the full name of the employee",
+      "positionPlaceholder": "Enter position",
+      "emailPlaceholder": "Enter email",
+      "phonePlaceholder": "Enter phone",
+      "accessPlaceholder": "Select access level",
+      "availablePlaceholder": "Select available objects",
+      "availableObjects": "Available objects",
+      "deleteEmployee": "Delete an employee",
+      "employee": "Employee"
+    }
+  }
+}

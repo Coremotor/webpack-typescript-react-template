@@ -11,8 +11,8 @@ export const usePopover = () => {
   };
 
   return {
-    open,
-    hide,
-    handleOpenChange,
+    isMenuOpen: open,
+    handleHideMenu: hide,
+    handleOpenMenuChange: handleOpenChange,
   };
 };

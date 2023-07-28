@@ -2,8 +2,11 @@ import React, { useEffect } from 'react';
 import { Button, List } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { getTransactionRegisters } from 'modules/document-flow/store/selectors';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
-import { setTransactionRegisters } from 'modules/document-flow/store/reduser';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
+import { setTransactionRegisters } from 'modules/document-flow/store/reducer';
 import { transactionRegisterData } from 'modules/_shared/mock-data/transaction-register-data';
 import {
   TransactionRegisterListHeader,

@@ -2,8 +2,11 @@ import React, { FC } from 'react';
 import { Col, Text } from 'modules/_shared/ui';
 import { useCompanyEmployeesColumnsWidth } from 'modules/company/blocks/company-employees/hooks/use-company-employees-columns-width';
 import { TEmployee } from 'modules/company/types';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
-import { setActiveEmployee } from 'modules/company/store/reduser';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
+import { setActiveEmployee } from 'modules/company/store/reducer';
 import { getActiveEmployee } from 'modules/company/store/selectors';
 import { usePopover } from 'modules/_shared/hooks/use-popover';
 import { useModal } from 'modules/_shared/hooks/use-modal';
@@ -32,9 +35,13 @@ export const CompanyEmployeesListItem: FC<TCompanyEmployeesListItemProps> = ({
 
   const isActive = activeEmployee && activeEmployee.id === employee.id;
 
-  const { open, hide, handleOpenChange } = usePopover();
-  const { isModalOpen, showModal, onModalOkButton, onModalCancelButton } =
-    useModal();
+  const { isMenuOpen, handleHideMenu, handleOpenMenuChange } = usePopover();
+  const {
+    isModalOpen,
+    handleOpenModal,
+    handleModalConfirmClick,
+    handleModalCancelClick,
+  } = useModal();
 
   const setEmployeeInActive = () => dispatch(setActiveEmployee(employee));
 
@@ -68,10 +75,10 @@ export const CompanyEmployeesListItem: FC<TCompanyEmployeesListItemProps> = ({
 
           <Col className={styles.col} flex={columnsWidth.edit}>
             <EditMenuPopover
-              openMenu={open}
-              hideMenu={hide}
-              openDeleteModal={showModal}
-              onOpenMenuChange={handleOpenChange}
+              openMenu={isMenuOpen}
+              hideMenu={handleHideMenu}
+              openDeleteModal={handleOpenModal}
+              onOpenMenuChange={handleOpenMenuChange}
               editPagePath={RoutesEnum.employee + '/' + employee.id}
             />
           </Col>
@@ -82,9 +89,9 @@ export const CompanyEmployeesListItem: FC<TCompanyEmployeesListItemProps> = ({
         title={t('companyEmployees.deleteEmployee') + '?'}
         deletingObjPosition={t('companyEmployees.employee')}
         deletingObjName={employee.fullName}
-        isModalOpen={isModalOpen}
-        onModalOkButton={onModalOkButton}
-        onModalCancelButton={onModalCancelButton}
+        isOpen={isModalOpen}
+        onConfirm={handleModalConfirmClick}
+        onCancel={handleModalCancelClick}
       />
     </>
   );

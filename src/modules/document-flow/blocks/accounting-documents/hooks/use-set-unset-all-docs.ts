@@ -1,10 +1,13 @@
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import {
   getAccountingDocuments,
   getSelectedAccountingDocuments,
 } from 'modules/document-flow/store/selectors';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import { setSelectedAccountingDocuments } from 'modules/document-flow/store/reduser';
+import { setSelectedAccountingDocuments } from 'modules/document-flow/store/reducer';
 
 export const useSetUnsetAllDocs = () => {
   const allDocs = useAppSelector(getAccountingDocuments);

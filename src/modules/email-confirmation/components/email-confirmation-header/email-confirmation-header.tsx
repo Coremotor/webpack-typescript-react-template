@@ -4,7 +4,7 @@ import logo from 'assets/images/logo.png';
 import { Text, Title, Space } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { getEmailForConfirm } from 'modules/registration/store/selectors';
-import { useAppSelector } from 'modules/_shared/store/hooks';
+import { useAppSelector } from 'modules/_shared/root-store/hooks';
 
 export const EmailConfirmationHeader = () => {
   const { t } = useTranslation();

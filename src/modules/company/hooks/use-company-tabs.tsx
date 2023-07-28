@@ -7,9 +7,12 @@ import {
   CompanyInfo,
   CompanyManagers,
 } from 'modules/company/blocks';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { getActiveTabKey } from 'modules/company/store/selectors';
-import { setActiveTabKey } from 'modules/company/store/reduser';
+import { setActiveTabKey } from 'modules/company/store/reducer';
 import { ActiveNavTabKeyEnum } from 'modules/company/types';
 
 export const useCompanyTabs = () => {

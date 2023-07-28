@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import EditIcon from 'assets/icons/edit.svg';
 import DeleteIcon from 'assets/icons/delete.svg';
 import { Text } from 'modules/_shared/ui';
@@ -24,8 +23,12 @@ export const EditMenu: FC<TEditMenuProps> = ({
     openDeleteModal();
   };
 
+  const handleWrapperClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => e.stopPropagation();
+
   return (
-    <div className={styles.navItemsWrapper} onClick={stopPropagationFn}>
+    <div className={styles.navItemsWrapper} onClick={handleWrapperClick}>
       <Link className={styles.navItem} to={editPagePath}>
         <EditIcon />
         <Text className={styles.text}>{t('shared.edit')}</Text>

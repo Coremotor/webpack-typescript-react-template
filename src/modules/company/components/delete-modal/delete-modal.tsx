@@ -6,32 +6,32 @@ type TDeleteModalProps = {
   title: string;
   deletingObjPosition: string;
   deletingObjName: string;
-  isModalOpen: boolean;
-  onModalOkButton: () => void;
-  onModalCancelButton: () => void;
+  isOpen: boolean;
+  onConfirm: () => void;
+  onCancel: () => void;
 };
 
 export const DeleteModal: FC<TDeleteModalProps> = ({
   title,
   deletingObjPosition,
   deletingObjName,
-  isModalOpen,
-  onModalOkButton,
-  onModalCancelButton,
+  isOpen,
+  onConfirm,
+  onCancel,
 }) => {
   const { t } = useTranslation();
 
   return (
     <Modal
       title={title}
-      open={isModalOpen}
-      onOk={onModalOkButton}
-      onCancel={onModalCancelButton}
+      open={isOpen}
+      onOk={onConfirm}
+      onCancel={onCancel}
       footer={[
-        <Button key='back' onClick={onModalCancelButton}>
+        <Button key='back' onClick={onCancel}>
           {t('shared.cancel')}
         </Button>,
-        <Button key='submit' type='primary' danger onClick={onModalOkButton}>
+        <Button key='submit' type='primary' danger onClick={onConfirm}>
           {t('shared.delete')}
         </Button>,
       ]}

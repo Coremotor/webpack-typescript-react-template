@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { TAppState, TDirection } from 'modules/_shared/store/global/types';
+import { TAppState, TDirection } from 'modules/_shared/app-store/types';
 import type { Locale } from 'antd/es/locale';
 import localeRu from 'antd/locale/ru_RU';
 

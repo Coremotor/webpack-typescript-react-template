@@ -17,12 +17,16 @@ export const CompanyEmployeesDetails = () => {
   const { isEmployeeDetailsOpen, onEmployeeDetailsClose, activeEmployee } =
     useShowCompanyEmployeesDetails();
 
-  const { isModalOpen, showModal, onModalOkButton, onModalCancelButton } =
-    useModal();
+  const {
+    isModalOpen,
+    handleOpenModal,
+    handleModalConfirmClick,
+    handleModalCancelClick,
+  } = useModal();
 
   const onDeleteEmployee = () => {
     onEmployeeDetailsClose();
-    onModalOkButton();
+    handleModalConfirmClick();
   };
 
   if (!activeEmployee) return;
@@ -45,7 +49,7 @@ export const CompanyEmployeesDetails = () => {
           description={activeEmployee.description}
           onClose={onEmployeeDetailsClose}
           onEdit={goToEmployeePage}
-          onDelete={showModal}
+          onDelete={handleOpenModal}
         />
 
         <Divider />
@@ -66,9 +70,9 @@ export const CompanyEmployeesDetails = () => {
         title={t('companyEmployees.deleteEmployee') + '?'}
         deletingObjPosition={t('companyEmployees.employee')}
         deletingObjName={activeEmployee.fullName}
-        isModalOpen={isModalOpen}
-        onModalOkButton={onDeleteEmployee}
-        onModalCancelButton={onModalCancelButton}
+        isOpen={isModalOpen}
+        onConfirm={onDeleteEmployee}
+        onCancel={handleModalCancelClick}
       />
     </SidebarDetailsDrawer>
   );

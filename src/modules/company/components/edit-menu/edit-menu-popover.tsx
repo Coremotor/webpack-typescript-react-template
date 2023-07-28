@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Popover } from 'modules/_shared/ui';
-import { stopPropagationFn } from 'modules/_shared/helpers/stopPropagation';
 import ThreeDotsIcon from 'assets/icons/three-dots.svg';
 import { EditMenu } from './edit-menu';
 
@@ -19,6 +18,9 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
   openMenu,
   editPagePath,
 }) => {
+  const handleIconClick = (e: React.MouseEvent<SVGAElement, MouseEvent>) =>
+    e.stopPropagation();
+
   return (
     <Popover
       destroyTooltipOnHide
@@ -36,7 +38,7 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
       open={openMenu}
       onOpenChange={onOpenMenuChange}
     >
-      <ThreeDotsIcon onClick={stopPropagationFn} />
+      <ThreeDotsIcon onClick={handleIconClick} />
     </Popover>
   );
 };

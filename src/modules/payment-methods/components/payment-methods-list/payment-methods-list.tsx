@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import { List } from 'modules/_shared/ui';
 import { getPaymentMethods } from 'modules/payment-methods/store/selectors';
-import { setPaymentMethods } from 'modules/payment-methods/store/reduser';
+import { setPaymentMethods } from 'modules/payment-methods/store/reducer';
 import { paymentMethodsData } from 'modules/_shared/mock-data/paymet-methods-data';
 import { PaymentMethodsListItem } from 'modules/payment-methods/components/payment-methods-list-item/payment-methods-list-item';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import styles from './payment-methods-list.module.css';
 
 export const PaymentMethodsList = () => {

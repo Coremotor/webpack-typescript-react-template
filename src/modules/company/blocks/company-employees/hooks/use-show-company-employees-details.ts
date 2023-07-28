@@ -1,7 +1,10 @@
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { useEffect, useState } from 'react';
 import { getActiveEmployee } from 'modules/company/store/selectors';
-import { setActiveEmployee } from 'modules/company/store/reduser';
+import { setActiveEmployee } from 'modules/company/store/reducer';
 
 export const useShowCompanyEmployeesDetails = () => {
   const dispatch = useAppDispatch();

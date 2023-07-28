@@ -1,6 +1,6 @@
 import React from 'react';
 import { RangePicker, Space } from 'modules/_shared/ui';
-import { useAppSelector } from 'modules/_shared/store/hooks';
+import { useAppSelector } from 'modules/_shared/root-store/hooks';
 import { getSelectedTransactionRegisters } from 'modules/document-flow/store/selectors';
 import { TransactionRegisterSchedulerSend } from 'modules/document-flow/blocks/transaction-register-scheduler-send/transaction-register-scheduler-send';
 import {

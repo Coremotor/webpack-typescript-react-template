@@ -21,12 +21,16 @@ export const CompanyManagersDetails = () => {
   const { isManagerDetailsOpen, onManagerDetailsClose, activeManager } =
     useShowCompanyManagersDetails();
 
-  const { isModalOpen, showModal, onModalOkButton, onModalCancelButton } =
-    useModal();
+  const {
+    isModalOpen,
+    handleOpenModal,
+    handleModalConfirmClick,
+    handleModalCancelClick,
+  } = useModal();
 
   const onDeleteManager = () => {
     onManagerDetailsClose();
-    onModalOkButton();
+    handleModalConfirmClick();
   };
 
   if (!activeManager) return;
@@ -47,7 +51,7 @@ export const CompanyManagersDetails = () => {
           description={activeManager.position}
           onClose={onManagerDetailsClose}
           onEdit={goToManagerPage}
-          onDelete={showModal}
+          onDelete={handleOpenModal}
         />
 
         <Space direction='vertical'>
@@ -81,9 +85,9 @@ export const CompanyManagersDetails = () => {
         title={t('Удалить руководителя') + '?'}
         deletingObjPosition={t('Руководитель')}
         deletingObjName={activeManager.fullName}
-        isModalOpen={isModalOpen}
-        onModalOkButton={onDeleteManager}
-        onModalCancelButton={onModalCancelButton}
+        isOpen={isModalOpen}
+        onConfirm={onDeleteManager}
+        onCancel={handleModalCancelClick}
       />
     </SidebarDetailsDrawer>
   );

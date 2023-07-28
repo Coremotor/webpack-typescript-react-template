@@ -4,9 +4,12 @@ import {
   CompanyEmployeesListHeader,
   CompanyEmployeesListItem,
 } from 'modules/company/blocks/company-employees/components';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { getEmployees } from 'modules/company/store/selectors';
-import { setEmployees } from 'modules/company/store/reduser';
+import { setEmployees } from 'modules/company/store/reducer';
 import { employeesData } from 'modules/_shared/mock-data/company-data';
 import styles from './company-employees-list.module.css';
 import { ListItem } from 'modules/company/layouts';

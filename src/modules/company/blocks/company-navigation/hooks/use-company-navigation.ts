@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { setActiveTabKey } from 'modules/company/store/reduser';
+import { setActiveTabKey } from 'modules/company/store/reducer';
 import { RoutesEnum } from 'modules/_shared/router/routes';
-import { useAppDispatch } from 'modules/_shared/store/hooks';
+import { useAppDispatch } from 'modules/_shared/root-store/hooks';
 import { useNavigate } from 'react-router-dom';
 import { ActiveNavTabKeyEnum } from 'modules/company/types';
 

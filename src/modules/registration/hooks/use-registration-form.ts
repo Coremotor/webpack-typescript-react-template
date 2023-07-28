@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Form } from 'modules/_shared/ui';
 import { RoutesEnum } from 'modules/_shared/router/routes';
-import { setEmailForConfirm } from 'modules/registration/store/reduser';
+import { setEmailForConfirm } from 'modules/registration/store/reducer';
 import { TRegistrationFormFields } from 'modules/registration/types';
-import { useAppDispatch } from 'modules/_shared/store/hooks';
+import { useAppDispatch } from 'modules/_shared/root-store/hooks';
 
 export const useRegistrationForm = () => {
   const navigate = useNavigate();

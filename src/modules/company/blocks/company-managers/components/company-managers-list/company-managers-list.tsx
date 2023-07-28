@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { List } from 'modules/_shared/ui';
-import { useAppDispatch, useAppSelector } from 'modules/_shared/store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'modules/_shared/root-store/hooks';
 import { getManagers } from 'modules/company/store/selectors';
-import { setManagers } from 'modules/company/store/reduser';
+import { setManagers } from 'modules/company/store/reducer';
 import { managersData } from 'modules/_shared/mock-data/company-data';
 import { ListItem } from 'modules/company/layouts';
 import {

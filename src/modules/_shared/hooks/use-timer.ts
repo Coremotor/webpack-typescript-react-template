@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const useTimer = (
   initTimerValueInSeconds: number,
-  callBack?: () => void,
+  onStopTimer?: () => void,
 ) => {
   const [seconds, setSeconds] = useState(initTimerValueInSeconds);
   const [timer, setTimer] = useState<NodeJS.Timer | undefined>(undefined);
@@ -36,7 +36,7 @@ export const useTimer = (
   useEffect(() => {
     if (seconds < 1) {
       stopTimer();
-      if (callBack) callBack();
+      if (onStopTimer) onStopTimer();
     }
   }, [seconds]);
 
