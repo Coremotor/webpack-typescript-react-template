@@ -1,0 +1,17 @@
+.container {
+  padding: 32px var(--content-padding);
+}
+
+.form {
+  width: 60%;
+}
+
+.inputsWrapper {
+  width: 100%;
+  gap: 24px;
+  display: flex;
+}
+
+.input {
+  width: 100%;
+}

@@ -128,7 +128,7 @@ export const CompanyEmployee = () => {
         </Form.Item>
 
         <Form.Item
-          label={t('companyEmployees.available')}
+          label={t('companyEmployees.availableObjects')}
           name='available'
           rules={[{ required: true }]}
         >

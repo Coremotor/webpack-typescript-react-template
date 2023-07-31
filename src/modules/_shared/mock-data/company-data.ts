@@ -1,4 +1,9 @@
-import type { TCompany, TEmployee, TManager } from 'modules/company/types';
+import type {
+  TCompany,
+  TEmployee,
+  TFounder,
+  TManager,
+} from 'modules/company/types';
 
 export const companyData: TCompany = {
   id: 'company-id',
@@ -118,5 +123,52 @@ export const managersData: TManager[] = [
     passportDate: '20.12.2010',
     passportCode: '122 001',
     passportOrgan: 'ОУФМС России по СПБ',
+  },
+];
+
+export const foundersData: TFounder[] = [
+  {
+    id: 'founder_id_1',
+    type: 'Физическое лицо',
+    isRussiaResident: true,
+    fullName: 'Константинов Константин Константинович',
+    position: 'Учредитель',
+    citizenship: 'РФ',
+    capitalPart: '10%',
+    inn: '526317984689',
+    snils: '258 412 520 69',
+    birthday: '11.04.1989',
+    phone: '+7 (902) 100-58-41',
+    birthPlace: '123592, г. Москва',
+    address: '123592, г. Москва, ул. Кулакова, д.20, к.1',
+    mailingAddress: '123592, г. Москва, ул. Кулакова, д.20, к.1',
+    isMailingAddressEqualsAddress: true,
+    passportSeries: '8815',
+    passportNumber: '848754',
+    passportDate: '01.01.2005',
+    passportCode: '120 001',
+    passportOrgan: 'ОУФМС России по РМЭ',
+  },
+  {
+    id: 'founder_id_2',
+    type: 'Физическое лицо',
+    isRussiaResident: true,
+    fullName: 'Константинов Иван Константинович',
+    position: 'Учредитель',
+    citizenship: 'РФ',
+    capitalPart: '50%',
+    inn: '526317911689',
+    snils: '300 412 520 69',
+    birthday: '10.04.1989',
+    phone: '+7 (903) 100-58-41',
+    birthPlace: '123692, г. Москва',
+    address: '123692, г. Москва, ул. Кулакова, д.20, к.1',
+    mailingAddress: '123692, г. Москва, ул. Кулакова, д.20, к.1',
+    isMailingAddressEqualsAddress: true,
+    passportSeries: '8811',
+    passportNumber: '868754',
+    passportDate: '01.01.2003',
+    passportCode: '120 004',
+    passportOrgan: 'ОУФМС России по РМЭ',
   },
 ];

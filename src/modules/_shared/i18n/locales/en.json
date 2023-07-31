@@ -1,13 +1,36 @@
 {
   "translation": {
     "shared": {
+      "forms": {
+        "labels": {},
+        "placeholders": {
+          "fullName": "Enter full name",
+          "citizenship": "Enter citizenship",
+          "position": "Enter position",
+          "document": "Enter document",
+          "inn": "Enter INN",
+          "snils": "Enter SNILS",
+          "birthday": "Enter birth day",
+          "address": "Enter address",
+          "birthPlace": "Enter birth place",
+          "email": "Enter email",
+          "phone": "Enter phone",
+          "passportSeries": "Enter series",
+          "passportNumber": "Enter number",
+          "passportDate": "Enter date of issue",
+          "passportCode": "Enter code",
+          "passportOrgan": "Enter organ name"
+        }
+      },
       "edit": "Edit",
       "delete": "Delete",
       "cancel": "Cancel",
       "save": "Save",
       "willRemoved": "will be removed",
       "yes": "Yes",
-      "no": "No"
+      "no": "No",
+      "basicInfoTab": "Basic information",
+      "passportInfoTab": "Passport details"
     },
     "registration": {
       "title": "Registration",
@@ -102,7 +125,6 @@
       "position": "Position",
       "phone": "Phone",
       "access": "Access level",
-      "available": "Available objects",
       "status": "Status",
       "fullNamePlaceholder": "Enter the full name of the employee",
       "positionPlaceholder": "Enter position",
@@ -113,6 +135,38 @@
       "availableObjects": "Available objects",
       "deleteEmployee": "Delete an employee",
       "employee": "Employee"
+    },
+    "companyManagers": {
+      "addManagerButton": "Add manager",
+      "addingManager": "Adding an manager",
+      "editManager": "Editing an manager",
+      "managers": "Managers",
+      "fullName": "Manager full name",
+      "phone": "Phone",
+      "fullNamePlaceholder": "Enter the full name of the employee",
+      "emailPlaceholder": "Enter email",
+      "phonePlaceholder": "Enter phone",
+      "deleteManager": "Delete an manager",
+      "manager": "Manager",
+      "basicInfoTab": "Basic information",
+      "passportInfoTab": "Passport details",
+      "resident": "Resident of the Russian Federation",
+      "citizenship": "Citizenship"
+    },
+    "companyFounders": {
+      "addFounderButton": "Add founder",
+      "addingFounder": "Adding an founder",
+      "editFounder": "Editing an founder",
+      "founders": "Founders",
+      "fullName": "Founder full name",
+      "phone": "Phone",
+      "fullNamePlaceholder": "Enter the full name of the founder",
+      "emailPlaceholder": "Enter email",
+      "phonePlaceholder": "Enter phone",
+      "deleteFounder": "Delete an founder",
+      "founder": "Founder",
+      "resident": "Resident of the Russian Federation",
+      "citizenship": "Citizenship"
     }
   }
 }

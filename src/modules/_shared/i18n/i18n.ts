@@ -23,7 +23,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    debug: true,
+    debug: false,
     lng: LangEnum.ru,
     interpolation: {
       escapeValue: false,

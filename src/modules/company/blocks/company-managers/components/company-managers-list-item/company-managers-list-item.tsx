@@ -86,8 +86,8 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
       </ListItemRow>
 
       <DeleteModal
-        title={t('Удалить руководителя') + '?'}
-        deletingObjPosition={t('руководитель')}
+        title={t('companyManagers.deleteManager') + '?'}
+        deletingObjPosition={t('companyManagers.manager')}
         deletingObjName={manager.fullName}
         isOpen={isModalOpen}
         onConfirm={handleModalConfirmClick}

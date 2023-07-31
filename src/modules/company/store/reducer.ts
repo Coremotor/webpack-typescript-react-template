@@ -4,12 +4,13 @@ import type {
   TCompany,
   TCompanyState,
   TEmployee,
+  TFounder,
   TManager,
 } from 'modules/company/types';
 import { ActiveNavTabKeyEnum } from 'modules/company/types';
 
 const initialState: TCompanyState = {
-  activeTabKey: ActiveNavTabKeyEnum.three,
+  activeTabKey: ActiveNavTabKeyEnum.four,
   company: null,
   employee: null,
   employees: [],
@@ -17,6 +18,9 @@ const initialState: TCompanyState = {
   manager: null,
   managers: [],
   activeManager: null,
+  founder: null,
+  founders: [],
+  activeFounder: null,
 };
 
 const companySlice = createSlice({
@@ -53,6 +57,18 @@ const companySlice = createSlice({
     ) {
       state.activeManager = action.payload;
     },
+    setFounder(state: TCompanyState, action: PayloadAction<TFounder | null>) {
+      state.founder = action.payload;
+    },
+    setFounders(state: TCompanyState, action: PayloadAction<TFounder[]>) {
+      state.founders = action.payload;
+    },
+    setActiveFounder(
+      state: TCompanyState,
+      action: PayloadAction<TFounder | null>,
+    ) {
+      state.activeFounder = action.payload;
+    },
   },
 });
 
@@ -65,6 +81,9 @@ export const {
   setManager,
   setManagers,
   setActiveManager,
+  setFounder,
+  setFounders,
+  setActiveFounder,
 } = companySlice.actions;
 
 export default companySlice.reducer;

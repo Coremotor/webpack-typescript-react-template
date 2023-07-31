@@ -57,6 +57,29 @@ export type TManager = {
   passportOrgan: string;
 };
 
+export type TFounder = {
+  id: string;
+  type: string;
+  isRussiaResident: boolean;
+  fullName: string;
+  position: string;
+  citizenship: string;
+  capitalPart: string;
+  inn: string;
+  snils: string;
+  birthday: string;
+  phone: string;
+  birthPlace: string;
+  address: string;
+  mailingAddress: string;
+  isMailingAddressEqualsAddress: boolean;
+  passportSeries: string;
+  passportNumber: string;
+  passportDate: string;
+  passportCode: string;
+  passportOrgan: string;
+};
+
 export type TCompanyState = {
   activeTabKey: string;
   company: TCompany | null;
@@ -66,6 +89,9 @@ export type TCompanyState = {
   manager: TManager | null;
   managers: TManager[];
   activeManager: TManager | null;
+  founder: TFounder | null;
+  founders: TFounder[];
+  activeFounder: TFounder | null;
 };
 
 export enum ActiveNavTabKeyEnum {
@@ -98,6 +124,26 @@ export type TManagerFormFields = {
   birthPlace: string;
   address: string;
   mailingAddress: string;
+  isMailingAddressEqualsAddress: boolean;
+  passportSeries: string;
+  passportNumber: string;
+  passportDate: string;
+  passportCode: string;
+  passportOrgan: string;
+};
+
+export type TFounderFormFields = {
+  type: string;
+  isRussiaResident: boolean;
+  fullName: string;
+  citizenship: string;
+  capitalPart: string;
+  inn: string;
+  snils: string;
+  birthday: string;
+  phone: string;
+  birthPlace: string;
+  address: string;
   isMailingAddressEqualsAddress: boolean;
   passportSeries: string;
   passportNumber: string;

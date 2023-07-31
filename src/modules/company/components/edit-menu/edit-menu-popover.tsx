@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Popover } from 'modules/_shared/ui';
-import ThreeDotsIcon from 'assets/icons/three-dots.svg';
+import MoreIcon from 'assets/icons/more.svg';
 import { EditMenu } from './edit-menu';
 
 type TEditMenuPopoverProps = {
@@ -18,7 +18,7 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
   openMenu,
   editPagePath,
 }) => {
-  const handleIconClick = (e: React.MouseEvent<SVGAElement, MouseEvent>) =>
+  const stopPropagationFN = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
     e.stopPropagation();
 
   return (
@@ -38,7 +38,9 @@ export const EditMenuPopover: FC<TEditMenuPopoverProps> = ({
       open={openMenu}
       onOpenChange={onOpenMenuChange}
     >
-      <ThreeDotsIcon onClick={handleIconClick} />
+      <div onClick={stopPropagationFN}>
+        <MoreIcon />
+      </div>
     </Popover>
   );
 };

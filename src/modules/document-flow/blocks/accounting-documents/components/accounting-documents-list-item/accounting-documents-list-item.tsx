@@ -67,11 +67,15 @@ export const AccountingDocumentsListItem: FC<
           trigger='click'
           arrow={false}
         >
-          <PrintIcon className={styles.icon} />
+          <div className={styles.icon}>
+            <PrintIcon />
+          </div>
         </Popover>
       </Col>
       <Col className={styles.col} flex={columnsWidth.cloud}>
-        <CloudIcon className={styles.icon} />
+        <div className={styles.icon}>
+          <CloudIcon />
+        </div>
       </Col>
     </Row>
   );

@@ -11,16 +11,16 @@ export const CompanyManagersListHeader = () => {
   return (
     <Row className={styles.row} wrap={false}>
       <Col className={styles.col} flex={managerListColumnsWidth.fullName}>
-        {t('ФИО руководства')}
+        {t('companyManagers.fullName')}
       </Col>
       <Col className={styles.col} flex={managerListColumnsWidth.resident}>
-        <Text ellipsis>{t('Резидент РФ')}</Text>
+        <Text ellipsis>{t('companyManagers.resident')}</Text>
       </Col>
       <Col className={styles.col} flex={managerListColumnsWidth.citizenship}>
-        <Text ellipsis>{t('Гражданство')}</Text>
+        <Text ellipsis>{t('companyManagers.citizenship')}</Text>
       </Col>
       <Col className={styles.col} flex={managerListColumnsWidth.phone}>
-        <Text ellipsis>{t('Телефон')}</Text>
+        <Text ellipsis>{t('companyManagers.phone')}</Text>
       </Col>
       <Col className={styles.col} flex={managerListColumnsWidth.edit} />
     </Row>

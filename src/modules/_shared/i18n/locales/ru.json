@@ -7,7 +7,9 @@
       "save": "Сохранить",
       "willRemoved": "будет удален",
       "yes": "Да",
-      "no": "Нет"
+      "no": "Нет",
+      "basicInfoTab": "Основная информация",
+      "passportInfoTab": "Паспортные данные"
     },
     "registration": {
       "title": "Регистрация",
@@ -102,7 +104,6 @@
       "position": "Должность",
       "phone": "Телефон",
       "access": "Уровень доступа",
-      "available": "Доступные объекты",
       "status": "Статус",
       "fullNamePlaceholder": "Введите ФИО сотрудника",
       "positionPlaceholder": "Введите должность",
@@ -113,6 +114,38 @@
       "availableObjects": "Доступные объекты",
       "deleteEmployee": "Удалить сотрудника",
       "employee": "Сотрудник"
+    },
+    "companyManagers": {
+      "addManagerButton": "Добавить руководство",
+      "addingManager": "Добавление руководства",
+      "editManager": "Редактирование руководства",
+      "managers": "Руководители",
+      "fullName": "ФИО руководителя",
+      "phone": "Телефон",
+      "fullNamePlaceholder": "Введите ФИО руководителя",
+      "emailPlaceholder": "Введите email",
+      "phonePlaceholder": "Введите телефон",
+      "deleteManager": "Удалить руководителя",
+      "manager": "Руководитель",
+      "basicInfoTab": "Основная информация",
+      "passportInfoTab": "Паспортные данные",
+      "resident": "Резидент РФ",
+      "citizenship": "Гражданство"
+    },
+    "companyFounders": {
+      "addFounderButton": "Добавить учредителя",
+      "addingFounder": "Добавление учредителя",
+      "editFounder": "Редактирование учредителя",
+      "founders": "Учредители",
+      "fullName": "ФИО учредителя",
+      "phone": "Телефон",
+      "fullNamePlaceholder": "Введите ФИО учредителя",
+      "emailPlaceholder": "Введите email",
+      "phonePlaceholder": "Введите телефон",
+      "deleteFounder": "Удалить учредителя",
+      "founder": "Учредитель",
+      "resident": "Резидент РФ",
+      "citizenship": "Гражданство"
     }
   }
 }

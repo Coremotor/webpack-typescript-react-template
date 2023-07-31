@@ -6,20 +6,20 @@ import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useTranslation } from 'react-i18next';
 import { DeleteModal, DetailsHeader } from 'modules/company/components';
 import { SidebarDetailsDrawer } from 'modules/_shared/layouts';
-import { useShowCompanyManagersDetails } from 'modules/company/blocks/company-managers/hooks/use-show-company-managers-details';
-import { CompanyManagersDetailsInfo } from './company-managers-details-info';
-import styles from './company-managers-details.module.css';
+import { CompanyFoundersDetailsInfo } from 'modules/company/blocks/company-founders/components/company-founders-details/company-founders-details-info';
 import {
   convertToBasicTab,
   convertToPassportTab,
-} from 'modules/company/helpers/convertActiveMenegerInTableView';
+} from 'modules/company/helpers/convertActiveFounderInTableView';
+import { useShowCompanyFoundersDetails } from 'modules/company/blocks/company-founders/hooks/use-show-company-founders-details';
+import styles from './company-founders-details.module.css';
 
-export const CompanyManagersDetails = () => {
+export const CompanyFoundersDetails = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const { isManagerDetailsOpen, onManagerDetailsClose, activeManager } =
-    useShowCompanyManagersDetails();
+  const { isFounderDetailsOpen, onFounderDetailsClose, activeFounder } =
+    useShowCompanyFoundersDetails();
 
   const {
     isModalOpen,
@@ -29,27 +29,27 @@ export const CompanyManagersDetails = () => {
   } = useModal();
 
   const onDeleteManager = () => {
-    onManagerDetailsClose();
+    onFounderDetailsClose();
     handleModalConfirmClick();
   };
 
-  if (!activeManager) return;
+  if (!activeFounder) return;
 
   const goToManagerPage = () => {
-    onManagerDetailsClose();
-    navigate(RoutesEnum.manager + '/' + activeManager.id);
+    onFounderDetailsClose();
+    navigate(RoutesEnum.founder + '/' + activeFounder.id);
   };
 
   return (
     <SidebarDetailsDrawer
-      onClose={onManagerDetailsClose}
-      isOpen={isManagerDetailsOpen}
+      onClose={onFounderDetailsClose}
+      isOpen={isFounderDetailsOpen}
     >
       <div className={styles.wrapper}>
         <DetailsHeader
-          fullName={activeManager.fullName}
-          description={activeManager.position}
-          onClose={onManagerDetailsClose}
+          fullName={activeFounder.fullName}
+          description={activeFounder.position}
+          onClose={onFounderDetailsClose}
           onEdit={goToManagerPage}
           onDelete={handleOpenModal}
         />
@@ -62,8 +62,8 @@ export const CompanyManagersDetails = () => {
                 key: '1',
                 label: t('shared.basicInfoTab'),
                 children: (
-                  <CompanyManagersDetailsInfo
-                    data={convertToBasicTab(activeManager)}
+                  <CompanyFoundersDetailsInfo
+                    data={convertToBasicTab(activeFounder)}
                   />
                 ),
               },
@@ -71,8 +71,8 @@ export const CompanyManagersDetails = () => {
                 key: '2',
                 label: t('shared.passportInfoTab'),
                 children: (
-                  <CompanyManagersDetailsInfo
-                    data={convertToPassportTab(activeManager)}
+                  <CompanyFoundersDetailsInfo
+                    data={convertToPassportTab(activeFounder)}
                   />
                 ),
               },
@@ -82,9 +82,9 @@ export const CompanyManagersDetails = () => {
       </div>
 
       <DeleteModal
-        title={t('companyManagers.deleteManager') + '?'}
-        deletingObjPosition={t('companyManagers.manager')}
-        deletingObjName={activeManager.fullName}
+        title={t('companyFounders.deleteFounder') + '?'}
+        deletingObjPosition={t('companyFounders.founder')}
+        deletingObjName={activeFounder.fullName}
         isOpen={isModalOpen}
         onConfirm={onDeleteManager}
         onCancel={handleModalCancelClick}

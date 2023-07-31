@@ -10,3 +10,7 @@ export const getManager = (state: RootState) => state.company.manager;
 export const getActiveManager = (state: RootState) =>
   state.company.activeManager;
 export const getManagers = (state: RootState) => state.company.managers;
+export const getFounder = (state: RootState) => state.company.founder;
+export const getActiveFounder = (state: RootState) =>
+  state.company.activeFounder;
+export const getFounders = (state: RootState) => state.company.founders;

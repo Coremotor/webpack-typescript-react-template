@@ -18,7 +18,7 @@ export const CompanyManagers = () => {
   return (
     <Space className={styles.list} size='large' direction='vertical'>
       <Button onClick={goToManagerPage} type='primary'>
-        {t('Добавить руководителя')}
+        {t('companyManagers.addManagerButton')}
       </Button>
       <CompanyManagersList />
       <CompanyManagersDetails />
