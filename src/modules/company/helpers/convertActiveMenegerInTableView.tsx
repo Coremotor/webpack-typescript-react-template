@@ -2,66 +2,70 @@ import { TManager } from 'modules/company/types';
 
 export const convertToBasicTab = (activeManager: TManager) => [
   {
-    label: 'Резидент РФ',
+    label: 'forms.labels.resident',
     value: activeManager ? 'shared.yes' : 'shared.no',
   },
   {
-    label: 'Гражданство',
+    label: 'forms.labels.citizenship',
     value: activeManager.citizenship,
   },
   {
-    label: 'Действует на основании',
+    label: 'forms.labels.documents',
     value: activeManager.act,
   },
   {
-    label: 'ФИО для подписи в документах',
+    label: 'forms.labels.signingDocumentsFullName',
     value: activeManager.fullNameForDocs,
   },
   {
-    label: 'ИНН',
+    label: 'forms.labels.inn',
     value: activeManager.inn,
   },
   {
-    label: 'СНИЛС',
+    label: 'forms.labels.snils',
     value: activeManager.snils,
   },
   {
-    label: 'Дата рождения',
+    label: 'forms.labels.birthday',
     value: activeManager.birthday,
   },
   {
-    label: 'Контактный телефон',
+    label: 'forms.labels.phone',
     value: activeManager.phone,
   },
   {
-    label: 'Место рождения',
+    label: 'forms.labels.birthPlace',
     value: activeManager.birthPlace,
   },
   {
-    label: 'Адрес места жительства',
+    label: 'forms.labels.address',
     value: activeManager.address,
   },
   {
-    label: 'Почтовый адрес',
+    label: 'forms.labels.mailingAddress',
     value: activeManager.mailingAddress,
   },
 ];
 
 export const convertToPassportTab = (activeManager: TManager) => [
   {
-    label: 'Серия и номер',
+    label: 'forms.labels.passportSeries',
+    value: activeManager.passportSeries,
+  },
+  {
+    label: 'forms.labels.passportNumber',
     value: activeManager.passportNumber,
   },
   {
-    label: 'Дата выдачи',
+    label: 'forms.labels.passportDate',
     value: activeManager.passportDate,
   },
   {
-    label: 'Код подразделения',
+    label: 'forms.labels.passportCode',
     value: activeManager.passportCode,
   },
   {
-    label: 'Кем выдан',
+    label: 'forms.labels.passportOrgan',
     value: activeManager.passportOrgan,
   },
 ];

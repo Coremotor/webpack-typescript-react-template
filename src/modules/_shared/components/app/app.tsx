@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import RootRoute from 'modules/_shared/router/rootRoute';
 import { getDirection, getLocale } from 'modules/_shared/app-store/selectors';
 import { LocaleSwitcher, Notification } from 'modules/_shared/components/index';
-import { colors } from 'assets/styles/colors';
 import styles from './app.module.css';
 
 import { I18nextProvider } from 'react-i18next';
@@ -15,6 +14,7 @@ import {
   useAppSelector,
 } from 'modules/_shared/root-store/hooks';
 import { setIsAuth } from 'modules/authorization/store/reducer';
+import basicTheme from 'modules/_shared/theme/basic.json';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -30,12 +30,7 @@ const App: React.FC = () => {
           <ConfigProvider
             locale={locale}
             direction={direction}
-            theme={{
-              token: {
-                colorPrimary: colors.colorPrimary,
-                fontFamily: 'Gilroy',
-              },
-            }}
+            theme={basicTheme}
           >
             <I18nextProvider i18n={i18n}>
               <AntDApp className={styles.app}>

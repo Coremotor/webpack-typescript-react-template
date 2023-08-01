@@ -42,23 +42,27 @@ export const CompanyFounder = () => {
       <Breadcrumb
         items={[
           {
-            title: <Link to={RoutesEnum.company}>{t('Учредители')}</Link>,
+            title: (
+              <Link to={RoutesEnum.company}>
+                {t('companyFounders.founders')}
+              </Link>
+            ),
           },
           {
             title: founderId
-              ? t('Редактирование учредителей')
-              : t('Добавление учредителей'),
+              ? t('companyFounders.editFounder')
+              : t('companyFounders.addingFounder'),
           },
         ]}
       />
 
       <Title level={4}>
         {founderId
-          ? t('Редактирование учредителей')
-          : t('Добавление учредителей')}
+          ? t('companyFounders.editFounder')
+          : t('companyFounders.addingFounder')}
       </Title>
 
-      <Title level={5}>{t('Основная информация')}</Title>
+      <Title level={5}>{t('shared.basicInfo')}</Title>
 
       <Form
         className={styles.form}
@@ -73,13 +77,13 @@ export const CompanyFounder = () => {
         }}
       >
         <Form.Item
-          label={t('Учредитель')}
+          label={t('companyFounders.founder')}
           name='type'
           rules={[{ required: true }]}
         >
           <Select
             size='large'
-            placeholder={t('Выберите тип')}
+            placeholder={t('forms.placeholders.type')}
             options={typeOptions}
           />
         </Form.Item>
@@ -90,66 +94,66 @@ export const CompanyFounder = () => {
           valuePropName='checked'
           rules={[{ required: true }]}
         >
-          <Checkbox>{t('Резидент РФ')}</Checkbox>
+          <Checkbox>{t('forms.labels.resident')}</Checkbox>
         </Form.Item>
 
         <Form.Item
-          label={t('ФИО')}
+          label={t('forms.labels.fullName')}
           name='fullName'
           rules={[{ required: true }]}
         >
-          <Input placeholder={t('Введите ФИО руководства')} size='large' />
+          <Input placeholder={t('forms.placeholders.fullName')} size='large' />
         </Form.Item>
 
         <Form.Item
-          label={t('Гражданство')}
+          label={t('forms.labels.citizenship')}
           name='citizenship'
           rules={[{ required: true }]}
         >
           <Select
             size='large'
-            placeholder={t('Выберите гражданство')}
+            placeholder={t('forms.placeholders.citizenship')}
             options={citizenshipOptions}
           />
         </Form.Item>
 
         <Form.Item
-          label={t('Доля в капитале')}
+          label={t('forms.labels.capital')}
           name='capitalPart'
           rules={[{ required: true }]}
         >
-          <Input placeholder={t('Введите долю в капитале')} size='large' />
+          <Input placeholder={t('forms.placeholders.capital')} size='large' />
         </Form.Item>
 
         <div className={styles.inputsWrapper}>
           <Form.Item
             className={styles.input}
-            label={t('ИНН')}
+            label={t('forms.labels.inn')}
             name='inn'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите ИНН')} size='large' />
+            <Input placeholder={t('forms.placeholders.inn')} size='large' />
           </Form.Item>
 
           <Form.Item
             className={styles.input}
-            label={t('СНИЛС')}
+            label={t('forms.labels.snils')}
             name='snils'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите СНИЛС')} size='large' />
+            <Input placeholder={t('forms.placeholders.snils')} size='large' />
           </Form.Item>
         </div>
 
         <div className={styles.inputsWrapper}>
           <Form.Item
             className={styles.input}
-            label={t('Дата рождения')}
+            label={t('forms.labels.birthday')}
             name='birthday'
             rules={[{ required: true }]}
           >
             <DatePicker
-              placeholder={t('Введите дату рождения')}
+              placeholder={t('forms.placeholders.birthday')}
               className={styles.input}
               size='large'
             />
@@ -157,31 +161,31 @@ export const CompanyFounder = () => {
 
           <Form.Item
             className={styles.input}
-            label={t('Контактный телефон')}
+            label={t('forms.labels.phone')}
             name='phone'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите контактный телефон')} size='large' />
+            <Input placeholder={t('forms.placeholders.phone')} size='large' />
           </Form.Item>
         </div>
 
         <Form.Item
-          label={t('Место рождения')}
+          label={t('forms.labels.birthPlace')}
           name='birthPlace'
           rules={[{ required: true }]}
         >
-          <Input placeholder={t('Введите место рождения')} size='large' />
+          <Input
+            placeholder={t('forms.placeholders.birthPlace')}
+            size='large'
+          />
         </Form.Item>
 
         <Form.Item
-          label={t('Адрес места жительства')}
+          label={t('forms.labels.address')}
           name='address'
           rules={[{ required: true }]}
         >
-          <Input
-            placeholder={t('Введите адрес места жительства')}
-            size='large'
-          />
+          <Input placeholder={t('forms.placeholders.address')} size='large' />
         </Form.Item>
 
         <Form.Item
@@ -190,40 +194,46 @@ export const CompanyFounder = () => {
           valuePropName='checked'
           rules={[{ required: true }]}
         >
-          <Checkbox>{t('Почтовый адрес совпадает с юридическим')}</Checkbox>
+          <Checkbox>{t('forms.labels.isAddressEqualsMailingAddress')}</Checkbox>
         </Form.Item>
 
-        <Title level={5}>{t('Паспортные данные')}</Title>
+        <Title level={5}>{t('shared.passportInfo')}</Title>
 
         <div className={styles.inputsWrapper}>
           <Form.Item
             className={styles.input}
-            label={t('Серия')}
+            label={t('forms.labels.passportSeries')}
             name='passportSeries'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите серию')} size='large' />
+            <Input
+              placeholder={t('forms.placeholders.passportSeries')}
+              size='large'
+            />
           </Form.Item>
 
           <Form.Item
             className={styles.input}
-            label={t('Номер')}
+            label={t('forms.labels.passportNumber')}
             name='passportNumber'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите номер')} size='large' />
+            <Input
+              placeholder={t('forms.placeholders.passportNumber')}
+              size='large'
+            />
           </Form.Item>
         </div>
 
         <div className={styles.inputsWrapper}>
           <Form.Item
             className={styles.input}
-            label={t('Дата выдачи')}
+            label={t('forms.labels.passportDate')}
             name='passportDate'
             rules={[{ required: true }]}
           >
             <DatePicker
-              placeholder={t('Введите дату выдачи')}
+              placeholder={t('forms.placeholders.passportDate')}
               className={styles.input}
               size='large'
             />
@@ -231,21 +241,27 @@ export const CompanyFounder = () => {
 
           <Form.Item
             className={styles.input}
-            label={t('Код подразделения')}
+            label={t('forms.labels.passportCode')}
             name='passportCode'
             rules={[{ required: true }]}
           >
-            <Input placeholder={t('Введите код подразделения')} size='large' />
+            <Input
+              placeholder={t('forms.placeholders.passportCode')}
+              size='large'
+            />
           </Form.Item>
         </div>
 
         <Form.Item
           className={styles.input}
-          label={t('Кем выдан')}
+          label={t('forms.labels.passportOrgan')}
           name='passportOrgan'
           rules={[{ required: true }]}
         >
-          <Input placeholder={t('Введите наименование органа')} size='large' />
+          <Input
+            placeholder={t('forms.placeholders.passportOrgan')}
+            size='large'
+          />
         </Form.Item>
 
         <Form.Item>

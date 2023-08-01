@@ -2,66 +2,70 @@ import { TFounder } from 'modules/company/types';
 
 export const convertToBasicTab = (activeFounder: TFounder) => [
   {
-    label: 'Учредитель',
+    label: 'companyFounders.founder',
     value: activeFounder.type,
   },
   {
-    label: 'Резидент РФ',
+    label: 'forms.labels.resident',
     value: activeFounder ? 'shared.yes' : 'shared.no',
   },
   {
-    label: 'Гражданство',
+    label: 'forms.labels.citizenship',
     value: activeFounder.citizenship,
   },
   {
-    label: 'Доля в капитале',
+    label: 'forms.labels.capital',
     value: activeFounder.capitalPart,
   },
   {
-    label: 'ИНН',
+    label: 'forms.labels.inn',
     value: activeFounder.inn,
   },
   {
-    label: 'СНИЛС',
+    label: 'forms.labels.snils',
     value: activeFounder.snils,
   },
   {
-    label: 'Дата рождения',
+    label: 'forms.labels.birthday',
     value: activeFounder.birthday,
   },
   {
-    label: 'Контактный телефон',
+    label: 'forms.labels.phone',
     value: activeFounder.phone,
   },
   {
-    label: 'Место рождения',
+    label: 'forms.labels.birthPlace',
     value: activeFounder.birthPlace,
   },
   {
-    label: 'Адрес места жительства',
+    label: 'forms.labels.address',
     value: activeFounder.address,
   },
   {
-    label: 'Почтовый адрес',
+    label: 'forms.labels.mailingAddress',
     value: activeFounder.mailingAddress,
   },
 ];
 
 export const convertToPassportTab = (activeFounder: TFounder) => [
   {
-    label: 'Серия и номер',
+    label: 'forms.labels.passportSeries',
+    value: activeFounder.passportSeries,
+  },
+  {
+    label: 'forms.labels.passportNumber',
     value: activeFounder.passportNumber,
   },
   {
-    label: 'Дата выдачи',
+    label: 'forms.labels.passportDate',
     value: activeFounder.passportDate,
   },
   {
-    label: 'Код подразделения',
+    label: 'forms.labels.passportCode',
     value: activeFounder.passportCode,
   },
   {
-    label: 'Кем выдан',
+    label: 'forms.labels.passportOrgan',
     value: activeFounder.passportOrgan,
   },
 ];

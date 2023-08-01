@@ -60,7 +60,7 @@ export const CompanyFoundersDetails = () => {
             items={[
               {
                 key: '1',
-                label: t('shared.basicInfoTab'),
+                label: t('shared.basicInfo'),
                 children: (
                   <CompanyFoundersDetailsInfo
                     data={convertToBasicTab(activeFounder)}
@@ -69,7 +69,7 @@ export const CompanyFoundersDetails = () => {
               },
               {
                 key: '2',
-                label: t('shared.passportInfoTab'),
+                label: t('shared.passportInfo'),
                 children: (
                   <CompanyFoundersDetailsInfo
                     data={convertToPassportTab(activeFounder)}

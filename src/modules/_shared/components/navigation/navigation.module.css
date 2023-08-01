@@ -1,3 +1,10 @@
 .menu {
   border: none !important;
 }
+.item {
+  display: flex !important;
+  align-items: center !important;
+}
+.active {
+  color: var(--color-primary) !important
+}

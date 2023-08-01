@@ -1,27 +1,6 @@
 {
   "translation": {
     "shared": {
-      "forms": {
-        "labels": {},
-        "placeholders": {
-          "fullName": "Enter full name",
-          "citizenship": "Enter citizenship",
-          "position": "Enter position",
-          "document": "Enter document",
-          "inn": "Enter INN",
-          "snils": "Enter SNILS",
-          "birthday": "Enter birth day",
-          "address": "Enter address",
-          "birthPlace": "Enter birth place",
-          "email": "Enter email",
-          "phone": "Enter phone",
-          "passportSeries": "Enter series",
-          "passportNumber": "Enter number",
-          "passportDate": "Enter date of issue",
-          "passportCode": "Enter code",
-          "passportOrgan": "Enter organ name"
-        }
-      },
       "edit": "Edit",
       "delete": "Delete",
       "cancel": "Cancel",
@@ -29,8 +8,52 @@
       "willRemoved": "will be removed",
       "yes": "Yes",
       "no": "No",
-      "basicInfoTab": "Basic information",
-      "passportInfoTab": "Passport details"
+      "basicInfo": "Basic information",
+      "passportInfo": "Passport details"
+    },
+    "forms": {
+      "labels": {
+        "resident": "Resident of the Russian Federation",
+        "fullName": "Full name",
+        "citizenship": "Citizenship",
+        "position": "Position",
+        "documents": "Acting on the basis of",
+        "signingDocumentsFullName": "Full name for signing documents",
+        "inn": "INN",
+        "snils": "SNILS",
+        "birthday": "Birthday",
+        "phone": "Contact phone",
+        "address": "Address of residence",
+        "birthPlace": "Place of birth",
+        "passportSeries": "Series",
+        "passportNumber": "Number",
+        "passportDate": "Date of issue",
+        "passportCode": "Unit code",
+        "passportOrgan": "By whom issued",
+        "capital": "Equity stake",
+        "isAddressEqualsMailingAddress": "The postal address is the same as the legal address",
+        "mailingAddress": "Mailing address"
+      },
+      "placeholders": {
+        "fullName": "Enter full name",
+        "citizenship": "Enter citizenship",
+        "position": "Enter position",
+        "documents": "Enter document",
+        "inn": "Enter INN",
+        "snils": "Enter SNILS",
+        "birthday": "Enter birth day",
+        "address": "Enter address",
+        "birthPlace": "Enter birth place",
+        "email": "Enter email",
+        "phone": "Enter phone",
+        "passportSeries": "Enter series",
+        "passportNumber": "Enter number",
+        "passportDate": "Enter date of issue",
+        "passportCode": "Enter code",
+        "passportOrgan": "Enter organ name",
+        "capital": "Enter equity stake",
+        "type": "Enter type"
+      }
     },
     "registration": {
       "title": "Registration",
@@ -143,9 +166,6 @@
       "managers": "Managers",
       "fullName": "Manager full name",
       "phone": "Phone",
-      "fullNamePlaceholder": "Enter the full name of the employee",
-      "emailPlaceholder": "Enter email",
-      "phonePlaceholder": "Enter phone",
       "deleteManager": "Delete an manager",
       "manager": "Manager",
       "basicInfoTab": "Basic information",
@@ -160,9 +180,6 @@
       "founders": "Founders",
       "fullName": "Founder full name",
       "phone": "Phone",
-      "fullNamePlaceholder": "Enter the full name of the founder",
-      "emailPlaceholder": "Enter email",
-      "phonePlaceholder": "Enter phone",
       "deleteFounder": "Delete an founder",
       "founder": "Founder",
       "resident": "Resident of the Russian Federation",

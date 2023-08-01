@@ -9,7 +9,8 @@ import IconBill from 'assets/icons/bill.svg';
 import IconApartment from 'assets/icons/apartment.svg';
 import IconWallet from 'assets/icons/wallet.svg';
 import { Text } from 'modules/_shared/ui';
-import { colors } from 'assets/styles/colors';
+import classNames from 'classnames';
+import styles from './navigation.module.css';
 
 const navItems = [
   {
@@ -47,26 +48,22 @@ const navItems = [
 export const useNavItems = (currentRoute: string) => {
   const { t } = useTranslation();
 
-  const activeItemColor = (route: string) =>
-    currentRoute === route ? colors.colorPrimary : 'rgba(0, 0, 0, 0.45)';
+  const isActive = (route: string) => currentRoute === route;
 
   const items: MenuProps['items'] = navItems.map((item) => ({
     label: (
       <Text
-        strong
         type='secondary'
-        style={{ color: activeItemColor(item.route) }}
+        className={classNames({ [styles.active]: isActive(item.route) })}
       >
         {t(item.label)}
       </Text>
     ),
     key: item.route,
     icon: <item.icon />,
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      color: activeItemColor(item.route),
-    },
+    className: classNames([styles.item], {
+      [styles.active]: isActive(item.route),
+    }),
   }));
 
   return items;
