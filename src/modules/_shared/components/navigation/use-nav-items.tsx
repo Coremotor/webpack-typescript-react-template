@@ -7,7 +7,7 @@ import IconOperation from 'assets/icons/operation.svg';
 import IconContract from 'assets/icons/contract.svg';
 import IconBill from 'assets/icons/bill.svg';
 import IconApartment from 'assets/icons/apartment.svg';
-import IconWallet from 'assets/icons/wallet.svg';
+import IconPayment from 'assets/icons/payment.svg';
 import { Text } from 'modules/_shared/ui';
 import classNames from 'classnames';
 import styles from './navigation.module.css';
@@ -41,7 +41,7 @@ const navItems = [
   {
     label: 'navigation.paymentMethods',
     route: RoutesEnum.paymentMethods,
-    icon: IconWallet,
+    icon: IconPayment,
   },
 ];
 

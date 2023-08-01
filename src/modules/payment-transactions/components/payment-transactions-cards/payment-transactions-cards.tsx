@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './payment-transactions-cards.module.css';
 import { PaymentTransactionsCard } from 'modules/payment-transactions/components';
+import styles from './payment-transactions-cards.module.css';
 
 const cards: {
   id: string;
