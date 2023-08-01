@@ -1,0 +1,14 @@
+.container {
+  padding: 0 var(--content-padding);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}

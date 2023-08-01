@@ -184,6 +184,9 @@
       "founder": "Founder",
       "resident": "Resident of the Russian Federation",
       "citizenship": "Citizenship"
+    },
+    "paymentTransactions": {
+      "title": "Payment transactions"
     }
   }
 }

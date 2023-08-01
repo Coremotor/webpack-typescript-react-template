@@ -9,4 +9,13 @@
   --color-border-hover: #7289FF;
   --active-icon-background: #D9E1FC;
   --icon-background: #F1F4FE;
+
+  --blue-card-icon-color: #4022F5;
+  --blue-card-bg-color: #F1F4FE;
+
+  --orange-card-icon-color: #FF8933;
+  --orange-card-bg-color: #FFF3EB;
+
+  --green-card-icon-color: #1FC074;
+  --green-card-bg-color: #ECFAF5;
 }
