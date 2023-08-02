@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Text, Button, Popover, Space } from 'modules/_shared/ui';
 import { useAppSelector } from 'modules/_shared/root-store/hooks';
 import { getSelectedAccountingDocuments } from 'modules/document-flow/store/selectors';
-import ArrowIcon from 'assets/icons/arrow.svg';
+import ArrowIcon from 'assets/icons/arrow-up.svg';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { AccountingDocumentsForm } from 'modules/document-flow/blocks/accounting-documents/components';

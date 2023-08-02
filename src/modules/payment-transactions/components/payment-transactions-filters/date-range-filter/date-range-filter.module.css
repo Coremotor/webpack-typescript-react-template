@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.value {
+  margin-right: 5px;
+}
+
+.active {
+  transform: rotate(0deg);
+}
+
+.select {
+  width: 100%;
+}

@@ -3,7 +3,11 @@ import { Title, Button } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import CloudIcon from 'assets/icons/cloud.svg';
 import styles from './payment-transactions.module.css';
-import { PaymentTransactionsCards } from 'modules/payment-transactions/components';
+import {
+  PaymentTransactionsCards,
+  PaymentTransactionsFilters,
+  PaymentTransactionsSearch,
+} from 'modules/payment-transactions/components';
 
 export const PaymentTransactions = () => {
   const { t } = useTranslation();
@@ -16,6 +20,8 @@ export const PaymentTransactions = () => {
         </Button>
       </header>
       <PaymentTransactionsCards />
+      <PaymentTransactionsSearch />
+      <PaymentTransactionsFilters />
     </div>
   );
 };
