@@ -15,10 +15,10 @@ import {
   PersonInfoInListItem,
 } from 'modules/company/components';
 import { useTranslation } from 'react-i18next';
-import { ListItemRow } from 'modules/company/layouts';
 import { useCompanyManagersColumnsWidth } from 'modules/company/blocks/company-managers/hooks/use-company-managers-columns-width';
 import styles from './company-managers-list-item.module.css';
 import { RoutesEnum } from 'modules/_shared/router/routes';
+import { ListItemRow } from 'modules/_shared/layouts/list';
 
 type TCompanyManagersListItemProps = {
   manager: TManager;

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import CardIcon from 'assets/icons/card.svg';
+import CardIcon from 'assets/icons/round-card.svg';
 import YandexIcon from 'assets/icons/yandex.svg';
 import { TPaymentSystem } from 'modules/payment-methods/types';
 

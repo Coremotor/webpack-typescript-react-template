@@ -11,8 +11,8 @@ import {
 import { getEmployees } from 'modules/company/store/selectors';
 import { setEmployees } from 'modules/company/store/reducer';
 import { employeesData } from 'modules/_shared/mock-data/company-data';
+import { ListItem } from 'modules/_shared/layouts/list';
 import styles from './company-employees-list.module.css';
-import { ListItem } from 'modules/company/layouts';
 
 export const CompanyEmployeesList = () => {
   const dispatch = useAppDispatch();

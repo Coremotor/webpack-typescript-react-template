@@ -7,12 +7,12 @@ import {
 import { getFounders } from 'modules/company/store/selectors';
 import { setFounders } from 'modules/company/store/reducer';
 import { foundersData } from 'modules/_shared/mock-data/company-data';
-import { ListItem } from 'modules/company/layouts';
 import {
   CompanyFoundersListHeader,
   CompanyFoundersListItem,
 } from 'modules/company/blocks/company-founders/components';
 import styles from './company-founders-list.module.css';
+import { ListItem } from 'modules/_shared/layouts/list';
 
 export const CompanyFoundersList = () => {
   const dispatch = useAppDispatch();

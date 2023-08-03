@@ -16,9 +16,9 @@ import {
   PersonInfoInListItem,
 } from 'modules/company/components';
 import { useTranslation } from 'react-i18next';
-import styles from './company-employees-list-item.module.css';
-import { ListItemRow } from 'modules/company/layouts';
 import { RoutesEnum } from 'modules/_shared/router/routes';
+import { ListItemRow } from 'modules/_shared/layouts/list';
+import styles from './company-employees-list-item.module.css';
 
 type TCompanyEmployeesListItemProps = {
   employee: TEmployee;

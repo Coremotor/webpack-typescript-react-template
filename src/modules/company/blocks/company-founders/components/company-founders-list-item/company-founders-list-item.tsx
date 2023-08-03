@@ -15,10 +15,10 @@ import {
   PersonInfoInListItem,
 } from 'modules/company/components';
 import { useTranslation } from 'react-i18next';
-import { ListItemRow } from 'modules/company/layouts';
 import { RoutesEnum } from 'modules/_shared/router/routes';
 import { useCompanyFoundersColumnsWidth } from 'modules/company/blocks/company-founders/hooks/use-company-founders-columns-width';
 import styles from './company-founders-list-item.module.css';
+import { ListItemRow } from 'modules/_shared/layouts/list';
 
 type TCompanyFoundersListItemProps = {
   founder: TFounder;

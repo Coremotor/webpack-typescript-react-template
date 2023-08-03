@@ -1,8 +1,9 @@
 import React from 'react';
 import { RangePicker, Text, Popover, Select, Space } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
+import { Button } from 'antd';
+import ArrowIcon from 'assets/icons/arrow-down.svg';
 import styles from './date-range-filter.module.css';
-import Arrow from 'modules/_shared/components/arrow/arrow';
 
 const dateRangesOptions = [
   { value: 'Настраиваемый', label: 'Настраиваемый' },
@@ -35,10 +36,16 @@ export const DateRangeFilter = () => {
             />
             <Text>{t('Даты начали и окончания')}</Text>
             <RangePicker />
+            <div className={styles.buttons}>
+              <Button>{t('Отменить')}</Button>
+              <Button type='primary'>{t('Применить')}</Button>
+            </div>
           </Space>
         }
       >
-        <Arrow />
+        <div className={styles.iconWrapper}>
+          <ArrowIcon className={styles.icon} />
+        </div>
       </Popover>
     </div>
   );

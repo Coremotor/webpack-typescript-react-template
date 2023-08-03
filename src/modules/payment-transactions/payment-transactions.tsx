@@ -2,12 +2,13 @@ import React from 'react';
 import { Title, Button } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import CloudIcon from 'assets/icons/cloud.svg';
-import styles from './payment-transactions.module.css';
 import {
   PaymentTransactionsCards,
   PaymentTransactionsFilters,
   PaymentTransactionsSearch,
+  PaymentTransactionsList,
 } from 'modules/payment-transactions/components';
+import styles from './payment-transactions.module.css';
 
 export const PaymentTransactions = () => {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const PaymentTransactions = () => {
       <PaymentTransactionsCards />
       <PaymentTransactionsSearch />
       <PaymentTransactionsFilters />
+      <PaymentTransactionsList />
     </div>
   );
 };

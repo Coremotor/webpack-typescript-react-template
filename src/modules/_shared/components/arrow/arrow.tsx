@@ -7,12 +7,10 @@ type TArrowProps = {
   onClick?: () => void;
 };
 
-const Arrow: FC<TArrowProps> = ({ onClick }) => {
+export const Arrow: FC<TArrowProps> = ({ onClick }) => {
   return (
     <div onClick={onClick} className={styles.iconWrapper}>
       <ArrowIcon className={classNames([styles.icon])} />
     </div>
   );
 };
-
-export default Arrow;

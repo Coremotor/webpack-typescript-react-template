@@ -7,11 +7,11 @@ import {
 import { getManagers } from 'modules/company/store/selectors';
 import { setManagers } from 'modules/company/store/reducer';
 import { managersData } from 'modules/_shared/mock-data/company-data';
-import { ListItem } from 'modules/company/layouts';
 import {
   CompanyManagersListHeader,
   CompanyManagersListItem,
 } from 'modules/company/blocks/company-managers/components';
+import { ListItem } from 'modules/_shared/layouts/list';
 import styles from './company-managers-list.module.css';
 
 export const CompanyManagersList = () => {

@@ -22,4 +22,10 @@
   --placeholder-color: #9699B1;
 
   --text-color: rgba(0, 0, 0, 0.88);
+
+  --done-tag-bg-color: #D5F6EA;
+  --cancel-tag-bg-color: #FFD6E0;
+  --pending-tag-bg-color: #FFF8D6;
+  --reserve-tag-bg-color: #FFE6D6;
+  --other-tag-bg-color: #D9E1FC;
 }

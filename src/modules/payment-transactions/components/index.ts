@@ -2,3 +2,8 @@ export { PaymentTransactionsCard } from 'modules/payment-transactions/components
 export { PaymentTransactionsCards } from 'modules/payment-transactions/components/payment-transactions-cards/payment-transactions-cards';
 export { PaymentTransactionsSearch } from 'modules/payment-transactions/components/payment-transactions-search/payment-transactions-search';
 export { PaymentTransactionsFilters } from 'modules/payment-transactions/components/payment-transactions-filters/payment-transactions-filters';
+export { PaymentTransactionsListHeader } from 'modules/payment-transactions/components/payment-transactions-list-header/payment-transactions-list-header';
+export { PaymentTransactionsListItem } from 'modules/payment-transactions/components/payment-transactions-list-item/payment-transactions-list-item';
+export { PaymentTransactionsList } from 'modules/payment-transactions/components/payment-transactions-list/payment-transactions-list';
+export { PaymentTransactionsTypeStatusTag } from 'modules/payment-transactions/components/payment-transactions-type-status-tag/payment-transactions-type-status-tag';
+export { PaymentTransactionsPaymentMethod } from 'modules/payment-transactions/components/payment-transactions-payment-method/payment-transactions-payment-method';
