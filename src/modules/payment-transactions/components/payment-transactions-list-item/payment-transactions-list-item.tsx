@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
 import { Row, Col, Text } from 'modules/_shared/ui';
-import styles from './payment-transactions-list-item.module.css';
 import { usePaymentTransactionsColumnsWidth } from 'modules/payment-transactions/hooks/use-payment-transactions-columns-width';
 import { TPaymentTransaction } from 'modules/payment-transactions/types';
 import { formatCurrency } from 'modules/_shared/helpers/format-currency';
 import { PaymentTransactionsTypeStatusTag } from 'modules/payment-transactions/components/payment-transactions-type-status-tag/payment-transactions-type-status-tag';
+import classNames from 'classnames';
+import styles from './payment-transactions-list-item.module.css';
+import { PaymentTransactionsPaymentMethod } from 'modules/payment-transactions/components/payment-transactions-payment-method/payment-transactions-payment-method';
 
 type TPaymentTransactionsListItemProps = {
   transaction: TPaymentTransaction;
@@ -36,7 +38,7 @@ export const PaymentTransactionsListItem: FC<
         className={styles.col}
         flex={paymentTransactionsColumnsWidth.paymentMethod}
       >
-        <Text ellipsis>{transaction.paymentMethod}</Text>
+        <PaymentTransactionsPaymentMethod transaction={transaction} />
       </Col>
       <Col
         className={styles.col}
@@ -45,7 +47,14 @@ export const PaymentTransactionsListItem: FC<
         <PaymentTransactionsTypeStatusTag transaction={transaction} />
       </Col>
       <Col className={styles.col} flex={paymentTransactionsColumnsWidth.amount}>
-        <Text ellipsis>{formatCurrency(transaction.amount)}</Text>
+        <Text
+          className={classNames({
+            [styles.red]: transaction.typeStatus.status === 'cancel',
+          })}
+          ellipsis
+        >
+          {formatCurrency(transaction.amount)}
+        </Text>
       </Col>
     </Row>
   );

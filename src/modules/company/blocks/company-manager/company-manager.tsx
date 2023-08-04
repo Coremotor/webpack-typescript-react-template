@@ -35,7 +35,7 @@ export const CompanyManager = () => {
 
   const onFinish = (values: TManagerFormFields) => {
     console.log(values);
-    navigate(RoutesEnum.company);
+    navigate(RoutesEnum.Company);
   };
 
   return (
@@ -44,7 +44,7 @@ export const CompanyManager = () => {
         items={[
           {
             title: (
-              <Link to={RoutesEnum.company}>
+              <Link to={RoutesEnum.Company}>
                 {t('companyManagers.managers')}
               </Link>
             ),

@@ -9,7 +9,18 @@
       "yes": "Да",
       "no": "Нет",
       "basicInfo": "Основная информация",
-      "passportInfo": "Паспортные данные"
+      "passportInfo": "Паспортные данные",
+      "unload": "Выгрузить",
+      "find": "Найти",
+      "apply": "Применить"
+    },
+    "options": {
+      "all": "Все",
+      "set": "Настраиваемый",
+      "last3days": "Последние три дня",
+      "week": "За неделю",
+      "month": "За месяц",
+      "3month": "За три месяца"
     },
     "forms": {
       "labels": {
@@ -184,7 +195,25 @@
       "citizenship": "Гражданство"
     },
     "paymentTransactions": {
-      "title": "Платежные операции"
+      "title": "Платежные операции",
+      "searchPlaceholder": "Поиск по номеру заказа или названию объекта",
+      "filters": {
+        "date": "Дата",
+        "accountsContracts": "Счета и договоры",
+        "paymentMethod": "Методы оплаты",
+        "type": "Тип",
+        "status": "Статус",
+        "dateRange": "Диапазон дат",
+        "startEndDates": "Даты начали и окончания"
+      },
+      "listHeader": {
+        "date": "Дата",
+        "order": "№ заказа",
+        "accountContract": "Счет/договор",
+        "paymentMethod": "Способ оплаты",
+        "typeStatus": "Тип и статус операции",
+        "amount": "Сумма"
+      }
     }
   }
 }

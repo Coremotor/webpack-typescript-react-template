@@ -13,7 +13,7 @@ export const LocaleSwitcher = () => {
     <Select
       onChange={changeLocale}
       options={locales}
-      defaultValue={LocalesEnum.ruRu}
+      defaultValue={LocalesEnum.RuRu}
     />
   );
 };

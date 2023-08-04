@@ -13,7 +13,7 @@ export const CompanyFounders = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const goToFounderPage = () => navigate(RoutesEnum.founder);
+  const goToFounderPage = () => navigate(RoutesEnum.Founder);
   return (
     <Space className={styles.list} size='large' direction='vertical'>
       <Button onClick={goToFounderPage} type='primary'>

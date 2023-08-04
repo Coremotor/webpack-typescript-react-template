@@ -15,7 +15,7 @@ export const AuthorizationHeader = () => {
       <Title level={3}>{t('authorization.title')}</Title>
       <Space>
         <Text strong>{t('authorization.isHaveAccount')}</Text>
-        <Link className={styles.link} to={RoutesEnum.registration}>
+        <Link className={styles.link} to={RoutesEnum.Registration}>
           {t('authorization.link')}
         </Link>
       </Space>

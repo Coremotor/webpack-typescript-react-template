@@ -15,7 +15,7 @@ export const RegistrationHeader = () => {
       <Title level={3}>{t('registration.title')}</Title>
       <Space classNames={styles.linkWrapper} className={styles.linkWrapper}>
         <Text>{t('registration.isHaveAccount')}</Text>
-        <Link to={RoutesEnum.authorization}>{t('registration.link')}</Link>
+        <Link to={RoutesEnum.Authorization}>{t('registration.link')}</Link>
       </Space>
     </header>
   );

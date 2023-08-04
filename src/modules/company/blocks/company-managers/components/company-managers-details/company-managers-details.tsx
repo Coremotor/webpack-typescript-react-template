@@ -37,7 +37,7 @@ export const CompanyManagersDetails = () => {
 
   const goToManagerPage = () => {
     onManagerDetailsClose();
-    navigate(RoutesEnum.manager + '/' + activeManager.id);
+    navigate(RoutesEnum.Manager + '/' + activeManager.id);
   };
 
   return (
@@ -56,10 +56,10 @@ export const CompanyManagersDetails = () => {
 
         <Space direction='vertical'>
           <Tabs
-            defaultActiveKey='1'
+            defaultActiveKey='basicInfo'
             items={[
               {
-                key: '1',
+                key: 'basicInfo',
                 label: t('shared.basicInfo'),
                 children: (
                   <CompanyManagersDetailsInfo
@@ -68,7 +68,7 @@ export const CompanyManagersDetails = () => {
                 ),
               },
               {
-                key: '2',
+                key: 'passportInfo',
                 label: t('shared.passportInfo'),
                 children: (
                   <CompanyManagersDetailsInfo

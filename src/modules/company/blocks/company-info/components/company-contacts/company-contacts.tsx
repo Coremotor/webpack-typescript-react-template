@@ -14,7 +14,7 @@ type TCompanyContactsProps = {
 export const CompanyContacts: FC<TCompanyContactsProps> = ({ company }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const goToEditCompany = () => navigate(RoutesEnum.editCompany);
+  const goToEditCompany = () => navigate(RoutesEnum.EditCompany);
 
   return (
     <Card className={styles.card}>

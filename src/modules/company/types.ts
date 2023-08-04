@@ -95,10 +95,10 @@ export type TCompanyState = {
 };
 
 export enum ActiveNavTabKeyEnum {
-  one = '1',
-  two = '2',
-  three = '3',
-  four = '4',
+  CompanyInfo = 'company-info',
+  CompanyEmployees = 'company-employees',
+  CompanyManagement = 'company-management',
+  CompanyFounders = 'company-founders',
 }
 
 export type TEmployeeFormFields = {

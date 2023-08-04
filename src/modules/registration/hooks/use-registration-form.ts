@@ -12,7 +12,7 @@ export const useRegistrationForm = () => {
   const [form] = Form.useForm<TRegistrationFormFields>();
   const onFinish = (values: TRegistrationFormFields) => {
     console.log(values);
-    navigate(RoutesEnum.emailConfirmation);
+    navigate(RoutesEnum.EmailConfirmation);
     dispatch(setEmailForConfirm(values.email));
   };
 

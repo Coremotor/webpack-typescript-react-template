@@ -13,7 +13,7 @@ export const CompanyManagers = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const goToManagerPage = () => navigate(RoutesEnum.manager);
+  const goToManagerPage = () => navigate(RoutesEnum.Manager);
 
   return (
     <Space className={styles.list} size='large' direction='vertical'>

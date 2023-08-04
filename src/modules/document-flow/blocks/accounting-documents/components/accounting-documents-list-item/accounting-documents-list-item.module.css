@@ -15,11 +15,11 @@
   text-decoration: underline;
 }
 .text:hover {
-  color: var(--color-primary);
+  color: var(--brand-color);
 }
 .icon:hover {
   cursor: pointer;
 }
 .active {
-  background-color: var(--active-icon-background);
+  background-color: var(--active-list-item-bg-color);
 }

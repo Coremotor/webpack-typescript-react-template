@@ -17,7 +17,7 @@ export const AuthorizationForm = () => {
   const onFinish = (values: TAuthorizationFormFields) => {
     console.log(values);
     dispatch(setIsAuth(true));
-    navigate(RoutesEnum.mainScreen);
+    navigate(RoutesEnum.MainScreen);
   };
 
   return (
@@ -56,7 +56,7 @@ export const AuthorizationForm = () => {
         />
       </Form.Item>
 
-      <Link className={styles.link} to={RoutesEnum.authorization}>
+      <Link className={styles.link} to={RoutesEnum.Authorization}>
         {t('authorization.forgotYourPassword')}
       </Link>
 

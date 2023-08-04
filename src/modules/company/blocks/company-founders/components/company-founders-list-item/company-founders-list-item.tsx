@@ -85,7 +85,7 @@ export const CompanyFoundersListItem: FC<TCompanyFoundersListItemProps> = ({
               hideMenu={handleHideMenu}
               openDeleteModal={handleOpenModal}
               onOpenMenuChange={handleOpenMenuChange}
-              editPagePath={RoutesEnum.founder + '/' + founder.id}
+              editPagePath={RoutesEnum.Founder + '/' + founder.id}
             />
           </Col>
         </>

@@ -10,12 +10,12 @@ export const useDocumentFlowTabs = () => {
   const { t } = useTranslation();
   const items: TabsProps['items'] = [
     {
-      key: '1',
+      key: 'docsTab',
       label: t('documentFlow.docsTab'),
       children: <AccountingDocuments />,
     },
     {
-      key: '2',
+      key: 'registryTab',
       label: t('documentFlow.registryTab'),
       children: <TransactionRegister />,
     },

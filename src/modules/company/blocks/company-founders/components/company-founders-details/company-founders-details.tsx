@@ -37,7 +37,7 @@ export const CompanyFoundersDetails = () => {
 
   const goToManagerPage = () => {
     onFounderDetailsClose();
-    navigate(RoutesEnum.founder + '/' + activeFounder.id);
+    navigate(RoutesEnum.Founder + '/' + activeFounder.id);
   };
 
   return (
@@ -56,10 +56,10 @@ export const CompanyFoundersDetails = () => {
 
         <Space direction='vertical'>
           <Tabs
-            defaultActiveKey='1'
+            defaultActiveKey='basicInfo'
             items={[
               {
-                key: '1',
+                key: 'basicInfo',
                 label: t('shared.basicInfo'),
                 children: (
                   <CompanyFoundersDetailsInfo
@@ -68,7 +68,7 @@ export const CompanyFoundersDetails = () => {
                 ),
               },
               {
-                key: '2',
+                key: 'passportInfo',
                 label: t('shared.passportInfo'),
                 children: (
                   <CompanyFoundersDetailsInfo

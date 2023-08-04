@@ -16,7 +16,7 @@ const Protected: FC<TProtectedProps> = ({ children }) => {
   if (!auth) {
     return (
       <Navigate
-        to={RoutesEnum.authorization}
+        to={RoutesEnum.Authorization}
         state={{ from: location }}
         replace
       />

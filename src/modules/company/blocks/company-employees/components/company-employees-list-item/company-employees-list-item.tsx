@@ -79,7 +79,7 @@ export const CompanyEmployeesListItem: FC<TCompanyEmployeesListItemProps> = ({
               hideMenu={handleHideMenu}
               openDeleteModal={handleOpenModal}
               onOpenMenuChange={handleOpenMenuChange}
-              editPagePath={RoutesEnum.employee + '/' + employee.id}
+              editPagePath={RoutesEnum.Employee + '/' + employee.id}
             />
           </Col>
         </>

@@ -4,6 +4,9 @@
 }
 
 .value {
+  display: flex;
+  flex-wrap: nowrap;
+
   margin-right: 5px;
 }
 

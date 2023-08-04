@@ -16,7 +16,9 @@ export const AccountsContractsFilter = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <Text type='secondary'>{t('Счета и договоры')}: </Text>
+      <Text ellipsis type='secondary'>
+        {t('paymentTransactions.filters.accountsContracts')}:{' '}
+      </Text>
       <Select
         popupClassName={styles.select}
         suffixIcon={<ArrowIcon className={styles.icon} />}

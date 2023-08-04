@@ -33,7 +33,7 @@ export const CompanyEmployeesDetails = () => {
 
   const goToEmployeePage = () => {
     onEmployeeDetailsClose();
-    navigate(RoutesEnum.employee + '/' + activeEmployee.id);
+    navigate(RoutesEnum.Employee + '/' + activeEmployee.id);
   };
 
   const activeEmployeeInfo = convertActiveEmployeeInTableView(activeEmployee);

@@ -9,7 +9,18 @@
       "yes": "Yes",
       "no": "No",
       "basicInfo": "Basic information",
-      "passportInfo": "Passport details"
+      "passportInfo": "Passport details",
+      "unload": "Unload",
+      "find": "Find",
+      "apply": "Apply"
+    },
+    "options": {
+      "all": "All",
+      "set": "Customizable",
+      "last3days": "Last three days",
+      "week": "During the week",
+      "month": "During the month",
+      "3month": "During three month"
     },
     "forms": {
       "labels": {
@@ -186,7 +197,25 @@
       "citizenship": "Citizenship"
     },
     "paymentTransactions": {
-      "title": "Payment transactions"
+      "title": "Payment transactions",
+      "searchPlaceholder": "Search by order number or object name",
+      "filters": {
+        "date": "Date",
+        "accountsContracts": "Accounts and contracts",
+        "paymentMethod": "Payment method",
+        "type": "Type",
+        "status": "Status",
+        "dateRange": "Date range",
+        "startEndDates": "Start and end dates"
+      },
+      "listHeader": {
+        "date": "Date",
+        "order": "№ order",
+        "accountContract": "Account/contract",
+        "paymentMethod": "Payment method",
+        "typeStatus": "Operation type and status",
+        "amount": "Amount"
+      }
     }
   }
 }

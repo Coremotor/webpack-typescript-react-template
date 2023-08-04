@@ -15,7 +15,7 @@ export const useEmailConfirmationForm = () => {
   const onFinish = (values: TEmailConfirmationFormFields) => {
     console.log(values);
     dispatch(setIsAuth(true));
-    navigate(RoutesEnum.mainScreen);
+    navigate(RoutesEnum.MainScreen);
   };
 
   const isButtonDisabled = !(codeValue && conditionsChecked);

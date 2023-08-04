@@ -11,8 +11,8 @@
   padding: 0 5px;
 }
 .selected {
-  background-color: var(--active-icon-background);
+  background-color: var(--active-list-item-bg-color);
 }
 .active {
-  border-color: var(--color-primary);
+  border-color: var(--brand-color);
 }

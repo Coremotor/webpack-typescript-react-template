@@ -19,8 +19,10 @@ export const DateRangeFilter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.value}>
-        <Text type='secondary'>{t('Дата')}: </Text>
-        <Text>22.00.2020-23.00.2022</Text>
+        <Text ellipsis type='secondary'>
+          {t('paymentTransactions.filters.date')}: &nbsp;
+        </Text>
+        <Text ellipsis>22.00.2020-23.00.2022</Text>
       </div>
       <Popover
         trigger='click'
@@ -28,17 +30,17 @@ export const DateRangeFilter = () => {
         placement='bottom'
         content={
           <Space direction='vertical'>
-            <Text>{t('Диапазон дат')}</Text>
+            <Text>{t('paymentTransactions.filters.dateRange')}</Text>
             <Select
               className={styles.select}
               options={dateRangesOptions}
               defaultValue={dateRangesOptions[0]}
             />
-            <Text>{t('Даты начали и окончания')}</Text>
+            <Text>{t('paymentTransactions.filters.startEndDates')}</Text>
             <RangePicker />
             <div className={styles.buttons}>
-              <Button>{t('Отменить')}</Button>
-              <Button type='primary'>{t('Применить')}</Button>
+              <Button>{t('shared.cancel')}</Button>
+              <Button type='primary'>{t('shared.apply')}</Button>
             </div>
           </Space>
         }

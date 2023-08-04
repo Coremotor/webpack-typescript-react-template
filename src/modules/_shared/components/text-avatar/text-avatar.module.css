@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--color-primary);
-  background-color: var(--icon-background);
+  color: var(--brand-color);
+  background-color: var(--rounded-icon-bg-color);
 
   border-radius: 50%;
 

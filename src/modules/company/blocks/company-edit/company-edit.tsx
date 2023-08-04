@@ -16,7 +16,7 @@ export const CompanyEdit = () => {
         items={[
           {
             title: (
-              <Link to={RoutesEnum.company}>{t('company.myCompany')}</Link>
+              <Link to={RoutesEnum.Company}>{t('company.myCompany')}</Link>
             ),
           },
           { title: t('company.editContacts') },

@@ -1,4 +1,4 @@
 .alert {
-  background-color: var(--item-background-color);
+  background-color: var(--menu-item-bg-color);
   border: none;
 }

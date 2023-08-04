@@ -17,7 +17,7 @@ export const PaymentTransactions = () => {
       <header className={styles.header}>
         <Title level={3}>{t('paymentTransactions.title')}</Title>
         <Button className={styles.button} icon={<CloudIcon />}>
-          {t('Выгрузить')}
+          {t('shared.unload')}
         </Button>
       </header>
       <PaymentTransactionsCards />

@@ -15,32 +15,32 @@ import styles from './navigation.module.css';
 const navItems = [
   {
     label: 'navigation.mainScreen',
-    route: RoutesEnum.mainScreen,
+    route: RoutesEnum.MainScreen,
     icon: IconHome,
   },
   {
     label: 'navigation.paymentTransactions',
-    route: RoutesEnum.paymentTransactions,
+    route: RoutesEnum.PaymentTransactions,
     icon: IconOperation,
   },
   {
     label: 'navigation.documentFlow',
-    route: RoutesEnum.documentFlow,
+    route: RoutesEnum.DocumentFlow,
     icon: IconContract,
   },
   {
     label: 'navigation.accountsContracts',
-    route: RoutesEnum.accountsContracts,
+    route: RoutesEnum.AccountsContracts,
     icon: IconBill,
   },
   {
     label: 'navigation.accommodationFacilities',
-    route: RoutesEnum.accommodationFacilities,
+    route: RoutesEnum.AccommodationFacilities,
     icon: IconApartment,
   },
   {
     label: 'navigation.paymentMethods',
-    route: RoutesEnum.paymentMethods,
+    route: RoutesEnum.PaymentMethods,
     icon: IconPayment,
   },
 ];

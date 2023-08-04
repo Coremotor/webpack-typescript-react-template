@@ -10,7 +10,7 @@
   padding: 10px 20px;
 }
 .navItem:hover {
-  background-color: var(--item-background-color);
+  background-color: var(--menu-item-bg-color);
   color: inherit;
 }
 .text {

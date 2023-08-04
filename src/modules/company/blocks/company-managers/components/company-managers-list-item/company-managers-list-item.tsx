@@ -79,7 +79,7 @@ export const CompanyManagersListItem: FC<TCompanyManagersListItemProps> = ({
               hideMenu={handleHideMenu}
               openDeleteModal={handleOpenModal}
               onOpenMenuChange={handleOpenMenuChange}
-              editPagePath={RoutesEnum.manager + '/' + manager.id}
+              editPagePath={RoutesEnum.Manager + '/' + manager.id}
             />
           </Col>
         </>

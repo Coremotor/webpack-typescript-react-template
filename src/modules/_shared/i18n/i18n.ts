@@ -4,13 +4,13 @@ import ru from 'modules/_shared/i18n/locales/ru.json';
 import en from 'modules/_shared/i18n/locales/en.json';
 
 export enum LangEnum {
-  ru = 'ru',
-  en = 'en',
+  Ru = 'ru',
+  En = 'en',
 }
 
 export enum LocalesEnum {
-  ruRu = 'ru-RU',
-  enUS = 'en-US',
+  RuRu = 'ru-RU',
+  EnUS = 'en-US',
 }
 
 const resources = {
@@ -24,7 +24,7 @@ i18n
   .init({
     resources,
     debug: false,
-    lng: LangEnum.ru,
+    lng: LangEnum.Ru,
     interpolation: {
       escapeValue: false,
     },

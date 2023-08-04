@@ -9,8 +9,8 @@ import { useAppDispatch } from 'modules/_shared/root-store/hooks';
 import { LangEnum, LocalesEnum } from 'modules/_shared/i18n/i18n';
 
 export const locales = [
-  { label: 'English', value: LocalesEnum.enUS },
-  { label: 'Русский', value: LocalesEnum.ruRu },
+  { label: 'English', value: LocalesEnum.EnUS },
+  { label: 'Русский', value: LocalesEnum.RuRu },
 ];
 
 export const useLocaleSwitcher = () => {
@@ -23,17 +23,17 @@ export const useLocaleSwitcher = () => {
 
   const changeLocale = async (localeValue: string) => {
     switch (localeValue) {
-      case LocalesEnum.ruRu:
+      case LocalesEnum.RuRu:
         dispatch(setLocale(localeRu));
-        await changeLanguage(LangEnum.ru);
+        await changeLanguage(LangEnum.Ru);
         break;
-      case LocalesEnum.enUS:
+      case LocalesEnum.EnUS:
         dispatch(setLocale(localeEn));
-        await changeLanguage(LangEnum.en);
+        await changeLanguage(LangEnum.En);
         break;
       default:
         dispatch(setLocale(localeRu));
-        await changeLanguage(LangEnum.ru);
+        await changeLanguage(LangEnum.Ru);
     }
   };
 

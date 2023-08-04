@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'modules/_shared/ui';
+import { Row, Col, Text } from 'modules/_shared/ui';
 import { useTranslation } from 'react-i18next';
 import { usePaymentTransactionsColumnsWidth } from 'modules/payment-transactions/hooks/use-payment-transactions-columns-width';
 import styles from './payment-transactions-list-header.module.css';
@@ -9,36 +9,40 @@ export const PaymentTransactionsListHeader = () => {
   const { paymentTransactionsColumnsWidth } =
     usePaymentTransactionsColumnsWidth();
   return (
-    <Row className={styles.row} wrap={false}>
+    <Row className={styles.row} wrap={false} gutter={10}>
       <Col className={styles.col} flex={paymentTransactionsColumnsWidth.date}>
-        {t('Дата')}
+        <Text ellipsis>{t('paymentTransactions.listHeader.date')}</Text>
       </Col>
       <Col
         className={styles.col}
         flex={paymentTransactionsColumnsWidth.orderNumber}
       >
-        №{t('заказа')}
+        <Text ellipsis>{t('paymentTransactions.listHeader.order')}</Text>
       </Col>
       <Col
         className={styles.col}
         flex={paymentTransactionsColumnsWidth.invoiceContract}
       >
-        {t('Счет/договор')}
+        <Text ellipsis>
+          {t('paymentTransactions.listHeader.accountContract')}
+        </Text>
       </Col>
       <Col
         className={styles.col}
         flex={paymentTransactionsColumnsWidth.paymentMethod}
       >
-        {t('Способ оплаты')}
+        <Text ellipsis>
+          {t('paymentTransactions.listHeader.paymentMethod')}
+        </Text>
       </Col>
       <Col
         className={styles.col}
         flex={paymentTransactionsColumnsWidth.typeStatus}
       >
-        {t('Тип и статус операции')}
+        <Text ellipsis>{t('paymentTransactions.listHeader.typeStatus')}</Text>
       </Col>
       <Col className={styles.col} flex={paymentTransactionsColumnsWidth.amount}>
-        {t('Сумма')}
+        <Text ellipsis>{t('paymentTransactions.listHeader.amount')}</Text>
       </Col>
     </Row>
   );

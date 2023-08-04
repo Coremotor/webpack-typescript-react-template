@@ -6,7 +6,7 @@ import styles from 'modules/no-found/no-found.module.css';
 
 export const NoFound = () => {
   const navigate = useNavigate();
-  const goToMainPage = () => navigate(RoutesEnum.mainScreen);
+  const goToMainPage = () => navigate(RoutesEnum.MainScreen);
   return (
     <Result
       className={styles.noFound}

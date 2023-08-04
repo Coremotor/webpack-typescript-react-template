@@ -34,7 +34,7 @@ export const CompanyFounder = () => {
 
   const onFinish = (values: TFounderFormFields) => {
     console.log(values);
-    navigate(RoutesEnum.company);
+    navigate(RoutesEnum.Company);
   };
 
   return (
@@ -43,7 +43,7 @@ export const CompanyFounder = () => {
         items={[
           {
             title: (
-              <Link to={RoutesEnum.company}>
+              <Link to={RoutesEnum.Company}>
                 {t('companyFounders.founders')}
               </Link>
             ),

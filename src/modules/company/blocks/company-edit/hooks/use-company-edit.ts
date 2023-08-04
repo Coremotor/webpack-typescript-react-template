@@ -29,7 +29,7 @@ export const useCompanyEdit = () => {
       message: 'Контакты',
       description: 'Изменения успешно сохранены',
     });
-    navigate(RoutesEnum.company);
+    navigate(RoutesEnum.Company);
   };
 
   useEffect(() => {

@@ -10,7 +10,7 @@ import type {
 import { ActiveNavTabKeyEnum } from 'modules/company/types';
 
 const initialState: TCompanyState = {
-  activeTabKey: ActiveNavTabKeyEnum.one,
+  activeTabKey: ActiveNavTabKeyEnum.CompanyInfo,
   company: null,
   employee: null,
   employees: [],

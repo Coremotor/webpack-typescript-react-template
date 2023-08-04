@@ -11,10 +11,10 @@ export const PaymentTransactionsSearch = () => {
     <Input.Search
       className={styles.input}
       onSearch={handleSearch}
-      enterButton={t('Найти')}
+      enterButton={t('shared.find')}
       size='large'
       prefix={<SearchIcon className={styles.icon} />}
-      placeholder={t('Поиск по номеру заказа или названию объекта')}
+      placeholder={t('paymentTransactions.searchPlaceholder')}
     />
   );
 };

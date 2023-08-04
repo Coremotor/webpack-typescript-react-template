@@ -18,7 +18,9 @@ export const PaymentTypeFilter = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <Text type='secondary'>{t('Тип')}: </Text>
+      <Text ellipsis type='secondary'>
+        {t('paymentTransactions.filters.type')}:
+      </Text>
       <Select
         popupClassName={styles.select}
         suffixIcon={<ArrowIcon className={styles.icon} />}

@@ -28,7 +28,7 @@ export const CompanyEmployee = () => {
 
   const onFinish = (values: TEmployeeFormFields) => {
     console.log(values);
-    navigate(RoutesEnum.company);
+    navigate(RoutesEnum.Company);
   };
 
   return (
@@ -37,7 +37,7 @@ export const CompanyEmployee = () => {
         items={[
           {
             title: (
-              <Link to={RoutesEnum.company}>
+              <Link to={RoutesEnum.Company}>
                 {t('companyEmployees.employees')}
               </Link>
             ),

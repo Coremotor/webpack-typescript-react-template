@@ -23,22 +23,22 @@ export const useCompanyTabs = () => {
 
   const items: TabsProps['items'] = [
     {
-      key: ActiveNavTabKeyEnum.one,
+      key: ActiveNavTabKeyEnum.CompanyInfo,
       label: t('company.info'),
       children: <CompanyInfo />,
     },
     {
-      key: ActiveNavTabKeyEnum.two,
+      key: ActiveNavTabKeyEnum.CompanyEmployees,
       label: t('company.employees'),
       children: <CompanyEmployees />,
     },
     {
-      key: ActiveNavTabKeyEnum.three,
+      key: ActiveNavTabKeyEnum.CompanyManagement,
       label: t('company.management'),
       children: <CompanyManagers />,
     },
     {
-      key: ActiveNavTabKeyEnum.four,
+      key: ActiveNavTabKeyEnum.CompanyFounders,
       label: t('company.founders'),
       children: <CompanyFounders />,
     },

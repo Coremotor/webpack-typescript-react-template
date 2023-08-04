@@ -25,32 +25,32 @@ import {
 } from 'modules/company/blocks';
 
 const protectedRoutes = [
-  { path: RoutesEnum.company, element: <Company /> },
-  { path: RoutesEnum.editCompany, element: <CompanyEdit /> },
-  { path: RoutesEnum.employee + '/:employeeId?', element: <CompanyEmployee /> },
-  { path: RoutesEnum.founder + '/:founderId?', element: <CompanyFounder /> },
-  { path: RoutesEnum.manager + '/:managerId?', element: <CompanyManager /> },
+  { path: RoutesEnum.Company, element: <Company /> },
+  { path: RoutesEnum.EditCompany, element: <CompanyEdit /> },
+  { path: RoutesEnum.Employee + '/:employeeId?', element: <CompanyEmployee /> },
+  { path: RoutesEnum.Founder + '/:founderId?', element: <CompanyFounder /> },
+  { path: RoutesEnum.Manager + '/:managerId?', element: <CompanyManager /> },
   {
-    path: RoutesEnum.accommodationFacilities,
+    path: RoutesEnum.AccommodationFacilities,
     element: <AccommodationFacilities />,
   },
-  { path: RoutesEnum.accountsContracts, element: <AccountsContracts /> },
-  { path: RoutesEnum.documentFlow, element: <DocumentFlow /> },
-  { path: RoutesEnum.paymentMethods, element: <PaymentMethods /> },
-  { path: RoutesEnum.paymentTransactions, element: <PaymentTransactions /> },
+  { path: RoutesEnum.AccountsContracts, element: <AccountsContracts /> },
+  { path: RoutesEnum.DocumentFlow, element: <DocumentFlow /> },
+  { path: RoutesEnum.PaymentMethods, element: <PaymentMethods /> },
+  { path: RoutesEnum.PaymentTransactions, element: <PaymentTransactions /> },
 ] as const;
 
 const RootRoute: FC = () => {
   return (
     <Routes>
-      <Route path={RoutesEnum.authorization} element={<Authorization />} />
-      <Route path={RoutesEnum.registration} element={<Registration />} />
+      <Route path={RoutesEnum.Authorization} element={<Authorization />} />
+      <Route path={RoutesEnum.Registration} element={<Registration />} />
       <Route
-        path={RoutesEnum.emailConfirmation}
+        path={RoutesEnum.EmailConfirmation}
         element={<EmailConfirmation />}
       />
-      <Route path={RoutesEnum.noMatch} element={<NoFound />} />
-      <Route path={RoutesEnum.mainScreen} element={<AppLayout />}>
+      <Route path={RoutesEnum.NoMatch} element={<NoFound />} />
+      <Route path={RoutesEnum.MainScreen} element={<AppLayout />}>
         <Route
           index
           element={

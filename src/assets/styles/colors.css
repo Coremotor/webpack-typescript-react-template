@@ -1,31 +1,36 @@
 :root {
-  --box-shadow-color: #babacb66;
-  --item-background-color: #f6f6fb;
+  --black: 0, 0, 0;
+
+  --text-color: rgba(var(--black), 0.88);
+  --layout-border-color: rgba(var(--black), 0.06);
+  --brand-color: #4022f5;
   --default-background-color: #fff;
-  --layout-border-color: rgba(5, 5, 5, 0.06);
-  --color-primary: #4022F5;
-  --color-danger: #CF1743;
-  --color-danger-border: #FFD6E0;
-  --color-border-hover: #7289FF;
-  --active-icon-background: #D9E1FC;
-  --icon-background: #F1F4FE;
 
-  --blue-card-icon-color: #4022F5;
-  --blue-card-bg-color: #F1F4FE;
+  --box-shadow-color: #babacb66;
 
-  --orange-card-icon-color: #FF8933;
-  --orange-card-bg-color: #FFF3EB;
+  --menu-item-bg-color: #f6f6fb;
 
-  --green-card-icon-color: #1FC074;
-  --green-card-bg-color: #ECFAF5;
+  --active-list-item-bg-color: #d9e1fc;
 
-  --placeholder-color: #9699B1;
+  --rounded-icon-bg-color: #f1f4fe;
 
-  --text-color: rgba(0, 0, 0, 0.88);
+  --blue-card-icon-color: #4022f5;
+  --blue-card-bg-color: #f1f4fe;
 
-  --done-tag-bg-color: #D5F6EA;
-  --cancel-tag-bg-color: #FFD6E0;
-  --pending-tag-bg-color: #FFF8D6;
-  --reserve-tag-bg-color: #FFE6D6;
-  --other-tag-bg-color: #D9E1FC;
+  --orange-card-icon-color: #ff8933;
+  --orange-card-bg-color: #fff3eb;
+
+  --green-card-icon-color: #1fc074;
+  --green-card-bg-color: #ecfaf5;
+
+  --placeholder-color: #9699b1;
+
+  --done-tag-bg-color: #d5f6ea;
+  --cancel-tag-bg-color: #ffd6e0;
+  --pending-tag-bg-color: #fff8d6;
+  --reserve-tag-bg-color: #ffe6d6;
+  --other-tag-bg-color: #d9e1fc;
+
+  --danger-color: #cf1743;
+  --danger-border-color: #ffd6e0;
 }

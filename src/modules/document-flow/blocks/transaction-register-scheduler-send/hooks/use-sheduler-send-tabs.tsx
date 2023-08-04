@@ -10,12 +10,12 @@ export const useShedulerSendTabs = () => {
   const { t } = useTranslation();
   const items: TabsProps['items'] = [
     {
-      key: '1',
+      key: 'consolidatedRegistries',
       label: t('documentFlow.consolidatedRegistries'),
       children: <ConsolidatedRegistries />,
     },
     {
-      key: '2',
+      key: 'dailyRegisters',
       label: t('documentFlow.dailyRegisters'),
       children: <DailyRegisters />,
     },
