@@ -16,4 +16,6 @@ module.exports = [
     filename: '[name].[chunkhash].css',
     chunkFilename: '[name].[chunkhash].chunk.css',
   }),
+
+  new webpack.ProgressPlugin(),
 ].filter(Boolean);

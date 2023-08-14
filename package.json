@@ -6,16 +6,14 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js",
-    "serve": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.prod.js && cross-env serve build/",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
-    "prepare": "husky install",
-    "test": "echo \"[Husky] pre-commit\""
+    "serve": "npm run build && cross-env serve build/",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "1.9.5",
-    "antd": "5.7.0",
+    "antd": "5.8.3",
     "axios": "1.4.0",
     "classnames": "2.3.2",
     "dayjs": "1.11.9",
@@ -44,10 +42,8 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.32.2",
-    "file-loader": "6.2.0",
     "fork-ts-checker-webpack-plugin": "8.0.0",
     "html-webpack-plugin": "5.5.3",
-    "husky": "8.0.0",
     "mini-css-extract-plugin": "2.7.6",
     "prettier": "2.8.8",
     "serve": "14.2.0",
