@@ -1,0 +1,1 @@
+export const INIT_TIMER_VALUE_IN_SECONDS = 10;

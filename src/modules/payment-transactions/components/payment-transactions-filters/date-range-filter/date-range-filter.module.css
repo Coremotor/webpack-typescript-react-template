@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.value {
+  display: flex;
+  flex-wrap: nowrap;
+
+  margin-right: 5px;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.select {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  margin-top: 16px;
+}

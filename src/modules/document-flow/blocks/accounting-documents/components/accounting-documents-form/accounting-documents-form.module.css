@@ -1,0 +1,9 @@
+.form {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+.formItem {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,48 @@
+.container {
+  width: 330px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.blue {
+  background-color: var(--blue-card-bg-color);
+}
+
+.orange {
+  background-color: var(--orange-card-bg-color);
+}
+
+.green {
+  background-color: var(--green-card-bg-color);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.textCurrency {
+  font-size: 32px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.iconBlue {
+  color: var(--blue-card-icon-color);
+}
+
+.iconGreen {
+  color: var(--green-card-icon-color);
+}
+
+.iconOrange {
+  color: var(--orange-card-icon-color);
+}

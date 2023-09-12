@@ -1,0 +1,15 @@
+.col {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  display: flex;
+}
+.icon:hover {
+  cursor: pointer;
+}

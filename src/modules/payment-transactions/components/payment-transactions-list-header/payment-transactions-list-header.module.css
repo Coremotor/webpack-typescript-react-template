@@ -1,0 +1,11 @@
+.row {
+  width: 100%;
+  font-weight: bold;
+  padding: 16px;
+}
+.col {
+  display: flex;
+  align-items: center;
+
+  padding: 0 5px;
+}

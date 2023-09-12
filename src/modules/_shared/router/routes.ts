@@ -1,0 +1,17 @@
+export enum RoutesEnum {
+  MainScreen = '/',
+  PaymentTransactions = '/payment-transactions',
+  DocumentFlow = '/document-flow',
+  AccountsContracts = '/accounts-contracts',
+  AccommodationFacilities = '/accommodation-facilities',
+  PaymentMethods = '/payment-methods',
+  Authorization = '/authorization',
+  Registration = '/registration',
+  EmailConfirmation = '/email-confirmation',
+  Company = '/company',
+  EditCompany = '/edit-company',
+  Employee = '/company/employee',
+  Founder = '/company/founder',
+  Manager = '/company/manager',
+  NoMatch = '*',
+}

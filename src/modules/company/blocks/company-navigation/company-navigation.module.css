@@ -1,0 +1,19 @@
+.openNavButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navItemsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.navItem {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.navItem:hover {
+  background-color: var(--menu-item-bg-color);
+}
+.icon {
+  margin-right: 10px;
+}

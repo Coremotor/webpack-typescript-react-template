@@ -23,6 +23,7 @@
   "rules": {
     "react/prop-types": "off",
     "@typescript-eslint/no-var-requires": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "linebreak-style": "off"
   }
 }

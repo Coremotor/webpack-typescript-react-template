@@ -1,0 +1,36 @@
+:root {
+  --black: 0, 0, 0;
+
+  --text-color: rgba(var(--black), 0.88);
+  --layout-border-color: rgba(var(--black), 0.06);
+  --brand-color: #4022f5;
+  --default-background-color: #fff;
+
+  --box-shadow-color: #babacb66;
+
+  --menu-item-bg-color: #f6f6fb;
+
+  --active-list-item-bg-color: #d9e1fc;
+
+  --rounded-icon-bg-color: #f1f4fe;
+
+  --blue-card-icon-color: #4022f5;
+  --blue-card-bg-color: #f1f4fe;
+
+  --orange-card-icon-color: #ff8933;
+  --orange-card-bg-color: #fff3eb;
+
+  --green-card-icon-color: #1fc074;
+  --green-card-bg-color: #ecfaf5;
+
+  --placeholder-color: #9699b1;
+
+  --done-tag-bg-color: #d5f6ea;
+  --cancel-tag-bg-color: #ffd6e0;
+  --pending-tag-bg-color: #fff8d6;
+  --reserve-tag-bg-color: #ffe6d6;
+  --other-tag-bg-color: #d9e1fc;
+
+  --danger-color: #cf1743;
+  --danger-border-color: #ffd6e0;
+}

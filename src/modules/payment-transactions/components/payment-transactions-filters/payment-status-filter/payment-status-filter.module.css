@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: nowrap;
+}
+
+.select {
+  min-width: 200px !important;
+}
+
+.icon {
+  color: var(--text-color);
+  margin-right: -8px;
+}

@@ -1,0 +1,13 @@
+.container {
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 10px;
+}

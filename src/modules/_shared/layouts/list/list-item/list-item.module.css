@@ -1,0 +1,10 @@
+.item {
+  border: none;
+  border-radius: 8px;
+  border-block-end: none !important;
+  padding: 0 !important;
+  margin-bottom: 10px;
+}
+.item:last-child {
+  border-block-end: none !important;
+}

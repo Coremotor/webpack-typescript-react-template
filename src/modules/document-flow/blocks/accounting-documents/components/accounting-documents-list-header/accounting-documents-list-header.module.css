@@ -1,0 +1,13 @@
+.row {
+  width: 100%;
+  padding: 16px;
+  font-weight: bold;
+}
+.col {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.innerRow {
+  width: 100%;
+}

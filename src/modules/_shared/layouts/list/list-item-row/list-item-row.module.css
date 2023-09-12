@@ -1,0 +1,10 @@
+.row {
+  width: 100%;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 16px;
+}
+.active {
+  border-color: var(--brand-color);
+}

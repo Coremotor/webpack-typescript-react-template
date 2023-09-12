@@ -1,0 +1,16 @@
+.card {
+  width: fit-content;
+  position: sticky;
+  bottom: 40px;
+  margin: 100px auto 0;
+}
+.button {
+  display: flex;
+  align-items: center;
+}
+.buttonText {
+  margin-right: 10px;
+}
+.arrowDown {
+  transform: rotate(180deg);
+}

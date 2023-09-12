@@ -1,0 +1,41 @@
+.container {
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 24px;
+
+  padding: 6px 12px;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 10px;
+}
+
+.text {
+  line-height: 1 !important;
+}
+
+.done {
+  background-color: var(--done-tag-bg-color);
+}
+
+.cancel {
+  background-color: var(--cancel-tag-bg-color);
+}
+
+.pending {
+  background-color: var(--pending-tag-bg-color);
+}
+
+.reserve {
+  background-color: var(--reserve-tag-bg-color);
+}
+
+.other {
+  background-color: var(--other-tag-bg-color);
+}

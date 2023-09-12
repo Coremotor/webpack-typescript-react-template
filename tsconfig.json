@@ -9,9 +9,10 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "baseUrl": "src",
-    "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "typeRoots": ["src/typings", "node_modules/@types"]
   },
-  "include": ["src/**/*", "tools/**/*"]
+  "include": ["src/**/*"]
 }

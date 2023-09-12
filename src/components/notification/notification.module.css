@@ -1,9 +1,0 @@
-.error {
-    max-width: 200px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-}

@@ -1,0 +1,6 @@
+.container {
+  padding: 32px var(--content-padding);
+}
+.form {
+  width: 60%;
+}

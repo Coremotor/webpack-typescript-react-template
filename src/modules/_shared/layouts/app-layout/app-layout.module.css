@@ -1,0 +1,21 @@
+.layout {
+  height: 100vh;
+}
+.logo {
+  width: 150px;
+  padding: 20px;
+}
+.sider {
+  background-color: var(--default-background-color);
+  border-right: 1px solid var(--layout-border-color);
+}
+.header {
+  display: flex;
+  background-color: var(--default-background-color);
+  border-bottom: 1px solid var(--layout-border-color);
+  padding: 0 20px;
+}
+.content {
+  background-color: var(--default-background-color);
+  overflow: auto;
+}
